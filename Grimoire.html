@@ -12,19 +12,24 @@
         
         <nav id="nav">
             <ul>
-                <li><a href="index.html">Front Page</a></li>
+                <li><a href="index.html">Règles</a></li>
                 <li><a href="Grimoire.html">Book of Spells</a></li>
-                <li><a href="">Characters</a></li>
-                <li></li>
             </ul>
         </nav>
         
         <section id="main">
+           
+           <div class="vigation">
+               <div><h2><a href="#gard">Gardien</a></h2></div>
+               <div><h2><a href="#zelo">Zélote</a></h2></div>
+               <div><h2><a href="#invo">Invocateur</a></h2></div>
+               <div><h2><a href="#paci">Pacificateur</a></h2></div>
+           </div>
             <section>
                 <article>
-                    <h2>Gardien</h2>
+                    <h2 id="gard">Gardien</h2>
 
-                        <p>Les gardiens sont les maitres de la manipulation de leur aura. Leurs techniques de prédilections s’articulent autour de l’absorption de l’énergie qui les entoure afin de la mélanger à la leur pour la renforcer.</p>  
+                        <p>Les gardiens sont les maitres de la manipulation de leur aura. Leurs techniques de prédilections s’articulent autour de l’absorption de l’énergie qui les entoure afin de la mélanger à la leur pour la renforcer.<br> Dans un groupe, le gardien est la première ligne de défense, qui protège ses alliers grace à sa grande résistance physique.</p>  
                 </article>
 
                 <article>
@@ -62,14 +67,7 @@
             <article>
                 <h3>Neutre</h3>
                 <div class="liste">
-                <div class="sort">
-                    <h4>Lame Enchantée</h4>
-                    
-                        <em>2 PA / Self</em>
-                        
-                        <p>En appliquant la Lame Enchantée à n’importe quel objet non magique, le gardien crée autour de celui-ci une aura élémentaire neutre qui absorbe l’énergie magique. Une fois appliquée, l’aura prendra la nature élémentaire du dernier sort lancé par le gardien. L’objet enchanté s’autodétruit après <strong>1D4+2</strong> utilisations. Chaque fois que le joueur lance un sort, l’aura reçoit sa nature élémentaire<br>Utilisé comme arme, l’objet enchanté reçoit un bonus de <strong>+COIN DMG</strong> élémentaires à ses <strong>DMG</strong> de base</p>
-                </div>
-                    
+                  
                 <div class="sort">
                     <h4>Provocation</h4>
                     
@@ -85,14 +83,25 @@
                             <li><strong>-1 DMG</strong> reçus par le gardien <strong>/2Tr</strong></li>
                         </ul>
                 </div>
+                   
                 <div class="sort">
+                    <h4>Lame Enchantée</h4>
+                    
+                        <em>2 PA / Self</em>
+                        
+                        <p>En appliquant la Lame Enchantée à n’importe quel objet non magique, le gardien crée autour de celui-ci une aura élémentaire neutre qui absorbe l’énergie magique. Une fois appliquée, l’aura prendra la nature élémentaire du dernier sort lancé par le gardien. L’objet enchanté s’autodétruit après <strong>1D4+2</strong> utilisations. Chaque fois que le joueur lance un sort, l’aura reçoit sa nature élémentaire<br>Utilisé comme arme, l’objet enchanté reçoit un bonus de <strong>+COIN DMG</strong> élémentaires à ses <strong>DMG</strong> de base</p>
+
                     <h4>Soin d'Urgence</h4>
                     
                         <em>3 PA / Self / Cd 2</em>
                         
                         <p>Le gardien absorbe l’énergie magique naturellement présente dans l’air pour la mélanger à son aura. Il récupère <strong>1D4 PV</strong></p>
                 </div>
+                
+
                 </div>
+                
+     
             </article>
 
              <article>           
@@ -172,7 +181,7 @@
             </article>
             
            
-        <h2>Zélote</h2>
+        <h2 id="zelo">Zélote</h2>
           
             <p>Opposé direct du gardien, le zélote applique l’énergie de son aura à celle naturellement présente dans l’air qui l’entoure pour la sur-activer afin de déchainer une puissance dévastatrice.</p>
             
@@ -299,7 +308,7 @@
                 </div>
             </div>
                
-        <h2>Invocateur</h2>
+        <h2 id="invo">Invocateur</h2>
         <p>Les invocateur sont des mages ayant développé les capacités de leur esprit à un point tel que celui-ci peut, pour un temps limité, dépasser les contraintes du monde physique. Leur plus belle accomplissement est le sort d’invocation leur ayant valu ce nom. Par son intermédiaire ils peuvent matérialiser leur esprit combatif sous la forme d’une créature qui prend forme physique en dévorant une partie de son énergie magique. Le familier agit comme une extension de son invocateur sous le contrôle de ce dernier, et possède même la capacité de lancer des sorts.</p>
             
             <ul>
@@ -327,7 +336,9 @@
                     </div>
         </article>
             
+                       <h2>Liste des Sorts de l'invocateur</h2>
                 <h3>Neutre</h3>
+                <div class="liste">
             <div class="sort">
                 <h4>Invocation</h4>
             
@@ -344,7 +355,7 @@
                     </ul>
             </div>
             <div class="sort">
-                <h2>Hate</h2>
+                <h4>Hate</h4>
                     <em>3 PA / Po 4 sans ligne de vue</em>
                 
                     <p>La cible gagne 2 PA max / 2Tr</p>
@@ -352,7 +363,9 @@
                         <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
                     </ul>
             </div>
+            </div>
                 <h3>Sorts du familier d'élément Eau</h3>
+                <div class="liste">
             <div class="sort">
                 <div class="eau">
                     <h4>Mirage</h4>
@@ -366,7 +379,8 @@
                             <li>L’illusion disparait si le familier meurt</li>
                         </ul>
                 </div>
-            </div>
+                </div>
+
             <div class="sort">
                 <div class="eau">
                     <h4>Souffle Glacé</h4>
@@ -405,8 +419,10 @@
                         </ul>
                 </div>
             </div>
+              </div>
                
                 <h3>Sorts du familier de la Terre</h3>
+                <div class="liste">
                 <div class="sort">
                     <div class="terre">
                         <h4>Constriction</h4>
@@ -449,10 +465,10 @@
                         <p>Le familier souffle un gaz soporifique qui incapacite toute cible à portée jusqu’à ce qu’elle réussisse 1D20 ESP avec un modificateur - 2</p>
                 </div>
             </div>
-            
+            </div>
             
                 <h3>Sort du familier des flammes</h3>
-                
+                <div class="liste">
                     <div class="sort">
                         <div class="feu">
                             <h4>Trace</h4>
@@ -496,8 +512,9 @@
                                 <ul><li>DMG 1D6 ; 1D6-1 ; D6-2 </li></ul>
                         </div>
                     </div>
+                    </div>
                     
-         <h2>Pacificateur</h2>
+         <h2 id="paci">Pacificateur</h2>
            
             <p>Les Pacificateurs sont des maitres de la séparation de l’aura : ils concentrent et compressent leur énergie magique qu’ils projettent ensuite loin de leur corps. Couplée à leur sensibilité accrue qui leur permet de lire avec une grande acuité les courants naturels d’énergie dans l’environnement, ils sont capable de perturber ce flux jusqu’à le déstabiliser pour en prendre le contrôle sur une zone limitée. </p>  
             
@@ -507,6 +524,7 @@
 
             <article>
                 <h3>Réactions</h3>
+                   <div class="liste">
                     <div class="sort">
                         <h4>Bouclier de l'esprit</h4>
 
@@ -524,67 +542,73 @@
                             <li>Si le lanceur a le plus grand score la cible ne peut plus se déplacer pour ce tr.</li>
                         </ul>
                     </div>
+                </div>
             </article>
                         
         <h2>Liste des Sorts du Pacificateur</h2>           
             
             <h3>Terre</h3>
-            <div class="sort">
-            <div class="terre">
-                <h4>Intimidation</h4>
-            
-                    <em>3 PA / Po 3 / Cd 3</em>
-            
-                    <p>Le pacificateur enchante l’aura de sa cible, qui devient intimidateur/2Tr. Toute personne que celle-ci identifie comme un ennemi et qui se trouve à moins de 3 m d’elle pendant que l’intimidation est active ressent un incontrôlable sentiment de panique et reçoit un marqueur de panique sur son aura qui se dissipe après 2Tr. </p>
-            
-                    <ul>
-                        <li>Tant que la cible à sur elle un marqueur de panique actif elle mettra le plus de distance possible entre elle et l’intimidateur et ne peut pas attaquer.</li>
-                        <li>Cible +1 PM/2Tr</li>
-                    </ul>
-            </div>
-            </div>
-            
-            <div class="sort">
-            <div class="terre">
-                <h4>Silence</h4>
-            
-                    <em>3 PA / Po 3 / Cd 2</em>
-            
-                    <p>Le pacificateur déstabilise l’aura de sa cible et pose sur elle un marqueur de silence qui se dissipe après 1Tr</p>
-            
-                    <ul><li>Tant que la cible a un marqueur de silence sur elle, elle ne peut plus utiliser la magie. Il perd aussi tout buff, débuff, ou marqueur qu’il possède.</li></ul>
-            </div>
-            </div>
-            
-            <div class="sort">
-            <div class="mixte">
-            <h3>Terre / Eau</h3>
-            
-                <h4>Portail</h4>
-            
-                    <em>4 PA / Po 3 / Cd X <br>X étant le nombre de portail de l’équipe encore ouvert
-</em>
-            
-                    <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée un portail à double entrés.</p>
-            
-                    <ul>
-                        <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
-                        <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
-                        <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
-                        <li>Les familiers ne peuvent pas traverser les portails</li>
-                        <li>Un portail disparait en cas de contact avec un sort d’écran</li>
-                        <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
-                        <li>Les sorts ne traversent pas les portails posés par un membre de l’équipe adverse mais diminue de 1 le nombre de traversées possible par celui-ci. Si le nombre tombe à 0 le portail disparait.</li>
-                        <li>Il est possible de créer un portail en appliquant une aura de terre sur une prison aqueuse. Le portail appartient à l’équipe de personnage appliquant l’aura. La prison est détruite à la création du portail</li>
-                        <li>Il est possible d’ouvrir un portail en appliquant une aura d’eau sur un bouclier de la terre. La personne sous le bouclier est téléportée au moment de l’ouverture du portail si un autre portail est sous le contrôle son équipe. Le bouclier se dissipe à la création du portail.</li>
-                        <li>Pas plus de trois portails ne peuvent être ouvert en même temps par une même équipe</li>
-                        <li>Il n’est pas possible de relier des portails ouvert par des membres d’équipes opposées</li>
+                <div class="liste">
+                    <div class="sort">
+                        <div class="terre">
+                            <h4>Intimidation</h4>
 
-                    </ul>
-            </div>
-            </div>
+                                <em>3 PA / Po 3 / Cd 3</em>
+
+                                <p>Le pacificateur enchante l’aura de sa cible, qui devient intimidateur/2Tr. Toute personne que celle-ci identifie comme un ennemi et qui se trouve à moins de 3 m d’elle pendant que l’intimidation est active ressent un incontrôlable sentiment de panique et reçoit un marqueur de panique sur son aura qui se dissipe après 2Tr. </p>
+
+                                <ul>
+                                    <li>Tant que la cible à sur elle un marqueur de panique actif elle mettra le plus de distance possible entre elle et l’intimidateur et ne peut pas attaquer.</li>
+                                    <li>Cible +1 PM/2Tr</li>
+                                </ul>
+                        </div>
+                    </div>
+
+                        <div class="sort">
+                            <div class="terre">
+                                <h4>Silence</h4>
+
+                                    <em>3 PA / Po 3 / Cd 2</em>
+
+                                    <p>Le pacificateur déstabilise l’aura de sa cible et pose sur elle un marqueur de silence qui se dissipe après 1Tr</p>
+
+                                    <ul><li>Tant que la cible a un marqueur de silence sur elle, elle ne peut plus utiliser la magie. Il perd aussi tout buff, débuff, ou marqueur qu’il possède.</li></ul>
+                            </div>
+                        </div>
+                </div>
+                
+            <h3>Terre / Eau</h3>
+                <div class="liste">
+                    <div class="sort">
+                        <div class="mixte">
+
+
+                            <h4>Portail</h4>
+
+                                <em>4 PA / Po 3 / Cd X <br>X étant le nombre de portail de l’équipe encore ouvert</em>
+
+                                <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée un portail à double entrés.</p>
+
+                                <ul>
+                                    <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
+                                    <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
+                                    <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
+                                    <li>Les familiers ne peuvent pas traverser les portails</li>
+                                    <li>Un portail disparait en cas de contact avec un sort d’écran</li>
+                                    <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
+                                    <li>Les sorts ne traversent pas les portails posés par un membre de l’équipe adverse mais diminue de 1 le nombre de traversées possible par celui-ci. Si le nombre tombe à 0 le portail disparait.</li>
+                                    <li>Il est possible de créer un portail en appliquant une aura de terre sur une prison aqueuse. Le portail appartient à l’équipe de personnage appliquant l’aura. La prison est détruite à la création du portail</li>
+                                    <li>Il est possible d’ouvrir un portail en appliquant une aura d’eau sur un bouclier de la terre. La personne sous le bouclier est téléportée au moment de l’ouverture du portail si un autre portail est sous le contrôle son équipe. Le bouclier se dissipe à la création du portail.</li>
+                                    <li>Pas plus de trois portails ne peuvent être ouvert en même temps par une même équipe</li>
+                                    <li>Il n’est pas possible de relier des portails ouvert par des membres d’équipes opposées</li>
+
+                                </ul>
+                        </div>
+                    </div>
+                </div>
             
             <h3>Eau</h3>
+            <div class="liste">
             <div class="sort">
             <div class="eau">
                 <h4>Marche forcée</h4>
@@ -633,30 +657,33 @@
                             </ul>
                     </div>
                 </div>
+            </div>
                 
             <h3>Eau / Feu</h3>
-            
-            <div class="sort">
-                <div class="mixfe">
-                    <h4>Ecran</h4>
+                <div class="liste">
+                    <div class="sort">
+                        <div class="mixfe">
+                            <h4>Ecran</h4>
 
-                        <em>4 PA / Po 3 / Cd 5</em>
+                                <em>4 PA / Po 3 / Cd 5</em>
 
-                        <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée une brume de magie instable de 3 m de long en ligne qui absorbe toute énergie magique avec laquelle elle entre en contact avant de s’évaporer après 3Tr. La brume étant intangible, il est possible aux objets et aux personne de la traverser. </p>
+                                <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée une brume de magie instable de 3 m de long en ligne qui absorbe toute énergie magique avec laquelle elle entre en contact avant de s’évaporer après 3Tr. La brume étant intangible, il est possible aux objets et aux personne de la traverser. </p>
 
-                        <ul>
-                            <li>Si une personne ou une chose entre en contact avec la brume, ses marqueurs, buffs et débuffs se dissipent tous.</li>
-                            <li>La brume magique peut aussi être produite si une attaque d’élément feu est lancée sur un iceberg, elle fait alors la taille de l’AoE de l’iceberg et dure 1Tr</li>
-                            <li>La brume magique peut aussi être produite si une attaque explosive d’élément feu est lancée sur une prison aqueuse elle fait alors la taille de l’AoE  de l’attaque feu explosive et dure 1Tr si l’attaque ne possède pas d’effet sur la durée, et la durée de l’effet le cas échéant</li>
-                            <li>Un familier entrant en contact avec la brume perd 1D4 PV au moment où il entre en contact avec elle et 1D4-1 PV supplémentaire pour chaque Tr qu’il y passe.</li>
-                            <li>Les sorts ne peuvent pas traverser la brume</li>
-                            <li>Un sort lancé depuis la brume se dissipe instantanément, n’occasionne pas de dégâts, n’occasionne pas d’effet.</li>
-                            <li>Une Prison aqueuse éclate au contact de la brume</li>
-                        </ul>
+                                <ul>
+                                    <li>Si une personne ou une chose entre en contact avec la brume, ses marqueurs, buffs et débuffs se dissipent tous.</li>
+                                    <li>La brume magique peut aussi être produite si une attaque d’élément feu est lancée sur un iceberg, elle fait alors la taille de l’AoE de l’iceberg et dure 1Tr</li>
+                                    <li>La brume magique peut aussi être produite si une attaque explosive d’élément feu est lancée sur une prison aqueuse elle fait alors la taille de l’AoE  de l’attaque feu explosive et dure 1Tr si l’attaque ne possède pas d’effet sur la durée, et la durée de l’effet le cas échéant</li>
+                                    <li>Un familier entrant en contact avec la brume perd 1D4 PV au moment où il entre en contact avec elle et 1D4-1 PV supplémentaire pour chaque Tr qu’il y passe.</li>
+                                    <li>Les sorts ne peuvent pas traverser la brume</li>
+                                    <li>Un sort lancé depuis la brume se dissipe instantanément, n’occasionne pas de dégâts, n’occasionne pas d’effet.</li>
+                                    <li>Une Prison aqueuse éclate au contact de la brume</li>
+                                </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
             
             <h3>Feu</h3>
+            <div class="liste">
             <div class="sort">
                 <div class="feu">
                     <h4>Invisibilité</h4>
@@ -702,6 +729,7 @@
                             <li>-2 PV sur zone/ Tr</li>
                         </ul> 
                 </div>
+            </div>
             </div>
         
         
