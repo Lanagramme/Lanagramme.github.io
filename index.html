@@ -1,0 +1,282 @@
+<!doctype HTML>
+
+<html>
+<head>
+	<meta charser="utf-8"/>	
+	<link rel="stylesheet" type="text/css" href="Book of Rules.css">
+	<title>Vous n'avez pas les bases</title>
+</head>
+
+<body>
+	<header><h1>Book of Rules</h1></header>
+	<nav id="nav">
+		<ul>
+			<li><a href="index.html">Front Page</a></li>
+			<li><a href="Grimoire.html">Book of Spells</a></li>
+			<li><a href="">Characters</a></li>
+			<li></li>
+		</ul>
+	</nav>
+
+	<section id="main">
+	
+		<h2>Explication claire et précise des règles générales du combat</h2>
+        
+        <em>Pointez votre curseur sur mots suivits d'un <span title="Définition disponible ici"><u>asterisk*</u></span> pour obtenir leur définition</em>
+		
+            <article>
+
+                <p>L'affrontement se déroule généralement sur un damier; ses dimentions peuvent varier, mais la taille standard est <strong>7x10</strong> ou <strong>10x14</strong> cases. Au début de la partie les deux équipes définissent leur position de départ sur des bords opposés et placent luers personnages sur les lignes les plus proches de leur bords. Si les joueurs ne sont pas d'accord sur la disposition du plateau (horizontale ou verticale), ils la décident par un <a class href="#coin">COIN</a>.</p>
+
+                <p>Le combat se déroule en tours par tours, chaque équipe effectue une phase d'attaque par tour. La phase d'attaque d'une équipe est considérée comme terminée quand tous ses membres ont effectué un tour d'action.</p>
+
+            </article>
+
+            <article>
+
+                <ol>
+                    <li><a href="#anat_Tr">Anatomie d'un tour d'action</a></li>
+                    <li><a href="#jet">Anatomie d'un jet</a></li>
+                    <li><a href="#crea_perso">Creation De Personanges</a></li>
+                </ol>
+
+            </article>
+
+            <h3 id="anat_Tr">Anatomie d'un Tour d'Action</h3>
+
+                <article>
+
+                <p>Un personnage ne peut se déplacer, utiliser des capacités ou effectuer des réactions que si son nombre de Points de Vie est 
+                    supérieur à <strong>0</strong> . Si le nombre de Points de Vie d'un personnage est inférieur à <strong>Xx(1)</strong>, 
+                <strong>X</strong>étant la valeur de sa statistique de <span title="Constitution">CONST</span> (modificateurs compris) il est déclaré mort. Tant qu'un 
+                personnage n'est pas mort il peut recevoir des soins. Quand un joueur est déclaré mort, son pion quitte le plateau et il ne peut plus
+                influer sur la partie. Une équipe est déclarée comme perdante quand tous ses joueurs sont morts. Quand un joueur passe un tour avec ses 
+                Points de Vie inférieurs à <strong>0</strong> il est déclaré mort.</p>
+
+                 <p>Un tour d'action est divisé en 4 étapes se déroulant dans l'ordre suivant.</p>
+
+                 <h4>Etape 1</h4>
+
+                     <ul>
+                        <li>Le personnage retourne à ses valeur maximums de Points de Mouvement et Points de Vie max.
+                        <li>Le joueur recoit les Bonus et Malus liés aux marqueurs qu'il porte</li>
+                         <li>Le <span title="Temps necessaire avant de relancer le sort"><u>cooldown*</u></span> des sorts est déduit de <strong>1</strong>, si celui-ci atteint <strong>0</strong> le sort peut être à nouveau utilisé.</li>
+                     </ul>
+
+                 <h4>Etape 2</h4>
+
+                     <ul>
+                        <li>Le personnage peut se déplacer d'il le souhaite et s'il lui reste des Points de Mouvement. Les personnages ne peuvent se déplacer que d'une case par Points de Mouvement dépensé.</li>
+                        <li>Les joueurs ne peuvent pas se dépalcer en diagonale</li>
+                        <li>Le joueur peut effectuer une action</li>
+                            <ol>
+                                <li>Le joueur dépense  le coût de l'action</li>
+                                <li>Le joueur effectue son <a href="#jet">jet</a> de statistique.</li>
+                                <li>Si son action cible un autre joueur, celui ci peut effectuer une réaction</li>
+                                    <ol>
+                                        <li>Le joueur qui réagit effectue son <span class=""><a href="#jet">jet</a></span></li>
+                                        <li>La réaction se <span class="">résoud</span></li>
+                                    </ol>
+                                <li>Laction se résoud</li>
+                                <li>Les dommages sont répartis si besoin</li>
+                            </ol>	
+                    </ul>
+
+
+                 <h4>Etape 3</h4>
+
+                     <ul>
+                        <li>Les capacités actives pour un nombre de tours limités dont le nombre de tours d'effet est atteint cessent leur effet.</li>
+                        <li>Les marqueurs actifs pour un nombre de tours limités dont le nombre de tours d'activité est atteint se dissipent</li>
+                    </ul>
+
+                <h4>Etape 4</h4>
+
+                    <ul>
+                        <li>Le personnage se tourne dans une direction</li>
+                    </ul>
+
+                    <P class="">Fin du tour d'action</P>
+                </article>
+
+		
+        <h2 id="jet">Anatomie d'un jet</h2>
+        
+            <article>
+			
+                <p>Le jet est l'action de lancer un ou plusieurs dés. Les jets seront mentionnés par la suite en utilisant la notation <strong>"XDY"</strong>, où <strong>X</strong> représente le nombre de dés lancés et <strong>Y</strong> le nombre de faces du dé. Par exemple un jet de dé à <strong>6</strong> faces sera noté <strong>"1D6"</strong> et un jet de deux dés à <strong>4</strong> faces sera noté <strong>"2D4"</strong>. Si un jet est effectué sur plusieurs dés, le score du jet est égal à la somme du score de chaque dé. Par exemple si un jet sur <strong>2D4</strong> donne comme résultats <strong>"4"</strong> et <strong>"1"</strong>, le score du jet est <strong>"5"</strong>.</p>
+
+			<h3 id>Les différents jets</h3>
+
+                <h4>Jets statistiques</h4>
+
+                    <p>Les jets statistique se font sur <strong>1D20</strong> et auquel le joueur ajoute les modificateurs* du personnage réalisant l'action <strong>(modificateur <span title="statistique">stat</span> + bonus + malus + modificateurs de classe)</strong></p>
+
+                    <ul>
+                        <li>Si le résultat du jet après l'application des modificateurs est supérieur à <strong>10</strong> le joueur réussit son action</li>
+                        <li>Si le résultat du jet après l'application des modificateurs est inférieur à <strong>10</strong> le joueur échoue son action</li>
+                    </ul>
+
+                    <p>Par exemple, si "Antoine" veut lancer une attaque magique, il fait un jet d'<strong title="Esprit">ESP</strong> : </p>
+
+                    <ul>
+                        <li>Il lance <strong>1D20</strong> et obtient <span class="">"9"</span></li>
+                        <li>Antoine à <span class="">6 en</span> <span class="">ESP</span>, il ajoute donc son modificateur d'<strong title="Esprit">ESP +2</strong> au résultat, son<span class="">"9"</span> deviennent un <span class="">"11</span></li>
+                        <li>Sa classe ne lui octroie pas de bonus d’<span class="">ESP</span> son jet reste un <span class="">"11"</span></li>
+                        <li>L'action est donc une réussite et Antoine peut lancer son sort</li>
+                    </ul>
+
+			    <h4>Jets critiques</h4>
+
+                    <p>Si le résultat d’un jet avant l'application des modificateurs est égal à <span class="">20</span> le joueur fait une <span class="">réussite critique*</span>,</p>
+                    <p>Si le résultat d’un jet avant l'application des modificateurs est égal à <span class="">1</span> le joueur fait un échec critique*.</p>
+                    <p>En cas de réussite critique le joueur reçoit un bonus en fonction de l'action qu'il cherchait à effectuer</p>
+
+                    <ul>
+                        <li>+2 DMG s'il voulait attaquer</li>
+                        <li>+2 Points de Vie s'il voulait réaliser un soin</li>
+                    </ul>
+
+                    <p>En cas d'échec critique le joueur reçoit un malus en fonction de l'action qu'il cherchait à effectuer</p>
+
+                    <ul>
+                        <li><span class=""><a href="#coin>"COIN></a> .DMG</span> <a class="" href="">auto-infligés*</a> s'il voulait réaliser un soin</li>
+                        <li>Le jet de dégât de l'attaque qu'il voulait effectuer divisés par <span class="">2</span> et arrondie au supérieur en <span class="">DMG</span> <a class="" href="">auto-infligés*</a> s'il voulait attaquer</li>
+                    </ul>
+
+                <h4 id="coin">Coin</h4>
+
+                    <p>Dans le cas ou au lieu d'un lancer de dé la description d'une action indique COIN, le joueur tire à pile ou face</p>
+
+                    <ul>
+                        <li>Pile vaut <span class="">1</span></li>
+                        <li>Face vaut <span class="">2</span></li>
+                    </ul>
+
+                    <p>S'il ne possède pas de pièce à disposition le joueur lance un dé (peu importe le nombre de face);</p>
+
+                    <ul>
+                        <li>si le résultat est impair le jet vaut à 1 <span class="">2</span></li>
+                        <li>si le résultat est pair le jet vaut à 2 <span class="">2</span></li>
+                    </ul>
+				
+            </article>
+		
+	   <section>
+		<h2 id="crea_perso">Creation De Personanges</h2>
+        
+		<article>
+			<p>Il y a trois éléments à définir lors de la création d’un personnage</p>
+
+			<p>Une affinité élémentaire qui définit l'élément avec lequel le joueur aura une facilité.<br/>En jeu, celui-ci recevra un modificateur de +<a class href="#coin">COIN</a>* au DMG et aux soins si le sort qui les provoque est du même élément que son affinité. Il aura aussi un modificateur de –<a class href="#coin">COIN</a> aux DMG reçus par un sort de l'élément avec lequel il a une affinité et +1 aux DMG reçus par un sort de l'élément avec lequel il est opposé</p>
+
+			<p>Une table de statistiques qui définit ses forces et faiblesses</p>
+
+			<p>Une classe qui définit les sorts et l'équipement qu'il peut utiliser</p>
+
+			<h3>Les éléments</h3>
+
+			<p>Le joueur qui veut créer son personnage commencera par définir l'affinité élémentaire de celui-ci avec <span class="">1D6</span></p>
+
+			<ul>
+				<li>s'il obtient un <span class="">1</span> ou un <span class="">4</span> son affinité est la terre et son opposé est le feu</li>
+				<li>s'il obtient un <span class="">2</span> ou un <span class="">5</span> son affinité est le feu et son opposé est l'eau</li>
+				<li>s'il obtient un <span class="">3</span> ou un <span class="">6</span> son affinité est l'eau et son opposé est la terre</li>
+			</ul>
+
+			<p class="">Si le lanceur est de la même affinité élémentaire que la capacité qu'il tente d'utiliser celle-ci reçoit un bonus de +1 à son effet.</p>
+
+			<p>Par exemple "Antoine" (encore lui) lance une boule de feu.</p>
+
+			<ul>
+				<li>il réussit son <a href="#jet">jet</a> de statistique</li>
+				<li>Daprès la description de la capacité, elle fait <span class="">2D6 -2 DMG.</li>
+				<li>Il fait son <a href="#jet">jet</a> et obtient <span class="">"4"</span> et <span class="">"3"</span>, le résultat de son <a href="#jet">jet</a> vaut donc <span class="">"7"</span> auquel on soustrait <span class="">2</span> comme indiqué dans la description donc <span class="">"5"</span></li>
+				<li>Antoine est d'affinité élémentaire feu il ajoute donc <span class="">+1</span> à son score de dégâts qui passe donc de <span class="">"5"</span> à <span class="">"6"</span></li>
+					<li>La boule de feu occasionnera donc <span class="">6 DMG</span></li>
+			</ul>
+
+            <h3>La Table Statistique</h3>
+
+    			<p>Ensuite il lancera <span class="">1D6</span> pour définir la valeur chaque statistique du personnage. Les statistiques du personnage sont au nombre de 5 :</p>
+
+    			<ol>
+    				<li>Force</li>
+    				<li>Chance</li>
+    				<li>Charisme</li>
+    				<li>Esprit</li>
+    				<li>Agilité</li>
+    			</ol>
+
+                <p>Le joueur personnage recevra une statistique de <span title="Constitution">Constitution</span> en fonction de sa Classe. En fonction de la valeur d'une statistique le personnage peut recevoir des modificateurs à ses <a href="#jet">jets</a> de cette statistique, comme défini dans la table des forces et faiblesses. Le modificateur ne s'applique qu'à la statistique possédant le score.</p>	
+
+    <!--- insérer la table des forces et faiblesses--->  
+
+                <p><em>Si le joueur n'est pas satisfait de son personnage il a une unique chance de relancer TOUTES les statistiques, mais sera obligé de garder le personnage ainsi obtenu quelque soit ses statistiques.</em></p>
+                
+                <p>Le trait génie octroie une capacité passive au personnage</p>
+                
+                <h4>Génie de Spirituel</h4>
+                    <p><span classe="">Vigilance : </span>Le personange peut réagir aux attaques venant de dos.</p>
+                    
+                    <h4>Génie Charismatique</h4>
+                    <p><span classe="">Second Souffle : </span>Si une attaque fait tomber les Points de Vie à <span class="">0</span>, il peut une fois par combat regagner <span class="">1D6 Points de Vie</span>. Les fois suivantes il fera un <span classe ="jet">jet</span> de <span classe=""><span classe="">CHA</span>-X</span>, <span classe="">X</span> étant le nombre de fois où il a utilisé Second souffle durant le combat.</p>
+                
+                <h4>Génie de la Force</h4>
+                    <p><span classe="">Maîtrise de la Parade</span> : <span classe="">-2DMG</span> reçus à chaque attaque parée.<br>Si le joueur appartient à la classe gardien il renvoie <span classe="">1D6 MDG CàC</span> à chaque réussite critique de son jet de Parade</p>
+                    
+                    <ul><li>Si le joueur n'appartient pas à la classe Gardien il acquiert la réactiobn Parade et un modificateur de <span class="">-2</span> à ses <span class="jet">jets</span> de Parade.</li></ul>
+                
+                <h4>Génie Agile</h4>
+                    <p><span classe="">Maîtrise de l'esquive :</span> Le joueur se déplace d'une case dans la direction opposée à chaque esquive physique ou <span class="">CàC</span>, et sur une case adjascente pour les attaques à distance</p>
+                    
+                    <ul>
+                        <li>Si le joueur appartient à la classe Zélote, un cas de réussite vritique au jet d'esquive, le personnage ayant lancé l'attaque recule d'une case s'il se trouve sur une case adjascente à la case de départ du personnage esquivant.</li>
+                        <li>Il n'est pas possible d'éjecter un personnage du plateau, heurter le bord du plateau n'occasionne pas de dégats</li>
+                        <li>Si le joueur n'appartient pas à la classe Zélote il acquiert la réaction Esquive et un modificateur de <span class="">-2</span> à ses ejts d'Esquive.</li>
+                    </ul>
+                
+                <h4>Génie Chanceux</h4>
+                    <p><span classe="">Lucky Star : </span>Le joueur peut relancer <span class="">2</span> de ses <span class="jet">jets</span> au cour du combat.</p>
+
+            <h3>III. Le Joueur Choisit la Classe de son Personnage</h3>
+            
+                <p>La description des différentes classes est disponible dans le grimoire. La classe du joueur lui applique un modificateur sur chaque statistique. Le modificateur ne modifie pas la statistique naturelle du joueur mais s'ajoute aux modificateurs qu'il possède déja.</p>
+                
+                <p>Les joueurs disposent chacun de 4 Emplacements de sorts. Ils peuvent choisir autant de sorts de leur classe qu'ils ont d'emplacements libres, tous éléments confondus, et un sort <em>de leur élément</em> appartenant à une autre classe. Ils ne peuvent pas apprendre de passifs, de réactions, ou de sorts neutres d'une autre classe. si un personnage veut apprendre un deuxième sort d'une autre classe, il lui en coutera deux emplacements de sorts.</p>
+            
+            <h3>IV. Sinon</h3>
+
+                <p>Si le joueur le choisis, il peut décider lui-même de la répartition des points statistiques. Dans ce cas il devra répartir <em>14</em> points entre chacunes de ses caractéristiques, le nombre de points de chaque caractéristique doit être compris entre 1 et 6.</p>
+            
+        <h2>Anatomie d'un Sort</h2>
+            
+            <p>Prenons comme exemple ce sort :</p>
+            
+            <div class="">
+                <h4>Souffle incandescent</h4>
+            
+                    <em>6 PV / Cone +3 / Cd 1</em>
+            
+                    <p>Le familier crache des flammes sur toutes les cibles à portée</p>
+            
+                    <ul><li>DMG 1D6 ; 1D6-1 ; D6-2 </li></ul>
+            </div>
+
+            <ol>
+                <li>La première ligne indique le nom du sort</li>
+                <li>La seconde indique les circonstances nécessaires à la lancée du sort</li>
+                <li>La suite est une description des effets du sort</li>
+            </ol>
+            
+            <p><span classe="">Concentrons-nous sur les circonstances.</span></p>
+            
+            <p><em>La première information est toujours le coût du sort pour le lanceur. </em>Un sort peut coûter des Points de Vie, des <em>PA</em> ou des Points de Mouvement. Dans tous les cas, le joueur ne peut utiliser ce sort que si le nombre de points qu'il lui reste dans la ressource est supérieur à 0. Une fois le sort utilisé, le nombre de points de ressource utilisés est soustrait au nombre de points restants au personnage.</p>
+            
+    
+        </article>
+        </section>
+	</section>
+
+</body>
+</html>
