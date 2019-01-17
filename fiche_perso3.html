@@ -49,13 +49,99 @@
             <section>
                 <h2>Grimoire</h2>
                 
-                    <div class="sort">
+                    <div class="liste">
+                       
+                       <div class="sort">
+                            <h4>Invocation</h4>
+
+                                <em>4 <span title="Point d'Action">PA*</span> + COIN PV / <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 5</em>
+
+                                <p>L’invocateur  sacrifie une part de son énergie vitale pour invoquer son familier</p>
+
+                                <ul>
+                                    <li>Si l’invocateur a moins de 5 PV il ne sacrifie pas de PV pour l’invocation.</li>
+                                    <li>Les marqueurs appliqués au familier se reportent aussi directement sur son invocateur et tous les familiers que celui-ci contrôle, mais se dissolvent à la mort du familier sur qui il a été posé.</li>
+                                    <li>Dès qu’il dépense des PA le familier perd autant de PV.</li>
+                                    <li>Le familier possède 10 PV + le modificateur ESP de son invocateur</li>
+                                    <li>Le familier possède autant de PA max et de <span title="Points de Mouvements">PM*</span> max qu’en possède son invocateur au moment de sa création</li>
+                                </ul>
+                        </div>
                         
+                        <div class="sort">
+                            <div class="mixte">
+
+
+                                <h4>Portail</h4>
+
+                                    <em>4 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 3 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> X <br>X étant le nombre de portail de l’équipe encore ouvert</em>
+
+                                    <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée un portail à double entrés.</p>
+
+                                    <ul>
+                                        <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
+                                        <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
+                                        <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
+                                        <li>Les familiers ne peuvent pas traverser les portails</li>
+                                        <li>Un portail disparait en cas de contact avec un sort d’écran</li>
+                                        <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
+                                        <li>Les sorts ne traversent pas les portails posés par un membre de l’équipe adverse mais diminue de 1 le nombre de traversées possible par celui-ci. Si le nombre tombe à 0 le portail disparait.</li>
+                                        <li>Il est possible de créer un portail en appliquant une aura de terre sur une prison aqueuse. Le portail appartient à l’équipe de personnage appliquant l’aura. La prison est détruite à la création du portail</li>
+                                        <li>Il est possible d’ouvrir un portail en appliquant une aura d’eau sur un bouclier de la terre. La personne sous le bouclier est téléportée au moment de l’ouverture du portail si un autre portail est sous le contrôle son équipe. Le bouclier se dissipe à la création du portail.</li>
+                                        <li>Pas plus de trois portails ne peuvent être ouvert en même temps par une même équipe</li>
+                                        <li>Il n’est pas possible de relier des portails ouvert par des membres d’équipes opposées</li>
+
+                                    </ul>
+                            </div>
+                        </div>
+                            <div class="sort">
+                                <h4>Hyperactivité</h4>
+
+                                    <em>3 PA / Po 4 sans ligne de vue</em>
+
+                                    <p>La cible gagne 2 PA max / 2Tr</p>
+
+                                    <ul>
+                                        <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
+
+                                    </ul>
+                            </div>
+                        </div>
                         
+                        <h3>Sorts du familier de la Terre</h3>
+                        <div class="liste">
+                            <div class="sort">
+                                <div class="terre">
+                                    <h4>Constriction</h4>
+
+                                        <em>3 PV / <span title="Portée en mètres">Po*</span>3</em>
+
+                                        <p>Des racines sorte de terre et immobilisent la cible</p>
+
+                                        <ul><li><span title="Points de Mouvements">PM*</span> = 0 / 3 TR</li></ul>
+                                </div>
+                            </div>
+                            
+                            <div class="sort">
+                                <div class="terre">
+                                    <h4>Bénédiction</h4>
+
+                                        <em>5 PV / <span title="Portée en mètres">Po*</span> 4</em>
+
+                                        <p>Le familier transfert 5 PV a une cible</p>
+                                </div>
+                            </div>
+
+                            <div class="sort">
+                                <div class="terre">
+                                    <h4>Sommeil forcé</h4>
+
+                                        <em>5 PV / Cone +3</em>
+
+                                        <p>Le familier souffle un gaz soporifique qui incapacite toute cible à portée jusqu’à ce qu’elle réussisse <a href="index.html#jet">1D20</a> ESP avec un modificateur - 2</p>
+                                </div>
+                            </div>
+                        </div>
                         
-                        
-                        
-                    </div>
 
 
             </section>
