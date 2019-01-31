@@ -12,6 +12,7 @@ header{
     left: 0;
     background-color: teal;
 }
+
 h1{ 
     text-align: center;
 }
@@ -75,11 +76,11 @@ nav{
 
 .def2{ margin-left: 60px; margin-top: 34px; }
 
-p{
+/*p{
     margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
-}
+}*/
 
 ul{ margin-top: 0px; }
 
@@ -118,7 +119,7 @@ ul{ margin-top: 0px; }
 
 .tab{ margin-right: 20px; }
 
-::-webkit-scrollbar
+/*::-webkit-scrollbar
     {
         width: 5px
     }
@@ -132,7 +133,7 @@ ul{ margin-top: 0px; }
 ::-webkit-scrollbar-thumb:hover
 {
     background: #00dcff95;
-}
+}*/
 
 .scroll
 {

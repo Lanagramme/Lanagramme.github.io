@@ -1,0 +1,80 @@
+#mani {
+    float: left; 
+    width: 800px;
+    background-color: aliceblue;
+}
+
+#navi {
+    float: left; 
+    width: 20%;
+    background-color: beige;
+    width: 280px;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+body {padding-top: 30px;}
+
+nav>div>ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+li {
+    list-style-type: none;
+    padding-top: 2px
+}
+
+nav{
+    padding-left: 40px;
+}
+
+#fdp{
+   padding-left: 20px; 
+}
+
+nav>div>h3,h4{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    line-height: ;
+}
+
+
+
+.descri{
+    float: left; 
+    width: 90%;
+}
+
+.ongtop{
+    display: inline-flex;
+    float: left;
+}
+
+.ongtop>p{
+    width: 100px; 
+    height: 30px; 
+    margin: 10px;
+    background-color: aqua;
+}
+
+.ongside{
+    float: right; 
+    margin-top: 100px;
+    float: left;
+}
+
+.ongside>p{
+    width: 30px; 
+    height: 100px; 
+    margin: 10px;
+    background-color: aqua;
+}
+
+#a,#b,#c,#d,#a2,#b2,#c2,#d2{
+    padding-left: 10px    
+}
+
+.switch{display: none;}
+
+.neutre{background-color: white;}

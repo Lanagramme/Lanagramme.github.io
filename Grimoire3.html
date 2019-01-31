@@ -3,7 +3,6 @@
     <head>
         <meta charser="utf-8"/> 
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="style1.css">
         <title>Vous n'avez pas les bases</title>
     </head>
 
@@ -12,10 +11,10 @@
         
         <nav id="vigation">
            <div class="li2">
-               <div><h2><a onclick="gard()">Gardien</a></h2></div>
-               <div><h2><a onclick="zelo()">Zélote</a></h2></div>
-               <div><h2><a onclick="invo()">Invocateur</a></h2></div>
-               <div><h2><a onclick="paci()">Pacificateur</a></h2></div>
+               <div><h2><a href="#gard">Gardien</a></h2></div>
+               <div><h2><a href="#zelo">Zélote</a></h2></div>
+               <div><h2><a href="#invo">Invocateur</a></h2></div>
+               <div><h2><a href="#paci">Pacificateur</a></h2></div>
             </div>
         </nav>
 
@@ -40,10 +39,9 @@
 
         <section id="main">
            
-            <section id="gard" style="display: none">
-            	<section>
+            <section>
                 <article>
-        <h2 >Gardien</h2>
+        <h2 id="gard">Gardien</h2>
 
                         <p>Les gardiens sont les maitres de la manipulation de leur aura. Leurs techniques de prédilections s’articulent autour de l’absorption de l’énergie qui les entoure afin de la mélanger à la leur pour la renforcer.<br> Dans un groupe, le gardien est la première ligne de défense, qui protège ses alliers grace à sa grande résistance physique, mais fait difficilement de gros dégats.</p>  
                 </article>
@@ -196,12 +194,10 @@
                 </article>
                 <a href="#top">.haut de page</a>
             </section>
-        </section>
             
             
-        <section id="zelo" style="display: none">
-           	<section>
-        <h2>Zélote</h2>
+           <section>
+        <h2 id="zelo">Zélote</h2>
           
                 <p>Opposé direct du gardien, le zélote applique l’énergie de son aura à celle naturellement présente dans l’air qui l’entoure pour la sur-activer afin de déchainer une puissance dévastatrice.<br>Très puissang grace à ses dégats magique à courte et semi courte distance et sa mobilité, il reste cependant faible physiquement et ne peut pas résister à des assauts trop violents.</p>
 
@@ -335,12 +331,10 @@
 
                 <a href="#top">.haut de page</a>
             </section>
-        </section>
               
-            <section id="invo"  style="display: none">
-            	<section>
+            <section>
                
-        <h2>Invocateur</h2>
+        <h2 id="invo">Invocateur</h2>
            
                 <p>Les invocateur sont des mages ayant développé les capacités de leur esprit à un point tel que celui-ci peut, pour un temps limité, dépasser les contraintes du monde physique. Leur plus belle accomplissement est le sort d’invocation leur ayant valu ce nom. Par son intermédiaire ils peuvent matérialiser leur esprit combatif sous la forme d’une créature d'aura qui prend forme physique en dévorant une partie de son énergie magique. Le familier agit comme une extension de son invocateur sous le contrôle de ce dernier, lui octroyant une portée quasi illimité tout en le gardant à l'abri des ennemis. Cependant les familiers ne sont pas immortels et s'ils sont la ligne principale de défense et d'attaque de leur maitres, s'ils meurent ou si un ennemi passe leur défense, celui-ci est laissé totalement vulnérable.</p>
 
@@ -570,11 +564,9 @@
                         </div>
                     <a href="#top">.haut de page</a>
             </section>
-        </section>
                    
-            <section id="paci"  style="display: none">
-            	<section>
-         <h2>Pacificateur</h2>
+            <section>
+         <h2 id="paci">Pacificateur</h2>
            
                 <p>Les Pacificateurs sont des maitres de la séparation de l’aura : ils concentrent et compressent leur énergie magique qu’ils projettent ensuite loin de leur corps. Couplée à leur sensibilité accrue qui leur permet de lire avec une grande acuité les courants naturels d’énergie dans l’environnement, ils sont capable de perturber ce flux jusqu’à le déstabiliser pour en prendre le contrôle sur une zone limitée. Même s'il ne fait pas de dégats direct, son pannel de compétences lui donne le controle du terrain. Il peut à la fois tirer ses coéquipiers de situations difficile, et briser la formation ennemie. Versatile, il sait vite se rendre indispensable sur un champ de abtaille</p>  
 
@@ -803,41 +795,7 @@
                     </div>
             <a href="#top">.haut de page</a>
             </section>
-            </section>
         </section>
-    	
-
-
-
-
-
-    	<script>
-    		function gard(){
-    			document.getElementById('gard').style.display = 'block';
-    			document.getElementById('zelo').style.display = 'none';
-    			document.getElementById('invo').style.display = 'none';
-    			document.getElementById('paci').style.display = 'none';
-    		}
-
-    		function zelo(){
-    			document.getElementById('gard').style.display = 'none';
-    			document.getElementById('zelo').style.display = 'block';
-    			document.getElementById('invo').style.display = 'none';
-    			document.getElementById('paci').style.display = 'none';
-    		}
-
-    		function invo(){
-    			document.getElementById('gard').style.display = 'none';
-    			document.getElementById('zelo').style.display = 'none';
-    			document.getElementById('invo').style.display = 'block';
-    			document.getElementById('paci').style.display = 'none';
-    		}
-
-    		function paci(){
-    			document.getElementById('gard').style.display = 'none';
-    			document.getElementById('zelo').style.display = 'none';
-    			document.getElementById('invo').style.display = 'none';
-    			document.getElementById('paci').style.display = 'block';
-    		}
-    	</script>
     </body>
+</html>
+
