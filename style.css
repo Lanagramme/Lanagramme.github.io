@@ -1,7 +1,7 @@
-body{
+body{/*
     
     background-image: url(img/background.png);
-    background-size: 100%;
+    background-size: 100%;*/
 }
 
 
@@ -149,3 +149,4 @@ ul{ margin-top: 0px; }
     margin-top: 0px;
 }
 
+td{text-align: center;}
