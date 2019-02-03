@@ -28,7 +28,7 @@
   }
 }
 
-.grosButton.active .button {
+.button {
     padding: 8px;
     margin-left: 20px;
     background-color: #fff; 
@@ -54,5 +54,6 @@ footer{
   padding: 15px;
 }
 
-a{display: block;}
-b{display: none;}
+#a{display: none;}
+
+#b{display: none;}
