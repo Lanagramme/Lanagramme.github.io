@@ -115,11 +115,11 @@ footer{
   padding: 15px;
 }
 
-
 .boite{
     display: inline-flex;
     width: 100%;
     text-align: center;
+    padding-bottom: 6px;
     border-bottom: 1px solid black;
 }
 
