@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald|Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+
+<body>
+    <header>
+        <h1>Fiches de personnages</h1>
+    </header>
+
+    <div id="nav" class="col-3">
+       <h3 class="grosButton" onclick="a('a', 'menu')">Classes</h3>
+       <div id="a" class="menu">
+            <p class="button"><a>Gardien</a></p>
+            <p class="button"><a>Zelote</a></p>
+            <p class="button"><a>Invocateur</a></p>
+            <p class="button"><a>Pacificateur</a></p>
+        </div>
+
+       <h3 class="grosButton" onclick="a('b', 'menu')">Personnages</h3>
+       <div id="b" class="menu">
+            <p class="button"><a href="FicheNeithania.html">Neithania</a></p>
+            <p class="button"><a href="FicheNirvelly.html">Nirvelly</a></p>
+            <p class="button"><a href="LeFaucheur.html">Lefaucheur</a></p>
+            <p class="button"><a href="FicheTheBoss.html">Theboss</a></p>
+        </div>
+    </div>
+<div id="main" class="colf-7">
+        <div class="colf-6 block block-h1">
+            <h2>Nirvelly</h2>
+            <p style="float: left;"><strong>Classe</strong> : Invocateur</p>
+            <p style="float: right;"><strong>Element </strong>: Terre</p>
+
+        </div>
+
+        <div class="colf-4 block block-h1" style="clear: both;">
+            <p><strong>Modificateurs</strong></p>
+            <div class="boite">
+                <div style="width: 60px;"><p><strong>FOR</strong><br>3<br>-1</p></div>
+
+                <div style="width: 60px;"><p><strong>ESP</strong><br>2<br>-1</p></div>
+
+                <div style="width: 60px;"><p><strong>AGI</strong><br>5<br>+1</p></div>
+
+                <div style="width: 60px;"><p><strong>CHA</strong><br>1<br>+11</p></div>
+
+                <div style="width: 60px;"><p><strong>CHAR</strong><br>3<br>+1</p></div>
+            </div>
+
+
+        </div>
+
+        <div class="colf-2 block block-h1">
+           <p><strong>Stats</strong> </p>
+            <ul>
+                <li>PV : 11</li>
+                <li>PA : 6</li>
+                <li>PM : 3</li>
+            </ul>
+        </div>
+
+	<div class="colf-6 block block-cf">
+            <p><strong>Equipement</strong></p>
+
+            <h3 class="element">Armes</h3>
+            
+            <div class="skillneutre" id="li">
+                <div onclick="c('li2', 'li', 1)">
+                    <h4 style="margin: 0px;" >Lance <i>Inante</i></h4>
+                    <em>4 PA/CaC --- 6 PA/Po 2 Ligne</em>
+                </div>
+                
+                <div id="li2" class="skil">
+                    <p>Si vous la lancez elle ne reviens pas. Alors pourquoi vous avez à ce point envie d'essayer ?</p>
+        
+                    <ul>
+                        <li>1D4 DMG</li>
+                        <li>1D4 DMG-1</li>
+                    </ul>
+                </div>
+            </div>            
+
+
+            <div class="skillneutre" id="grim">
+                <h4 style="margin: 0px;" onclick="c('grim2', 'grim', 1)">Grimmoire de débutant</h4>
+
+
+                <p id="grim2" class="skil">Un puissant artéfact magique qui permet à son porteur de lancer des sorts bien supérieur à ce dont il est réellement capable en se nourissant de son énergie vitale.<br><br><em>Il vous tuera en 24h.</em></p>
+            </div>		
+
+
+            <h3 class="element">Armure</h3>
+	</div>
+
+	<div class="colf-6 block block-cf">
+		<p style="clear: both;"><strong>inventaire</strong></p>
+	</div>
+
+	<div class="colf-6 block block-cf">
+		<p><strong>SKIlS</strong></p>
+
+		<h3 class="element">Passifs</h3>
+
+            <div class="skillneutre" id="rpl">
+
+                <h4 style="margin: 0px;" onclick="c('rpl2', 'rpl', 1)">Rappel</h4>
+
+                <p id="rpl2" class="skil">L’invocateur peut désinvoquer son familier contre  <strong>X-Y PV, X</strong> étant le nombre de <strong>PV</strong> restant au familier et <strong>Y</strong> le nombre de <strong>PA</strong> restant à l’invocateur. Si le nombre de point d’action de l’invocateur est supérieur au nombre de points de vie du familier il récupère <strong>X PV</strong></p>
+
+            </div>
+        
+		<h3 class="element">Neutres</h3>
+
+            <div class="skillneutre" id="invo">
+
+                <div onclick="c('invo2', 'invo', 1)">
+                    <h4 style="margin: 0px;" >Invocation</h4>
+
+                    <em>4 <span title="Point d'Action">PA*</span>+COIN PV/ <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 5</em>
+                </div>
+                <div id="invo2" class="skil">
+                    <p>L’invocateur  sacrifie une part de son énergie vitale pour invoquer son familier</p>
+
+                    <ul>
+                        <li>Si l’invocateur a moins de 5 PV il ne sacrifie pas de PV pour l’invocation.</li>
+                        <li>Les marqueurs appliqués au familier se reportent aussi directement sur son invocateur et tous les familiers que celui-ci contrôle, mais se dissolvent à la mort du familier sur qui il a été posé.</li>
+                        <li>Dès qu’il dépense des PA le familier perd autant de PV.</li>
+                        <li>Le familier possède 10 PV + le modificateur ESP de son invocateur</li>
+                        <li>Le familier possède autant de PA max et de <span title="Points de Mouvements">PM*</span> max qu’en possède son invocateur au moment de sa création</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="skillneutre" id="hype">
+
+                <div onclick="c('hype2', 'hype', 1)">
+                    <h4 style="margin: 0px;" >Hyperactivité</h4>
+
+                    <em>3 PA / Po 4 sans ligne de vue</em>
+                </div>
+                <div id="hype2" class="skil">
+                    <p>La cible gagne 2 PA max / 2Tr</p>
+
+                    <ul>
+                        <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="colf-6 block block-cf">
+            
+		    <p><strong>SKIlS DU FAMILIER DE NIRVELLY</strong></p>
+		    
+                <h3 class="element">Terre</h3>
+                
+                <div class="skillterre" id="stop">
+                    <div onclick="c('stop2', 'stop', 3)">
+                        <h4 style="margin: 0px;" >Constriction</h4>
+
+                        <em>3 PV / <span title="Portée en mètres">Po*</span>3</em>
+                    </div>
+                    <div id="stop2" class="skil">
+                        <p>Des racines sorte de terre et immobilisent la cible</p>
+                        <ul><li><span title="Points de Mouvements">PM*</span> = 0 / 3 TR</li></ul>
+                    </div>
+                </div>
+
+                <div class="skillterre" id="ben">
+                    <div onclick="c('ben2', 'ben', 3)">
+                        <h4 style="margin: 0px;" >Bénédiction</h4>
+                        <em>5 PV / <span title="Portée en mètres">Po*</span> 2</em>
+                    </div>
+
+                    <div id="ben2" class="skil">
+                        <p>Le familier transfert 5 PV a une cible</p>
+                    </div>
+                </div>
+
+                <div class="skillterre" id="dor">
+                    <div onclick="c('dor2', 'dor', 3)">
+                        <h4 style="margin: 0px;" >Sommeil forcé</h4>
+                        <em>5 PV / Po2</em>
+                    </div>
+
+                    <div id="dor2" class="skil">
+                        <p>Le familier souffle un gaz soporifique qui incapacite toute cible à portée jusqu’à ce qu’elle réussisse <a href="index.html#jet">1D20</a> ESP avec un modificateur - 2</p>
+                    </div>
+                </div>   
+        </div>
+            
+	</div>
+        <script>
+
+            var button = 0;
+            
+            function a(lien, menu)
+            {
+                let elmt = document.getElementById(lien);
+
+                if (button == lien)  { 
+                    elmt.style.display = 'none';
+                    
+                    button = 0;
+                }
+                else {
+                    let x = document.getElementsByClassName(menu);
+                    
+                    for (i = 0; i < x.length; i++)
+                    { x[i].style.display = 'none';}
+                    
+                    elmt.style.display = 'block';
+                    
+                    button = lien;
+                }   
+            }
+            
+            function b(lien, menu)
+            {
+                let elmt = document.getElementById(lien);
+                let hub = document.getElementById(menu);
+
+                if (elmt.style.display == 'none')
+                    { elmt.style.display = 'block';
+                    hub.className = 'skillneutreopen'}
+                else {elmt.style.display = 'none';
+                    hub.className = 'skillneutre';}
+            }
+            
+            function c(lien, menu, mgk)
+            {
+                let elmt = document.getElementById(lien);
+                let hub = document.getElementById(menu);
+                
+                switch (mgk){
+                    case 2:
+                        if (elmt.style.display == 'none')
+                            { elmt.style.display = 'block';
+                            hub.className = 'skilleauopen'}
+                        else {elmt.style.display = 'none';
+                            hub.className = 'skilleau';}
+                        break;
+                        
+                    case 3:
+                        if (elmt.style.display == 'none')
+                            { elmt.style.display = 'block';
+                            hub.className = 'skillterreopen'}
+                        else {elmt.style.display = 'none';
+                            hub.className = 'skillterre';}
+                        break;
+                        
+                    case 4:
+                        if (elmt.style.display == 'none')
+                            { elmt.style.display = 'block';
+                            hub.className = 'skillfeuopen'}
+                        else {elmt.style.display = 'none';
+                            hub.className = 'skillfeu';}
+                        break;  
+                    case 1:
+                        if (elmt.style.display == 'none')
+                            { elmt.style.display = 'block';
+                            hub.className = 'skillneutreopen'}
+                        else {elmt.style.display = 'none';
+                            hub.className = 'skillneutre';}
+                        break;
+                }
+                
+            }          
+
+        </script>
+
+	
+</body>
+</html>
