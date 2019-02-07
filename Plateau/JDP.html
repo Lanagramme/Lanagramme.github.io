@@ -5,22 +5,63 @@
     <link rel="stylesheet" type="text/css" href="JDP.css">
     <meta charset="UTF-8">
     <title>Document</title>
+    <script>
+        
+
     
-	<script src="../a.js"></script>
+        function g(a, l1, l2, lo)
+        {
+            var grille = document.getElementsByClassName('block');
+            
+            for (i=0 ; i < grille.length ; i++)
+                {grille[i].style.backgroundColor = '#f1f3f5';}
+            
+            grille[a].style.backgroundColor = 'red';
+            
+            if(a - 1 >= l1)
+                {grille[a - 1].style.backgroundColor = 'red';}
+            
+            if(a + 1 <= l2)
+                {grille[a + 1].style.backgroundColor = 'red';}
+            
+            if(a + lo <= 15)
+                {grille[a + 4].style.backgroundColor = 'red';}
+            
+            if(a - lo >= 0)
+                {grille[a - 4].style.backgroundColor = 'red';}
+        }
+    
+    </script>    
 	
 </head>
 <body>
-    <div class="case-first block" id="c1" onclick="g(c, 1, c1)"></div>
-    <div class="case block" id="c2"></div>
-    <div class="case block" id="c3"></div>
+    <div class="row">
+        <div class="case block" id="c1" onmouseover="g(0, 0, 3, 4)"></div>
+        <div class="case block" id="c2" onmouseover="g(1, 0, 3, 4)"></div>
+        <div class="case block" id="c3" onmouseover="g(2, 0, 3, 4)"></div>
+        <div class="case block" id="c3" onmouseover="g(3, 0, 3, 4)"></div>
+    </div>
     
-    <div class="case-first block" id="c4"></div>
-    <div class="case block" id="c5"></div>
-    <div class="case block" id="c6"></div>
+    <div class="row">
+        <div class="case block" id="c4" onmouseover="g(4, 4, 7, 4)"></div>
+        <div class="case block" id="c5" onmouseover="g(5, 4, 7, 4)"></div>
+        <div class="case block" id="c6" onmouseover="g(6, 4, 7, 4)"></div>
+        <div class="case block" id="c6" onmouseover="g(7, 4, 7, 4)"></div>
+    </div>
     
-    <div class="case-first block" id="c7"></div>
-    <div class="case block" id="c8"></div>
-    <div class="case block" id="c9"></div>
+    <div class="row">
+        <div class="case block" id="c7" onmouseover="g(8, 8, 11, 4)"></div>
+        <div class="case block" id="c8" onmouseover="g(9, 8, 11, 4)"></div>
+        <div class="case block" id="c9" onmouseover="g(10, 8, 11, 4)"></div>
+        <div class="case block" id="c9" onmouseover="g(11, 8, 11)"></div>
+    </div>
+    
+        <div class="row">
+        <div class="case block" id="c7" onmouseover="g(12, 12, 15, 4)"></div>
+        <div class="case block" id="c8" onmouseover="g(13, 12, 15, 4)"></div>
+        <div class="case block" id="c9" onmouseover="g(14, 12, 15, 4)"></div>
+        <div class="case block" id="c9" onmouseover="g(15, 12, 15, 4)"></div>
+    </div>
     
 </body>
 </html>
