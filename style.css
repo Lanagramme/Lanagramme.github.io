@@ -10,7 +10,6 @@
 .skillneutreopen, .skillterreopen, .skilleauopen, .skillfeuopen {width: calc(100% - 6px);}
 .skill-like{width: calc(50% - 6px);}
 
-
 /* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -39,10 +38,7 @@
 
 	.skillneutre, .skillterre, .skilleau, .skillfeu {width: calc(100% - 6px);}
 	.skillneutreopen, .skillterreopen, .skilleauopen, .skillfeuopen {width: calc(100% - 6px);}
-	.skill-like{width: calc(100% - 6px);}
-    
-    
-    
+	.skill-like{width: calc(100% - 6px);}   
 }
 
 [class*="col-"] {

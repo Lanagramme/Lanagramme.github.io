@@ -71,7 +71,7 @@
             <h3 class="element">Armes</h3>
             
             <div class="skillneutre" id="li">
-                <div onclick="c('li2', 'li', 1)">
+                <div onclick="c('li2', 'li', 'skillneutreopen', 'skillneutre')">
                     <h4 style="margin: 0px;" >Lance <i>Inante</i></h4>
                     <em>4 PA/CaC --- 6 PA/Po 2 Ligne</em>
                 </div>
@@ -88,7 +88,7 @@
 
 
             <div class="skillneutre" id="grim">
-                <h4 style="margin: 0px;" onclick="c('grim2', 'grim', 1)">Grimmoire de débutant</h4>
+                <h4 style="margin: 0px;" onclick="c('grim2', 'grim', 'skillneutreopen', 'skillneutre')">Grimmoire de débutant</h4>
 
 
                 <p id="grim2" class="skil" style="display: none;">Un puissant artéfact magique qui permet à son porteur de lancer des sorts bien supérieur à ce dont il est réellement capable en se nourissant de son énergie vitale.<br><br><em>Il vous tuera en 24h.</em></p>
@@ -109,7 +109,7 @@
 
             <div class="skillneutre" id="rpl">
 
-                <h4 style="margin: 0px;" onclick="c('rpl2', 'rpl', 1)">Rappel</h4>
+                <h4 style="margin: 0px;" onclick="c('rpl2', 'rpl', 'skillneutreopen', 'skillneutre')">Rappel</h4>
 
                 <p id="rpl2" class="skil" style="display: none;">L’invocateur peut désinvoquer son familier contre  <strong>X-Y PV, X</strong> étant le nombre de <strong>PV</strong> restant au familier et <strong>Y</strong> le nombre de <strong>PA</strong> restant à l’invocateur. Si le nombre de point d’action de l’invocateur est supérieur au nombre de points de vie du familier il récupère <strong>X PV</strong>.</p>
 
@@ -119,7 +119,7 @@
 
             <div class="skillneutre" id="invo">
 
-                <div onclick="c('invo2', 'invo', 1)">
+                <div onclick="c('invo2', 'invo', 'skillneutreopen', 'skillneutre')">
                     <h4 style="margin: 0px;" >Invocation</h4>
 
                     <em>4 <span title="Point d'Action">PA*</span>+COIN PV/ <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 5</em>
@@ -139,7 +139,7 @@
             
             <div class="skillneutre" id="hype">
 
-                <div onclick="c('hype2', 'hype', 1)">
+                <div onclick="c('hype2', 'hype', 'skillneutreopen', 'skillneutre')">
                     <h4 style="margin: 0px;" >Hyperactivité</h4>
 
                     <em>3 PA / Po 4 sans ligne de vue</em>
@@ -153,6 +153,36 @@
                     </ul>
                 </div>
             </div>
+               
+                <h3 class="element">Terre / EAU</h3>
+                
+            <div class="skilleau" id="port">
+
+                <div onclick="c('port2', 'port', 'skilleauopen', 'skilleau')">
+                    <h4 style="margin: 0px;" >Portail</h4>
+
+                    <em>4 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 3 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> X <br>X étant le nombre de portail de l’équipe encore ouvert</em>
+                </div>
+                <div id="port2" class="skil" style="display: none;">
+                    <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée un portail à double entrés.</p>
+
+                                    <ul>
+                                        <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
+                                        <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
+                                        <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
+                                        <li>Les familiers ne peuvent pas traverser les portails</li>
+                                        <li>Un portail disparait en cas de contact avec un sort d’écran</li>
+                                        <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
+                                        <li>Les sorts ne traversent pas les portails posés par un membre de l’équipe adverse mais diminue de 1 le nombre de traversées possible par celui-ci. Si le nombre tombe à 0 le portail disparait.</li>
+                                        <li>Il est possible de créer un portail en appliquant une aura de terre sur une prison aqueuse. Le portail appartient à l’équipe de personnage appliquant l’aura. La prison est détruite à la création du portail</li>
+                                        <li>Il est possible d’ouvrir un portail en appliquant une aura d’eau sur un bouclier de la terre. La personne sous le bouclier est téléportée au moment de l’ouverture du portail si un autre portail est sous le contrôle son équipe. Le bouclier se dissipe à la création du portail.</li>
+                                        <li>Pas plus de trois portails ne peuvent être ouvert en même temps par une même équipe</li>
+                                        <li>Il n’est pas possible de relier des portails ouvert par des membres d’équipes opposées</li>
+
+                                    </ul>
+                </div>
+            </div>
+            
         </div>
         
         <div class="colf-6 block block-cf">
@@ -162,7 +192,7 @@
                 <h3 class="element">Terre</h3>
                 
                 <div class="skillterre" id="stop">
-                    <div onclick="c('stop2', 'stop', 3)">
+                    <div onclick="c('stop2', 'stop', 'skillterreopen', 'skillterre')">
                         <h4 style="margin: 0px;" >Constriction</h4>
 
                         <em>3 PV / <span title="Portée en mètres">Po*</span>3</em>
@@ -174,7 +204,7 @@
                 </div>
 
                 <div class="skillterre" id="ben">
-                    <div onclick="c('ben2', 'ben', 3)">
+                    <div onclick="c('ben2', 'ben', 'skillterreopen', 'skillterre')">
                         <h4 style="margin: 0px;" >Bénédiction</h4>
                         <em>5 PV / <span title="Portée en mètres">Po*</span> 2</em>
                     </div>
@@ -185,7 +215,7 @@
                 </div>
 
                 <div class="skillterre" id="dor">
-                    <div onclick="c('dor2', 'dor', 3)">
+                    <div onclick="c('dor2', 'dor', 'skillterreopen', 'skillterre')">
                         <h4 style="margin: 0px;" >Sommeil forcé</h4>
                         <em>5 PV / Po2</em>
                     </div>
@@ -234,45 +264,19 @@
                     hub.className = 'skillneutre';}
             }
             
-            function c(lien, menu, mgk)
-            {
-                let elmt = document.getElementById(lien);
-                let hub = document.getElementById(menu);
-                
-                switch (mgk){
-                    case 2:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skilleauopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skilleau';}
-                        break;
-                        
-                    case 3:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skillterreopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skillterre';}
-                        break;
-                        
-                    case 4:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skillfeuopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skillfeu';}
-                        break;  
-                    case 1:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skillneutreopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skillneutre';}
-                        break;
-                }
-                
-            }          
+                function c(lien, menu, open, close)
+                {
+                    let elmt = document.getElementById(lien);
+                    let hub = document.getElementById(menu);
+     
+                    if (elmt.style.display == 'none')
+                        { elmt.style.display = 'block';
+         
+                        hub.className = open;}
+                    else {elmt.style.display = 'none';
+                        hub.className = close;}
+                    
+                }          
 
         </script>
 
