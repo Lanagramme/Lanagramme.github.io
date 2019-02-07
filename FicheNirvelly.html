@@ -4,9 +4,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald|Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	
+	<script src="a.js"></script>
+	
+	<title>Fiches de personnages</title>
 </head>
 
 <body>
@@ -27,11 +31,12 @@
        <div id="b" class="menu">
             <p class="button"><a href="FicheNeithania.html">Neithania</a></p>
             <p class="button"><a href="FicheNirvelly.html">Nirvelly</a></p>
-            <p class="button"><a href="LeFaucheur.html">Lefaucheur</a></p>
+            <p class="button"><a href="FicheLeFaucheur.html">Lefaucheur</a></p>
             <p class="button"><a href="FicheTheBoss.html">Theboss</a></p>
         </div>
     </div>
-<div id="main" class="colf-7">
+    
+    <div id="main" class="colf-7">
         <div class="colf-6 block block-h1">
             <h2>Nirvelly</h2>
             <p style="float: left;"><strong>Classe</strong> : Invocateur</p>
@@ -52,8 +57,6 @@
 
                 <div style="width: 60px;"><p><strong>CHAR</strong><br>3<br>+1</p></div>
             </div>
-
-
         </div>
 
         <div class="colf-2 block block-h1">
@@ -65,7 +68,7 @@
             </ul>
         </div>
 
-	<div class="colf-6 block block-cf">
+	    <div class="colf-6 block block-cf">
             <p><strong>Equipement</strong></p>
 
             <h3 class="element">Armes</h3>
@@ -86,7 +89,6 @@
                 </div>
             </div>            
 
-
             <div class="skillneutre" id="grim">
                 <h4 style="margin: 0px;" onclick="c('grim2', 'grim', 'skillneutreopen', 'skillneutre')">Grimmoire de débutant</h4>
 
@@ -96,94 +98,93 @@
 
 
             <h3 class="element">Armure</h3>
-	</div>
+	    </div>
 
-	<div class="colf-6 block block-cf">
-		<p style="clear: both;"><strong>inventaire</strong></p>
-	</div>
-
-	<div class="colf-6 block block-cf">
-		<p><strong>SKIlS</strong></p>
-
-		<h3 class="element">Passifs</h3>
-
-            <div class="skillneutre" id="rpl">
-
-                <h4 style="margin: 0px;" onclick="c('rpl2', 'rpl', 'skillneutreopen', 'skillneutre')">Rappel</h4>
-
-                <p id="rpl2" class="skil" style="display: none;">L’invocateur peut désinvoquer son familier contre  <strong>X-Y PV, X</strong> étant le nombre de <strong>PV</strong> restant au familier et <strong>Y</strong> le nombre de <strong>PA</strong> restant à l’invocateur. Si le nombre de point d’action de l’invocateur est supérieur au nombre de points de vie du familier il récupère <strong>X PV</strong>.</p>
-
-            </div>
-        
-		<h3 class="element">Neutres</h3>
-
-            <div class="skillneutre" id="invo">
-
-                <div onclick="c('invo2', 'invo', 'skillneutreopen', 'skillneutre')">
-                    <h4 style="margin: 0px;" >Invocation</h4>
-
-                    <em>4 <span title="Point d'Action">PA*</span>+COIN PV/ <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 5</em>
-                </div>
-                <div id="invo2" class="skil" style="display: none;">
-                    <p>L’invocateur  sacrifie une part de son énergie vitale pour invoquer son familier</p>
-
-                    <ul>
-                        <li>Si l’invocateur a moins de 5 PV il ne sacrifie pas de PV pour l’invocation.</li>
-                        <li>Les marqueurs appliqués au familier se reportent aussi directement sur son invocateur et tous les familiers que celui-ci contrôle, mais se dissolvent à la mort du familier sur qui il a été posé.</li>
-                        <li>Dès qu’il dépense des PA le familier perd autant de PV.</li>
-                        <li>Le familier possède 10 PV + le modificateur ESP de son invocateur</li>
-                        <li>Le familier possède autant de PA max et de <span title="Points de Mouvements">PM*</span> max qu’en possède son invocateur au moment de sa création</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="skillneutre" id="hype">
-
-                <div onclick="c('hype2', 'hype', 'skillneutreopen', 'skillneutre')">
-                    <h4 style="margin: 0px;" >Hyperactivité</h4>
-
-                    <em>3 PA / Po 4 sans ligne de vue</em>
-                </div>
-                <div id="hype2" class="skil" style="display: none;">
-                    <p>La cible gagne 2 PA max / 2Tr</p>
-
-                    <ul>
-                        <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
-
-                    </ul>
-                </div>
-            </div>
-               
-                <h3 class="element">Terre / EAU</h3>
-                
-            <div class="skilleau" id="port">
-
-                <div onclick="c('port2', 'port', 'skilleauopen', 'skilleau')">
-                    <h4 style="margin: 0px;" >Portail</h4>
-
-                    <em>4 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 3 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> X <br>X étant le nombre de portail de l’équipe encore ouvert</em>
-                </div>
-                <div id="port2" class="skil" style="display: none;">
-                    <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée un portail à double entrés.</p>
-
-                                    <ul>
-                                        <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
-                                        <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
-                                        <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
-                                        <li>Les familiers ne peuvent pas traverser les portails</li>
-                                        <li>Un portail disparait en cas de contact avec un sort d’écran</li>
-                                        <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
-                                        <li>Les sorts ne traversent pas les portails posés par un membre de l’équipe adverse mais diminue de 1 le nombre de traversées possible par celui-ci. Si le nombre tombe à 0 le portail disparait.</li>
-                                        <li>Il est possible de créer un portail en appliquant une aura de terre sur une prison aqueuse. Le portail appartient à l’équipe de personnage appliquant l’aura. La prison est détruite à la création du portail</li>
-                                        <li>Il est possible d’ouvrir un portail en appliquant une aura d’eau sur un bouclier de la terre. La personne sous le bouclier est téléportée au moment de l’ouverture du portail si un autre portail est sous le contrôle son équipe. Le bouclier se dissipe à la création du portail.</li>
-                                        <li>Pas plus de trois portails ne peuvent être ouvert en même temps par une même équipe</li>
-                                        <li>Il n’est pas possible de relier des portails ouvert par des membres d’équipes opposées</li>
-
-                                    </ul>
-                </div>
-            </div>
-            
+        <div class="colf-6 block block-cf">
+            <p style="clear: both;"><strong>inventaire</strong></p>
         </div>
+
+        <div class="colf-6 block block-cf">
+            <p><strong>SKIlS</strong></p>
+
+            <h3 class="element">Passifs</h3>
+
+                <div class="skillneutre" id="rpl">
+
+                    <h4 style="margin: 0px;" onclick="c('rpl2', 'rpl', 'skillneutreopen', 'skillneutre')">Rappel</h4>
+
+                    <p id="rpl2" class="skil" style="display: none;">L’invocateur peut désinvoquer son familier contre  <strong>X-Y PV, X</strong> étant le nombre de <strong>PV</strong> restant au familier et <strong>Y</strong> le nombre de <strong>PA</strong> restant à l’invocateur. Si le nombre de point d’action de l’invocateur est supérieur au nombre de points de vie du familier il récupère <strong>X PV</strong>.</p>
+
+                </div>
+
+            <h3 class="element">Neutres</h3>
+
+                <div class="skillneutre" id="invo">
+
+                    <div onclick="c('invo2', 'invo', 'skillneutreopen', 'skillneutre')">
+                        <h4 style="margin: 0px;" >Invocation</h4>
+
+                        <em>4 <span title="Point d'Action">PA*</span>+COIN PV/ <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 5</em>
+                    </div>
+                    <div id="invo2" class="skil" style="display: none;">
+                        <p>L’invocateur  sacrifie une part de son énergie vitale pour invoquer son familier</p>
+
+                        <ul>
+                            <li>Si l’invocateur a moins de 5 PV il ne sacrifie pas de PV pour l’invocation.</li>
+                            <li>Les marqueurs appliqués au familier se reportent aussi directement sur son invocateur et tous les familiers que celui-ci contrôle, mais se dissolvent à la mort du familier sur qui il a été posé.</li>
+                            <li>Dès qu’il dépense des PA le familier perd autant de PV.</li>
+                            <li>Le familier possède 10 PV + le modificateur ESP de son invocateur</li>
+                            <li>Le familier possède autant de PA max et de <span title="Points de Mouvements">PM*</span> max qu’en possède son invocateur au moment de sa création</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skillneutre" id="hype">
+
+                    <div onclick="c('hype2', 'hype', 'skillneutreopen', 'skillneutre')">
+                        <h4 style="margin: 0px;" >Hyperactivité</h4>
+
+                        <em>3 PA / Po 4 sans ligne de vue</em>
+                    </div>
+                    <div id="hype2" class="skil" style="display: none;">
+                        <p>La cible gagne 2 PA max / 2Tr</p>
+
+                        <ul>
+                            <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                    <h3 class="element">Terre / EAU</h3>
+
+                <div class="skilleau" id="port">
+
+                    <div onclick="c('port2', 'port', 'skilleauopen', 'skilleau')">
+                        <h4 style="margin: 0px;" >Portail</h4>
+
+                        <em>4 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 3 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> X <br>X étant le nombre de portail de l’équipe encore ouvert</em>
+                    </div>
+                    <div id="port2" class="skil" style="display: none;">
+                        <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée un portail à double entrés.</p>
+
+                        <ul>
+                            <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
+                            <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
+                            <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
+                            <li>Les familiers ne peuvent pas traverser les portails</li>
+                            <li>Un portail disparait en cas de contact avec un sort d’écran</li>
+                            <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
+                            <li>Les sorts ne traversent pas les portails posés par un membre de l’équipe adverse mais diminue de 1 le nombre de traversées possible par celui-ci. Si le nombre tombe à 0 le portail disparait.</li>
+                            <li>Il est possible de créer un portail en appliquant une aura de terre sur une prison aqueuse. Le portail appartient à l’équipe de personnage appliquant l’aura. La prison est détruite à la création du portail</li>
+                            <li>Il est possible d’ouvrir un portail en appliquant une aura d’eau sur un bouclier de la terre. La personne sous le bouclier est téléportée au moment de l’ouverture du portail si un autre portail est sous le contrôle son équipe. Le bouclier se dissipe à la création du portail.</li>
+                            <li>Pas plus de trois portails ne peuvent être ouvert en même temps par une même équipe</li>
+                            <li>Il n’est pas possible de relier des portails ouvert par des membres d’équipes opposées</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
         
         <div class="colf-6 block block-cf">
             
@@ -225,61 +226,6 @@
                     </div>
                 </div>   
         </div>
-            
 	</div>
-        <script>
-
-            var button = 0;
-            
-            function a(lien, menu)
-            {
-                let elmt = document.getElementById(lien);
-
-                if (button == lien)  { 
-                    elmt.style.display = 'none';
-                    
-                    button = 0;
-                }
-                else {
-                    let x = document.getElementsByClassName(menu);
-                    
-                    for (i = 0; i < x.length; i++)
-                    { x[i].style.display = 'none';}
-                    
-                    elmt.style.display = 'block';
-                    
-                    button = lien;
-                }   
-            }
-            
-            function b(lien, menu)
-            {
-                let elmt = document.getElementById(lien);
-                let hub = document.getElementById(menu);
-
-                if (elmt.style.display == 'none')
-                    { elmt.style.display = 'block';
-                    hub.className = 'skillneutreopen'}
-                else {elmt.style.display = 'none';
-                    hub.className = 'skillneutre';}
-            }
-            
-                function c(lien, menu, open, close)
-                {
-                    let elmt = document.getElementById(lien);
-                    let hub = document.getElementById(menu);
-     
-                    if (elmt.style.display == 'none')
-                        { elmt.style.display = 'block';
-         
-                        hub.className = open;}
-                    else {elmt.style.display = 'none';
-                        hub.className = close;}
-                    
-                }          
-
-        </script>
-
-	
 </body>
 </html>

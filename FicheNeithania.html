@@ -4,9 +4,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald|Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	
+	<script src="a.js"></script>
+	
+	<title>Neithania</title>
 </head>
 
 <body>
@@ -27,7 +31,7 @@
        <div id="b" class="menu">
             <p class="button"><a href="FicheNeithania.html">Neithania</a></p>
             <p class="button"><a href="FicheNirvelly.html">Nirvelly</a></p>
-            <p class="button"><a href="LeFaucheur.html">Lefaucheur</a></p>
+            <p class="button"><a href="FicheLeFaucheur.html">Lefaucheur</a></p>
             <p class="button"><a href="FicheTheBoss.html">Theboss</a></p>
         </div>
     </div>
@@ -37,7 +41,6 @@
             <h2>Neithania</h2>
             <p style="float: left;"><strong>Classe</strong> : Zélote</p>
             <p style="float: right;"><strong>Element </strong>: Terre</p>
-
         </div>
 
         <div class="colf-4 block block-h1" style="clear: both;">
@@ -53,8 +56,6 @@
 
                 <div style="width: 60px;"><p><strong>CHAR</strong><br>5<br>0</p></div>
             </div>
-
-
         </div>
 
         <div class="colf-2 block block-h1">
@@ -71,32 +72,31 @@
 
             <h3 class="element">Armes</h3>
             
-            <div class="skillneutre" id="hdj">
-                <div onclick="c('hdj2', 'hdj', 1)">
-                    <h4 style="margin: 0px;" >Hache de jet <i>durandil</i></h4>
-                    <em>6 PA/CaC --- 4 PA/Po 3</em>
-                </div>
+                <div class="skillneutre" id="hdj">
+                    <div onclick="c('hdj2', 'hdj', 'skillneutreopen', 'skillneutre')">
+                        <h4 style="margin: 0px;" >Hache de jet <i>durandil</i></h4>
+                        <em>6 PA/CaC --- 4 PA/Po 3</em>
+                    </div>
 
-                <div id="hdj2" class="skil">
-                    <p>Si vous la lancez elle reviens. Vos amis la craignent plus que vos ennemis</p>
-                    <ul>
-                        <li>1D6 DMG CaC</li>
-                        <li>1D4 DMG a distance</li>
-                        <li>A distance, le lanceur devra faire un jet d'agilité pour rattraper la hache. S'il le rate, il perd COIN PV.</li>
-                    </ul>
-                </div>
-            </div>            
+                    <div id="hdj2" class="skil" style="display: none;">
+                        <p>Si vous la lancez elle reviens. Vos amis la craignent plus que vos ennemis</p>
+                        <ul>
+                            <li>1D6 DMG CaC</li>
+                            <li>1D4 DMG a distance</li>
+                            <li>A distance, le lanceur devra faire un jet d'agilité pour rattraper la hache. S'il le rate, il perd COIN PV.</li>
+                        </ul>
+                    </div>
+                </div>            
+
+                <div class="skillneutre" id="grim">
+                <h4 style="margin: 0px;" onclick="c('grim2', 'grim', 'skillneutreopen', 'skillneutre')">Grimmoire de débutant</h4>
 
 
-            <div class="skillneutre" id="grim">
-                <h4 style="margin: 0px;" onclick="c('grim2', 'grim', 1)">Grimmoire de débutant</h4>
-
-
-                <p id="grim2" class="skil">Un puissant artéfact magique qui permet à son porteur de lancer des sorts bien supérieur à ce dont il est réellement capable en se nourissant de son énergie vitale.<br><br><em>Il vous tuera en 24h.</em></p>
+                <p id="grim2" class="skil" style="display: none;">Un puissant artéfact magique qui permet à son porteur de lancer des sorts bien supérieur à ce dont il est réellement capable en se nourissant de son énergie vitale.<br><br><em>Il vous tuera en 24h.</em></p>
             </div>		
 
-
             <h3 class="element">Armure</h3>
+            
         </div>
 
         <div class="colf-6 block block-cf">
@@ -104,37 +104,35 @@
         </div>
 
         <div class="colf-6 block block-cf">
-            <p><strong>SKIlS</strong></p>
+            <p><strong>SKILLS</strong></p>
 
             <h3 class="element">Passifs</h3>
 
-            <div class="skillneutre" id="skv">
+                <div class="skillneutre" id="skv">
 
-                <h4 style="margin: 0px;" onclick="c('skv2', 'skv', 1)">Esquive</h4>
+                <h4 style="margin: 0px;" onclick="c('skv2', 'skv', 'skillneutreopen', 'skillneutre')">Esquive</h4>
 
-                <p id="skv2" class="skil">Quand le zélote est attaqué, il peut tenter d’éviter <a href="index.html#jet">1D6</a> <span title="Dommages">DMG*</span> reçus par s’il réussit un jet d’AGI. Il ne peut pas réagir aux attaques dans son dos. Il peut utiliser l’esquive plusieurs fois par tr, tant qu’il réalise une chaine ininterrompue d’esquives. Si la chaine est brisée il ne peut plus effectuer d’esquives pour ce tr. Après une esquive réussie, le personnage fait face à la source de l’attaque. Ne fonctionne pas sur les AoE ou les attaques ayant une zone d’effet en ligne ou en cône, sauf si le zélote est sur une case adjacente au lanceur.</p>
+                <p id="skv2" class="skil" style="display: none;">Quand le zélote est attaqué, il peut tenter d’éviter <a href="index.html#jet">1D6</a> <span title="Dommages">DMG*</span> reçus par s’il réussit un jet d’AGI. Il ne peut pas réagir aux attaques dans son dos. Il peut utiliser l’esquive plusieurs fois par tr, tant qu’il réalise une chaine ininterrompue d’esquives. Si la chaine est brisée il ne peut plus effectuer d’esquives pour ce tr. Après une esquive réussie, le personnage fait face à la source de l’attaque. Ne fonctionne pas sur les AoE ou les attaques ayant une zone d’effet en ligne ou en cône, sauf si le zélote est sur une case adjacente au lanceur.</p>
 
             </div>
 
-            <div class="skillneutre" id="mma">
+                <div class="skillneutre" id="mma">
 
-                <h4 style="margin: 0px;" onclick="c('mma2', 'mma', 1)">Maitre d'arme</h4>
+                <h4 style="margin: 0px;" onclick="c('mma2', 'mma', 'skillneutreopen', 'skillneutre')">Maitre d'arme</h4>
 
-                    <p id="mma2" class="skil">Le cout en PA à l’usage des armes est réduit de 1 pour le zélote. </p>
+                    <p id="mma2" class="skil" style="display: none;">Le cout en PA à l’usage des armes est réduit de 1 pour le zélote. </p>
             </div>
-
-
 
             <h3 class="element">Eau</h3>
 
-            <div class="skilleau" id="ice">
+                <div class="skilleau" id="ice">
 
-                <div onclick="c('ice2', 'ice', 2)">
+                <div onclick="c('ice2', 'ice', 'skilleauopen', 'skilleau')">
                     <h4 style="margin: 0px;" >Iceberg</h4>
 
                     <em>5 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 2 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 3</em>
                 </div>
-                <div id="ice2" class="skil">
+                <div id="ice2" class="skil" style="display: none;">
                     <p>Le zélote mêle son aura à l’énergie d’eau naturellement présente dans l’air et la cristallise sous la forme d’un bloc de glace instable d’un mètre carré de large qui, s’il est attaqué avec un sort d’élément eau ou laissé intouché pendant 3 Tr, il libère son énergie projetant une vague de froid dans une AoE +3. </p>
 
                     <ul>
@@ -145,139 +143,57 @@
                 </div>
             </div>
 
-
             <h3 class="element">Terre</h3>
 
-            <div class="skillterre" id="proj">
+                <div class="skillterre" id="proj">
 
-                <div onclick="c('proj2', 'proj', 3)">
-                    <h4 style="margin: 0px;" >Projection</h4>
+                    <div onclick="c('proj2', 'proj', 'skillterreopen', 'skillterre')">
+                        <h4 style="margin: 0px;" >Projection</h4>
 
-                    <em>6 <span title="Point d'Action">PA*</span> / <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 4</em>
+                        <em>6 <span title="Point d'Action">PA*</span> / <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 4</em>
+                    </div>
+
+                    <div id="proj2" class="skil" style="display: none;">
+                        <p>La cible directement en face du zélote est projetée sur 5 m dans la direction opposée au lanceur.</p>
+
+                        <ul>
+                            <li><a href="index.html#jet">1D4</a>+2 <span title="Dommages">DMG*</span> cible lancée</li>
+                            <li><a href="index.html#jet">2D4</a> <span title="Dommages">DMG*</span> cible à la collision</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div id="proj2" class="skil">
-                    <p>La cible directement en face du zélote est projetée sur 5 m dans la direction opposée au lanceur.</p>
+                <div class="skillterre" id="chut">
+                    <div  onclick="c('chut2', 'chut', 'skillterreopen', 'skillterre')">
+                        <h4 style="margin: 0px;">Silence</h4>
 
-                    <ul>
-                        <li><a href="index.html#jet">1D4</a>+2 <span title="Dommages">DMG*</span> cible lancée</li>
-                        <li><a href="index.html#jet">2D4</a> <span title="Dommages">DMG*</span> cible à la collision</li>
-                    </ul>
+                        <em>3 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 3 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 2</em>
+                    </div>
+
+                    <div id="chut2" class="skil" style="display: none;">
+                        <p>Le pacificateur déstabilise l’aura de sa cible et pose sur elle un marqueur de silence qui se dissipe après 1Tr</p>
+
+                        <ul><li>Tant que la cible a un marqueur de silence sur elle, elle ne peut plus utiliser la magie. Il perd aussi tout buff, débuff, ou marqueur qu’il possède.</li></ul>
+                    </div>
                 </div>
-            </div>
-
-            <div class="skillterre" id="chut">
-                <div  onclick="c('chut2', 'chut', 3)">
-                    <h4 style="margin: 0px;">Silence</h4>
-
-                    <em>3 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 3 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 2</em>
-                </div>
-
-                <div id="chut2" class="skil">
-                    <p>Le pacificateur déstabilise l’aura de sa cible et pose sur elle un marqueur de silence qui se dissipe après 1Tr</p>
-
-                    <ul><li>Tant que la cible a un marqueur de silence sur elle, elle ne peut plus utiliser la magie. Il perd aussi tout buff, débuff, ou marqueur qu’il possède.</li></ul>
-                </div>
-            </div>
 
             <h3 class="element">Feu</h3>
 
-            <div class="skillfeu" id="vag">
+                <div class="skillfeu" id="vag">
 
-                <div onclick="c('vag2', 'vag', 4)">
-                    <h4 style="margin: 0px;" >Vague de feu</h4>
+                    <div onclick="c('vag2', 'vag', 'skillfeuopen', 'skillfeu')">
+                        <h4 style="margin: 0px;" >Vague de feu</h4>
 
-                    <em>4 <span title="Point d'Action">PA*</span> / Cône +2 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 4</em>
+                        <em>4 <span title="Point d'Action">PA*</span> / Cône +2 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 4</em>
+                    </div>
+                    <div id="vag2" class="skil" style="display: none;">
+                        <p>Le zélote mêle son aura à l’énergie de feu naturellement présente dans l’air et la sur-active avant de la déstabiliser, et la projette devant lui avant de l’enflammer déversant ainsi un cône de feu en face de lui.</p>
+
+                        <ul>
+                            <li><a href="index.html#jet">1D6</a> <span title="Dommages">DMG*</span></li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="vag2" class="skil">
-                    <p>Le zélote mêle son aura à l’énergie de feu naturellement présente dans l’air et la sur-active avant de la déstabiliser, et la projette devant lui avant de l’enflammer déversant ainsi un cône de feu en face de lui.</p>
-
-                    <ul>
-                        <li><a href="index.html#jet">1D6</a> <span title="Dommages">DMG*</span></li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <script>
-
-                var button = 0;
-
-                function a(lien, menu)
-                {
-                    let elmt = document.getElementById(lien);
-
-                    if (button == lien)  { 
-                        elmt.style.display = 'none';
-
-                        button = 0;
-                    }
-                    else {
-                        let x = document.getElementsByClassName(menu);
-
-                        for (i = 0; i < x.length; i++)
-                        { x[i].style.display = 'none';}
-
-                        elmt.style.display = 'block';
-
-                        button = lien;
-                    }   
-                }
-
-                function b(lien, menu)
-                {
-                    let elmt = document.getElementById(lien);
-                    let hub = document.getElementById(menu);
-
-                    if (elmt.style.display == 'none')
-                        { elmt.style.display = 'block';
-                        hub.className = 'skillneutreopen'}
-                    else {elmt.style.display = 'none';
-                        hub.className = 'skillneutre';}
-                }
-
-                function c(lien, menu, mgk)
-                {
-                    let elmt = document.getElementById(lien);
-                    let hub = document.getElementById(menu);
-
-                    switch (mgk){
-                        case 2:
-                            if (elmt.style.display == 'none')
-                                { elmt.style.display = 'block';
-                                hub.className = 'skilleauopen'}
-                            else {elmt.style.display = 'none';
-                                hub.className = 'skilleau';}
-                            break;
-
-                        case 3:
-                            if (elmt.style.display == 'none')
-                                { elmt.style.display = 'block';
-                                hub.className = 'skillterreopen'}
-                            else {elmt.style.display = 'none';
-                                hub.className = 'skillterre';}
-                            break;
-
-                        case 4:
-                            if (elmt.style.display == 'none')
-                                { elmt.style.display = 'block';
-                                hub.className = 'skillfeuopen'}
-                            else {elmt.style.display = 'none';
-                                hub.className = 'skillfeu';}
-                            break;  
-                        case 1:
-                            if (elmt.style.display == 'none')
-                                { elmt.style.display = 'block';
-                                hub.className = 'skillneutreopen'}
-                            else {elmt.style.display = 'none';
-                                hub.className = 'skillneutre';}
-                            break;
-                    }
-
-                }          
-
-            </script>
-
         </div>
 	</div>
 </body>

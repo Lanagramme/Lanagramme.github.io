@@ -4,10 +4,15 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald|Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	
+	<script src="a.js"></script>
+	
+	<title>Vous n'avez pas les bases</title>
 </head>
+
 
 <body>
     <header>
@@ -27,35 +32,9 @@
        <div id="b" class="menu">
             <p class="button"><a href="FicheNeithania.html">Neithania</a></p>
             <p class="button"><a href="FicheNirvelly.html">Nirvelly</a></p>
-            <p class="button"><a href="LeFaucheur.html">Lefaucheur</a></p>
+            <p class="button"><a href="FicheLeFaucheur.html">Lefaucheur</a></p>
             <p class="button"><a href="FicheTheBoss.html">Theboss</a></p>
         </div>
     </div>
-    
-   <script>
-                var button = 0;
-
-                function a(lien, menu)
-                {
-                    let elmt = document.getElementById(lien);
-
-                    if (button == lien)  { 
-                        elmt.style.display = 'none';
-
-                        button = 0;
-                    }
-                    else {
-                        let x = document.getElementsByClassName(menu);
-
-                        for (i = 0; i < x.length; i++)
-                        { x[i].style.display = 'none';}
-
-                        elmt.style.display = 'block';
-
-                        button = lien;
-                    }   
-                }       
-
-    </script>
 </body>
 </html>

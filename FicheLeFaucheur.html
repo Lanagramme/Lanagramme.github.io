@@ -4,9 +4,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald|Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	
+	<script src="a.js"></script>
+	
+	<title>Fiches de personnages</title>
 </head>
 
 <body>
@@ -27,7 +31,7 @@
        <div id="b" class="menu">
             <p class="button"><a href="FicheNeithania.html">Neithania</a></p>
             <p class="button"><a href="FicheNirvelly.html">Nirvelly</a></p>
-            <p class="button"><a href="LeFaucheur.html">Lefaucheur</a></p>
+            <p class="button"><a href="FicheLeFaucheur.html">Lefaucheur</a></p>
             <p class="button"><a href="FicheTheBoss.html">Theboss</a></p>
         </div>
     </div>
@@ -184,7 +188,7 @@
 
 		<h3 class="element">Feu</h3>
 
-            <div class="skillfeu" id="tdf" onclick="c('tdf2', 'tdf', 4)">
+            <div class="skillfeu" id="tdf" onclick="c('tdf2', 'tdf', 'skillfeuopen', 'skillfeu')">
 
                 <div >
                     <h4 style="margin: 0px;" >Trait de feu</h4>
@@ -200,85 +204,6 @@
                     </ul>
                 </div>
             </div>
-
-        <script>
-
-            var button = 0;
-            
-            function a(lien, menu)
-            {
-                let elmt = document.getElementById(lien);
-
-                if (button == lien)  { 
-                    elmt.style.display = 'none';
-                    
-                    button = 0;
-                }
-                else {
-                    let x = document.getElementsByClassName(menu);
-                    
-                    for (i = 0; i < x.length; i++)
-                    { x[i].style.display = 'none';}
-                    
-                    elmt.style.display = 'block';
-                    
-                    button = lien;
-                }   
-            }
-            
-            function b(lien, menu)
-            {
-                let elmt = document.getElementById(lien);
-                let hub = document.getElementById(menu);
-
-                if (elmt.style.display == 'none')
-                    { elmt.style.display = 'block';
-                    hub.className = 'skillneutreopen'}
-                else {elmt.style.display = 'none';
-                    hub.className = 'skillneutre';}
-            }
-            
-            function c(lien, menu, mgk)
-            {
-                let elmt = document.getElementById(lien);
-                let hub = document.getElementById(menu);
-                
-                switch (mgk){
-                    case 2:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skilleauopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skilleau';}
-                        break;
-                        
-                    case 3:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skillterreopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skillterre';}
-                        break;
-                        
-                    case 4:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skillfeuopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skillfeu';}
-                        break;  
-                    case 1:
-                        if (elmt.style.display == 'none')
-                            { elmt.style.display = 'block';
-                            hub.className = 'skillneutreopen'}
-                        else {elmt.style.display = 'none';
-                            hub.className = 'skillneutre';}
-                        break;
-                }
-                
-            }          
-
-        </script>
 
 	</div>
 	</div>

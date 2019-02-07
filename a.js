@@ -1,65 +1,36 @@
 var button = 0;
 
-function a(lien) {    
-    if (button  == lien) {
-        /*Si le dernier menu sur lequel l'utilisateur a cliqué est ouvert on le ferme*/
-        document.getElementById(lien).style.display = 'none';
+function a(lien, menu)
+{
+    let elmt = document.getElementById(lien);
 
-        button = 0; 
+    if (button == lien)  { 
+        elmt.style.display = 'none';
+
+        button = 0;
     }
-            else
-            {
-                /*sinon on ferme tous les menus */
-                var y = document.getElementsByClassName("menu");
-                
-                var i;
-                for (i = 0; i < x.length; i++) { x[i].style.display = 'none';}
+    else {
+        let x = document.getElementsByClassName(menu);
 
-                /*et on ouvre le menu sur lequel l'utilisateur à cliqué*/
-                document.getElementById(lien).style.display = 'block';
+        for (i = 0; i < x.length; i++)
+        { x[i].style.display = 'none';}
 
-                button = lien; 
-            }
-        }
+        elmt.style.display = 'block';
 
-
-function onferme(lien) {document.getElementById(lien).style.display = 'none';}
-
-function onouvre(lien, menu)
-{
-    let x = document.getElementsByClassName(menu);
-                
-        let i;
-        for (i = 0; i < x.length; i++) { x[i].style.display = 'none';}
-
-        document.getElementById(lien).style.display = 'block';
+        button = lien;
+    }   
 }
 
-function b(lien, menu)
+function c(lien, menu, open, close)
 {
-    switch (menu)
-        case 1:
-            if (lien = varmenu1) {   onferme(lien); varmenu1 = 0; }
-            else {   onouvre(lien, menu); varmenu1 = lien; }
-        break;
-    
-        case 2:
-            if (lien = varmenu2) {   onferme(lien) ; varmenu2 = 0;}
-            else {   onouvre(lien, menu); varmenu2 = lien; }
-        break;
-    
-        case 3:
-            if (lien = varmenu3) {   onferme(lien) ; varmenu3 = 0; }
-            else {   onouvre(lien, menu); varmenu3 = lien; }
-        break;
-    
-        case 4:
-            if (lien = varmenu1) {   onferme(lien); varmenu1 = 0; }
-            else {   onouvre(lien, menu); varmenu1 = lien; }
-        break;
-    
-        case 5:
-            if (lien = varmenu1) {  onferme(lien) ; varmenu1 = 0; }
-            else {  onouvre(lien, menu); varmenu1 = lien; }
-        break;
-}
+    let elmt = document.getElementById(lien);
+    let hub = document.getElementById(menu);
+
+    if (elmt.style.display == 'none')
+        { elmt.style.display = 'block';
+
+        hub.className = open;}
+    else {elmt.style.display = 'none';
+        hub.className = close;}
+
+}          
