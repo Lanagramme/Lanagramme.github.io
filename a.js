@@ -3,6 +3,8 @@ var button = 0;
 function a(lien, menu)
 {
     let elmt = document.getElementById(lien);
+    
+
 
     if (button == lien)  { 
         elmt.style.display = 'none';
@@ -34,3 +36,10 @@ function c(lien, menu, open, close)
         hub.className = close;}
 
 }          
+
+function g(y, x, a)
+{   
+    
+
+
+}

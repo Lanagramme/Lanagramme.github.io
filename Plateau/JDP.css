@@ -1,0 +1,25 @@
+.case
+{ 
+    width: 163px;
+    height: 163px;
+    float: left;
+    background-color: #f1f3f5;
+    border: 1px dotted white;
+}
+
+.case-first
+{ 
+    width: 163px;
+    height: 163px;
+    float: left;
+    clear: both;
+    background-color: #f1f3f5;
+    border: 1px dotted white;
+}
+
+
+
+#c2:hover #c3
+{
+    background-color: aqua;
+}
