@@ -1,0 +1,140 @@
+*{box-sizing: border-box}
+
+/*----------balises----------*/
+
+h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*----------classes----------*/
+
+.mainbox {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    height: ;
+    padding: 10px;
+    background-color: #f1f3f5;
+}
+
+.mainbox::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+    /*-boite-*/
+.ruler {
+    position: relative;
+    width: 50%;
+    padding: 0px 70px;
+    margin-top: 10px;
+}
+
+    /*-mise en forme boite-*/
+.list-group {
+    background-color: #fff; 
+    box-shadow: 1px 2px 1px 1px #745fb51f; 
+    border-radius: 2px
+}
+
+.right { left: 50%; }
+
+    /*fleche triangle*/
+    .right::before{
+        border: solid;
+        width: 0px;
+        left: 50px;
+        top: 15px;
+        z-index: 3;
+        content: '';
+        border-width: 10px;
+        border-color:  transparent #007bff transparent transparent;
+        position: absolute;
+    }
+
+.left { left: 0; }
+
+    /*fleche carre*/
+    .left::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        z-index: 9;
+        background-color: white;
+        position: absolute;
+        right: 65px;
+        top: 15px;
+        transform: rotate(-45deg);
+        background-color: #007bff;
+        box-shadow: 1px 2px 1px 1px #745fb51f;
+    }
+
+.dateleft {
+    position: absolute;
+    top: -7px;
+    left: -57px;
+    background-color: white;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #f1f3f5;
+}
+
+    .dateleft > p {margin: 0px;}
+
+.datedroite {
+    position: absolute;
+    top: -7px;
+    right: -57px;
+    background-color: white;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #f1f3f5;
+}
+
+    .datedroite > p {margin: 0px;}
+
+@media screen and (max-width: 992px) {
+    .mainbox::after { left: 30px; }
+
+    /*-boite responsive-*/
+    .ruler {
+        width: 100%;
+        padding-left: 90px;
+        padding-right: 25px;
+    }
+        .ruler::before {
+            left: 80px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #007bff transparent transparent;
+        }
+    
+    .left::before { z-index: 0; left: 85px; }
+
+    .right { left: 0%; }
+
+    .dateleft {
+        top: -20px;
+        left: -1px;
+        width: 50px;
+        padding-left: 0px;
+    }
+    
+    .datedroite {
+        top: -20px;
+        left: -1px;
+        width: 50px;
+        padding-left: 0px;
+    }
+}
