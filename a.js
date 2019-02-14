@@ -36,10 +36,3 @@ function c(lien, menu, open, close)
         hub.className = close;}
 
 }          
-
-function g(y, x, a)
-{   
-    
-
-
-}
