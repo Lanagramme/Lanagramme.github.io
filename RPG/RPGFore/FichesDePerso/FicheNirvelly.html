@@ -172,6 +172,8 @@
                             <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
                             <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
                             <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
+                            <li>Les sorts fonctionnant en AOE Traversent les portails. La portée totale en sortie de portail est égale à la portée totale de l'AOE - la distance entre la source de l'AOE et le portail.</li>
+                            <li>Les sorts fonctionnant en Cône traversent les portails. La portée totale en sortie de portail est égale à la portée totale du Cône - la distance entre la source de l'AOE et le portail. La direction en sortie est la même que la direction en entrée, mais le lanceur peut la modifier pour 1 PM.</li>
                             <li>Les familiers ne peuvent pas traverser les portails</li>
                             <li>Un portail disparait en cas de contact avec un sort d’écran</li>
                             <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
@@ -188,7 +190,7 @@
         
         <div class="colf-6 block block-cf">
             
-		    <p><strong>SKIlS DU FAMILIER DE NIRVELLY</strong></p>
+		    <p><strong>SKILLS DU FAMILIER DE NIRVELLY</strong></p>
 		    
                 <h3 class="element">Terre</h3>
                 
@@ -218,7 +220,7 @@
                 <div class="skillterre" id="dor">
                     <div onclick="c('dor2', 'dor', 'skillterreopen', 'skillterre')">
                         <h4 style="margin: 0px;" >Sommeil forcé</h4>
-                        <em>5 PV / Po2</em>
+                        <em>2 PV / Po2 Cône</em>
                     </div>
 
                     <div id="dor2" class="skil" style="display: none;">
