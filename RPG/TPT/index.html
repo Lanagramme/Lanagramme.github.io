@@ -87,6 +87,11 @@
                                 
                                 <button style="float: right" type="button" class="btn btn-defaut" onclick="attaque()">continuer</button>
                             </div>
+                            
+                            
+                            <div id="victory">
+                                <h2 id="v"></h2>
+                            </div>
                         </div>
 
                     </div>
@@ -128,27 +133,56 @@
     }*/
     var a = 0;
     var nmipv = 10;
+    
+    var nmipv = 10;
+    var hropv = 10;
+    
+    function victoire(){
+        var hroname = document.getElementById('herosname').value; hroname[0] = hroname[0].toUpperCase();
+        document.getElementById('v').innerHTML = hroname + " a triomphé de Vanir, serviteur du Roi Demon, il entre enfin dans la légende";
+        
+        document.getElementById('attaque').style.display = 'none';
+        document.getElementById('victory').style.display = 'block';
+    }
+    
+    function defaite(){
+        var hroname = document.getElementById('herosname').value; hroname[0] = hroname[0].toUpperCase();
+        document.getElementById('v').innerHTML = hroname + " est tombé sous les coups de Vanir, serviteur du Roi Demon, il ne se relèvera plus...";
+    
+        document.getElementById('attaque').style.display = 'none';
+        document.getElementById('victory').style.display = 'block';
+    }
   
 
     function WhatchaName(){
+        
         var hroname = document.getElementById('herosname').value;
         
+        if (hroname != ""){
         document.getElementById('WhatchaName').style.display = 'none';
         document.getElementById('ReadySetFight').style.display = 'block';
-        
+
         document.getElementById('hroname').innerHTML = hroname;
         document.getElementById('hroname1').innerHTML = hroname;
+        }
+        else{
+            alert('veuillez entrer un nom.');
+        }
+
     }
-    
+
     function ReadySetFight(){
         document.getElementById('ReadySetFight').style.display = 'none';
         document.getElementById('BattleMode').style.display = 'block';
+        
+        document.getElementById('pvhro').innerHTML = hropv;
+        document.getElementById('pvnmi').innerHTML = nmipv;
         
     }
     
     function attaque(){
         
-        var hroname = document.getElementById('herosname').value;
+        var hroname = document.getElementById('herosname').value; hroname[0] = hroname[0].toUpperCase()
         
         
         if (a==0){
@@ -157,15 +191,21 @@
             
             document.getElementById('hroatk').style.display = 'none';
             document.getElementById('hroatk').innerHTML = hroname + ' frappe Vanir, soldat du Roi Demon de toutes ses forces';
+            nmipv -=3 ;
+            document.getElementById('pvnmi').innerHTML = nmipv;
             document.getElementById('hroatk').style.display = 'block';
             a++;
         }
+        else if (nmipv <= 0){victoire();}
         else if (a == 1){
             document.getElementById('nmiatk').style.display = 'none';
-            document.getElementById('nmiatk').innerHTML = 'Vanir, serviteur du Roi Demon donne un coup vicieux a ' + hroname;
+            document.getElementById('nmiatk').innerHTML = 'Vanir, serviteur du Roi Demon balance un coup vicieux à ' + hroname;
+            hropv -=3;
+            document.getElementById('pvhro').innerHTML = hropv;
             document.getElementById('nmiatk').style.display = 'block';
             a++;
         }
+        else if (hropv <= 0){defaite();}
         else{
             document.getElementById('menu').style.display = 'block';
             document.getElementById('attaque').style.display = 'none';
@@ -174,6 +214,8 @@
             document.getElementById('nmiatk').style.display = 'none';
             a=0;
         }
+        
+        victory()
     }
 
     function menu(){
