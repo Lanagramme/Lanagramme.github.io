@@ -7,24 +7,47 @@
     <title>Document</title>
     <script>
         
+        var grille = document.getElementsByClassName('case');
 
-        var grille = document.getElementsByClassName('block');
+        function creer() {
+
+            let act = "" ;
+            let pos = 0;
+
+            let col = Number(document.getElementById("col").value) ;
+            let row = Number(document.getElementById("row").value) ;
+
+            let max = col - 1;
+            let min = 0;
+            let tot = col * row;
+
+            for (i = 0 ; i < row; i++) {
+                for (j = 0; j < col; j++) {
+                    act += "<div class='case' onmouseover='g(" + pos + ", " + col +", " + min +", " + max +")' onmouseout='f()'></div>" ;
+                    pos++;
+                }
+                act += "<div class='row'></div>" ;
+                max += col;
+                min += col;
+            }
+            document.getElementById('board').innerHTML = act ;
+        }
     
-        function g(a, l1, l2, lo)
+        function g(pos, col, min, max)
         {
-            grille[a].style.backgroundColor = 'red';
+            grille[pos].style.backgroundColor = 'red';
             
-            if(a - 1 >= l1)
-                {grille[a - 1].style.backgroundColor = 'red';}
+            if(pos - 1 >= min)
+                {grille[pos - 1].style.backgroundColor = 'red';}
             
-            if(a + 1 <= l2)
-                {grille[a + 1].style.backgroundColor = 'red';}
+            if(pos + 1 <= max)
+                {grille[pos + 1].style.backgroundColor = 'red';}
             
-            if(a + lo <= 15)
-                {grille[a + 4].style.backgroundColor = 'red';}
+            if(pos - col >= 0)
+                {grille[pos - col].style.backgroundColor = 'red';}
             
-            if(a - lo >= 0)
-                {grille[a - 4].style.backgroundColor = 'red';}
+            if(pos + col <= grille.length)
+                {grille[pos + col].style.backgroundColor = 'red';}
         }
 
         function f()
@@ -37,32 +60,15 @@
 	
 </head>
 <body>
-    <div class="row">
-        <div class="case block" id="c1" onmouseover="g(0, 0, 3, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c2" onmouseover="g(1, 0, 3, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c3" onmouseover="g(2, 0, 3, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c3" onmouseover="g(3, 0, 3, 4)" onmouseout="f()"></div>
-    </div>
+    <fieldset>
+        Nbr de colones :
+        <input type="text" id="col">
+        Nbr de lignes :
+        <input type="text" id="row">
+        <button onclick="creer()">Créer</button>
+    </fieldset>
     
-    <div class="row">
-        <div class="case block" id="c4" onmouseover="g(4, 4, 7, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c5" onmouseover="g(5, 4, 7, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c6" onmouseover="g(6, 4, 7, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c6" onmouseover="g(7, 4, 7, 4)" onmouseout="f()"></div>
-    </div>
-    
-    <div class="row">
-        <div class="case block" id="c7" onmouseover="g(8, 8, 11, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c8" onmouseover="g(9, 8, 11, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c9" onmouseover="g(10, 8, 11, 4)" onmouseout="f()"></div>
-        <div class="case block" id="c9" onmouseover="g(11, 8, 11, 4)" onmouseout="f()"></div>
-    </div>
-    
-    <div class="row">
-        <div class="case block" id="c7" onmouseover="g(12, 12, 15, 4)"  onmouseout="f()"></div>
-        <div class="case block" id="c8" onmouseover="g(13, 12, 15, 4)"  onmouseout="f()"></div>
-        <div class="case block" id="c9" onmouseover="g(14, 12, 15, 4)"  onmouseout="f()"></div>
-        <div class="case block" id="c9" onmouseover="g(15, 12, 15, 4)"  onmouseout="f()"></div>
+    <div id="board">
     </div>
 </body>
 </html>
