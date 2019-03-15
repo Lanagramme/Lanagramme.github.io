@@ -1,11 +1,12 @@
-.case
-{ 
+.case{ 
     width: 90px;
     height: 90px;
     float: left;
     background-color: #f1f3f5;
-    border-right: 1px dotted white;
-    border-bottom: 1px dotted white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .row {clear: both;}
+
+#board {margin: 50px;}
