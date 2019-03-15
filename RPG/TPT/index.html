@@ -84,11 +84,10 @@
                             <div id="attaque" style="display: none;">
                                 <p classe="atktxt" id="hroatk"></p>
                                 <p classe="atktxt" id="nmiatk"></p>
-                                
+
                                 <button style="float: right" type="button" class="btn btn-defaut" onclick="attaque()">continuer</button>
                             </div>
-                            
-                            
+
                             <div id="victory">
                                 <h2 id="v"></h2>
                             </div>
@@ -163,10 +162,9 @@
         if (a==0){
             document.getElementById('menu').style.display = 'none';
             document.getElementById('attaque').style.display = 'block';
-            
             document.getElementById('hroatk').style.display = 'none';
             document.getElementById('hroatk').innerHTML = hroname + ' frappe Vanir, soldat du Roi Demon de toutes ses forces';
-            nmipv -=3 ;
+            nmipv -= degats(3);
             document.getElementById('pvnmi').innerHTML = nmipv;
             document.getElementById('hroatk').style.display = 'block';
             a++;
@@ -175,7 +173,7 @@
         else if (a == 1){
             document.getElementById('nmiatk').style.display = 'none';
             document.getElementById('nmiatk').innerHTML = 'Vanir, serviteur du Roi Demon balance un coup vicieux à ' + hroname;
-            hropv -=3;
+            hropv -= degats(3);
             document.getElementById('pvhro').innerHTML = hropv;
             document.getElementById('nmiatk').style.display = 'block';
             a++;
@@ -184,13 +182,20 @@
         else{
             document.getElementById('menu').style.display = 'block';
             document.getElementById('attaque').style.display = 'none';
-
             document.getElementById('hroatk').style.display = 'none';
             document.getElementById('nmiatk').style.display = 'none';
             a=0;
         }
         
         victory()
+    }
+    
+    function degats(dmg){ 
+        return dmg+ Math.floor((Math.random() * 2) + 1);
+    
+        var x = Math.floor((Math.random() * 2) + 1);
+        if (x=1) {dmg *= 1}
+        else {dmg += -1}
     }
 
     $(document).ready(function(){
