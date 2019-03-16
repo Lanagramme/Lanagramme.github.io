@@ -1,4 +1,6 @@
-.case{ 
+#board { margin-top: 50px; }
+
+.section {
     width: 90px;
     height: 90px;
     float: left;
@@ -7,6 +9,4 @@
     border-bottom: 1px solid white;
 }
 
-.row {clear: both;}
-
-#board {margin: 50px;}
+.section-end {clear: both;}
