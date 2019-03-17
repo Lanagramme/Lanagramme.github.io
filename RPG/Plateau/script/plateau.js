@@ -3,30 +3,18 @@ var gri = document.getElementsByClassName('section');
 function creer() {
 
     let act = "", pos = 0, dex = [];
-
     let col = Number(document.getElementById("col").value);
     let row = Number(document.getElementById("row").value);
 
     if (isNaN(col) || isNaN(row)) {alert("Veuillez entrer des valeurs numériques.");}
     else {
-        let max = col - 1,  min = 0, tot = (col * row) - 1;
+        let max = col - 1,  min = 0;
 
-        /*for (i = 0; i < row; i++) {
-            for (j = 0; j < col; j++) {
-                act += "<div class='section' onclick='a(" + pos + ", " + col + ", " + tot + ", " + min + ", " + max + ")'></div>"; //onmouseout='f()'
-                dex.push([min, max]);
-                pos++;
-            }
-            act += "<br>";
-            max += col;
-            min += col;
-        }*/
         act += "<table>";
-
         for (i = 0; i < row; i++) {
             act += "<tr>";
             for (j = 0; j < col; j++) {
-                act += "<td class='section' onclick='a(" + pos + ", " + col + ", " + tot + ", " + min + ", " + max + ")'></td>"; //onmouseout='f()'
+                act += "<td class='section' onclick='z(" + pos + ")'></td>"; 
                 dex.push([min, max]);
                 pos++;
             }
@@ -34,7 +22,6 @@ function creer() {
             max += col;
             min += col;
         }
-
         act += "</table>";
 
         document.getElementById('board').innerHTML = act;
@@ -42,11 +29,16 @@ function creer() {
     }
 } //crée le plateau
 
-function a(pos, col, tot, min, max) {
+function a(pos) {
     f();
+    gri[pos].className += " active";
+
+    let col = Number(document.getElementById("col").value);
+    let row = Number(document.getElementById("row").value);
+    let dex = JSON.parse(localStorage.getItem("index"));
+    let tot = (col * row) - 1, min = dex[pos][0], max = dex[pos][1];
 
     gri[pos].style.backgroundColor = 'red';
-    gri[pos].className += " active";
 
     if (pos - 1 >= min) { gri[pos - 1].style.backgroundColor = 'red'; }
     if (pos + 1 <= max) { gri[pos + 1].style.backgroundColor = 'red'; }
@@ -54,16 +46,21 @@ function a(pos, col, tot, min, max) {
     if (pos + col <= tot) { gri[pos + col].style.backgroundColor = 'red'; }
 } //dessine une portée de 1 autour de la case active
 
-function b(pos, col, tot, min, max) {
+function b(pos) {
     f();
+    gri[pos].className += " active";
+
+    let col = Number(document.getElementById("col").value);
+    let row = Number(document.getElementById("row").value);
+    let dex = JSON.parse(localStorage.getItem("index"));
+    let tot = (col * row) - 1, min = dex[pos][0], max = dex[pos][1];
 
     gri[pos].style.backgroundColor = 'red';
-    gri[pos].className += " active";
 
     if (pos - 1 >= min) { gri[pos - 1].style.backgroundColor = 'red'; }
     if (pos - 2 >= min) { gri[pos - 2].style.backgroundColor = 'red'; }
-    if (pos-1-col >= min-col && pos-1-col >= 0) { gri[pos - 1 - col].style.backgroundColor = 'red'; }
-    if (pos-1+col >= min+col && pos-1+col <tot) { gri[pos - 1 + col].style.backgroundColor = 'red'; }
+    if (pos-1-col >= min-col && pos-1-col >= 0) { gri[pos-1-col].style.backgroundColor = 'red'; }
+    if (pos-1+col >= min+col && pos-1+col <tot) { gri[pos-1+col].style.backgroundColor = 'red'; }
 
     if (pos + 1 <= max) { gri[pos + 1].style.backgroundColor = 'red'; }
     if (pos + 2 <= max) { gri[pos + 2].style.backgroundColor = 'red'; }
@@ -86,10 +83,10 @@ function f() {
 
 document.addEventListener('keydown', function (event) {
 
-    let col1 = Number(document.getElementById("col").value);
+    let col = Number(document.getElementById("col").value);
     let row1 = Number(document.getElementById("row").value);
     let dex = JSON.parse(localStorage.getItem("index"));
-    let tot = (col1 * row1) - 1, pos = 0;
+    let tot = (col * row1) - 1, pos = 0;
 
     if (event.keyCode === 37) {
         for (let i = 0; i <= gri.length - 1; i++) {
@@ -97,7 +94,7 @@ document.addEventListener('keydown', function (event) {
                 pos = i;
                 if (pos > dex[pos][0]) {
                     f();
-                    a(pos - 1, col1, tot, dex[pos][0], dex[pos][1]);
+                    z(pos - 1);
                 }
                 break;
             }
@@ -108,7 +105,7 @@ document.addEventListener('keydown', function (event) {
                 pos = i;
                 if (pos < dex[pos][1]) {
                     f();
-                    a(pos + 1, col1, tot, dex[pos][0], dex[pos][1]);
+                    z(pos + 1);
                 }
                 break;
             }
@@ -117,9 +114,9 @@ document.addEventListener('keydown', function (event) {
         for (let i = 0; i <= gri.length - 1; i++) {
             if (gri[i].classList.contains("active")) {
                 pos = i;
-                if (pos - col1 >= 0) {
+                if (pos - col >= 0) {
                     f();
-                    a(pos - col1, col1, tot, dex[pos][0] - col1, dex[pos][1] - col1);
+                    z(pos - col);
                 }
                 break;
             }
@@ -128,12 +125,55 @@ document.addEventListener('keydown', function (event) {
         for (let i = 0; i <= gri.length - 1; i++) {
             if (gri[i].classList.contains("active")) {
                 pos = i;
-                if (pos + col1 <= tot) {
+                if (pos + col <= tot) {
                     f();
-                    a(pos + col1, col1, tot, dex[pos][0] + col1, dex[pos][1] + col1);
+                    z(pos + col);
                 }
                 break;
             }
         }
     }
 }); //déplacement  de la case active en fonction de keybard input
+
+function g(a, b, c){
+    let tabi = document.getElementsByClassName(b);
+    let taba = document.getElementsByClassName(c);
+    for (i=0; i<tabi.length; i++){
+        tabi[i].style.border = '1px solid gray';
+        tabi[i].style.borderBottom = '2px solid black';
+    }
+    for (i=0; i<taba.length; i++){
+        if (i == a){taba[i].style.display = "block";}
+        else {taba[i].style.display = "none";}
+        
+    }
+    tabi[a].style.border = '2px solid black';
+    tabi[a].style.borderBottom = '2px solid white';
+}
+
+
+
+function z (pos){
+    f();
+
+    gri[pos].style.backgroundColor = 'red';
+    gri[pos].className += " active";
+}
+
+function h(rrr){
+    for (let i = 0; i <= gri.length - 1; i++) {
+        if (gri[i].classList.contains("active")) {
+            pos = i;
+            break;
+        }
+    }
+    console.log(pos);
+    switch (rrr){
+        case 1:
+        a(pos);
+        break;
+        case 2:
+        b(pos);
+        break;
+    }
+}

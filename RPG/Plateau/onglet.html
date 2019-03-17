@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="onglet.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        function f(a, b){
+            let tabi = document.getElementsByClassName(b);
+            for (i=0; i<tabi.length; i++){
+                tabi[i].style.border = 'transparent';
+            }
+            tabi[a].style.border = '1px solid black';
+            tabi[a].style.borderBottom = '1px solid white';
+        }
+    </script>
+</head>
+<body>
+    <div class="a">
+        <div class="d">
+            <div class="c" onmouseover="f(0, 'c')">first</div>
+            <div class="c" onmouseover="f(1, 'c')">second</div>
+            <div class="c" onmouseover="f(2, 'c')">third</div>
+        </div>
+    </div>
+
+</body>
+</html>
