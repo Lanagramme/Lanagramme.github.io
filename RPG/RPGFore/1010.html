@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/columns.css">
     <title>Document</title>
 </head>
 <body>
@@ -22,21 +23,21 @@
             <div id="fdp">
                 <h4>Fiches de Personnage</h4>
                 <ul>
-                    <li>LeFaucheur</li>
-                    <li>TheBoss</li>
-                    <li>Neithania</li>
-                    <li>Nirvelly</li>
+                    <li><a class="button" href="FichesDePerso/FicheNeithania.html">Neithania</a></li>
+                    <li><a class="button" href="FichesDePerso/FicheNirvelly.html">Nirvelly</a></li>
+                    <li><a class="button" href="FichesDePerso/FicheLeFaucheur.html">Lefaucheur</a></li>
+                    <li><a class="button" href="FichesDePerso/FicheTheBoss.html">Theboss</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    
+        
     <div id="mani">
         <section>
             <article id="a" class="switch">
                 <div class="ongtop">
-                    <p onclick="a();" class="neutre">Présentation</p>
-                    <p onclick="a2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="a();" class="button">Présentation</p>
+                    <p onclick="a2();" class="button">Liste des Sorts</p>
                 </div>
             
                 <div class="descri">
@@ -51,13 +52,13 @@
                     <h3>Réactions</h3>
 
                     <div class="liste">
-                        <div class="sort">
+                        <figure class="sort">
                             <h4>Parade</h4>
 
                             <p>Si le gardien porte une arme, il peut s’en servir pour éviter <strong><a href="index.html#jet">1D6</a> <span title="Dommages">DMG*</span></strong> reçus par une attaque s’il réussit un jet FOR. Il ne peut pas réagir aux attaques dans son dos. Il peut utiliser la parade plusieurs fois par tr, tant qu’il réalise une chaine ininterrompue de parades. Si la chaine est brisée il ne peut plus effectuer de parades pour ce tr. Après une parade réussie, le personnage fait face à la source de l’attaque. Ne fonctionne pas sur les AoE ou les attaques ayant une zone d’effet en ligne ou en cône, sauf si le zélote est sur une case adjacente au lanceur.</p>
-                        </div>
+                        </figure>
 
-                        <div class="sort">
+                        <figure class="sort">
                             <h4>Tacle</h4>
 
                             <p>Si un personnage se trouvant sur une case adjacente au lanceur essaie de se déplacer, le lanceur peut tenter de l’en empêcher.</p>
@@ -67,15 +68,15 @@
                                 <li>La cible fait un jet d’<strong>AGI</strong></li>
                                 <li>Si le lanceur a le plus grand score la cible ne peut plus se déplacer pour ce tr.</li>
                             </ul>
-                        </div>
+                        </figure>
                     </div>
                 </div>
 
                 <div class="ongside">
-                    <p onclick="a2n();" class="neutre"></p>
-                    <p onclick="a2t();" class="terre"></p>
-                    <p onclick="a2e();" class="eau" ></p>
-                    <p onclick="a2f();" class="feu" ></p>
+                    <p onclick="a2n();" class="neutre button"></p><br>
+                    <p onclick="a2t();" class="terre button"></p><br>
+                    <p onclick="a2e();" class="eau button" ></p><br>
+                    <p onclick="a2f();" class="feu button" ></p>
                 </div>
 
             </article>
@@ -83,7 +84,7 @@
             <article id="a2" class="switch">
                 <div class="ongtop">
                     <p onclick="a();" class="neutre">Présentation</p>
-                    <p onclick="a2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="a2();" class="button">Liste des Sorts</p>
                 </div>
                 
                 <div class="descri">
@@ -91,7 +92,7 @@
                     <div id="a2n" class="switch">
                         <h3>Neutre</h3>
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <h4>Provocation</h4> 
 
                                 <em>3 <span title="Point d'Action">PA*</span> / <span title="lancé sur soi même">Self*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 4</em>
@@ -105,28 +106,31 @@
                                     <li>Cible <strong>+1 <span title="Points de Mouvements">PM*</span> /2Tr</strong></li>
                                     <li><strong>-1 <span title="Dommages">DMG*</span></strong> reçus par le gardien <strong>/2Tr</strong></li>
                                 </ul>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <h4>Lame Enchantée</h4>
 
                                 <em>2 <span title="Point d'Action">PA*</span> / <span title="lancé sur soi même">Self*</span></em>
 
                                 <p>En appliquant la Lame Enchantée à n’importe quel objet non magique, le gardien crée autour de celui-ci une aura élémentaire neutre qui absorbe l’énergie magique. Une fois appliquée, l’aura prendra la nature élémentaire du dernier sort lancé par le gardien. L’objet enchanté s’autodétruit après <strong><a href="index.html#jet">1D4</a>+2</strong> utilisations. Chaque fois que le joueur lance un sort, l’aura reçoit sa nature élémentaire<br>Utilisé comme arme, l’objet enchanté reçoit un bonus de <strong>+COIN <span title="Dommages">DMG*</span></strong> élémentaires à ses <strong><span title="Dommages">DMG*</span></strong> de base</p>
-
+                                
+                            </figure>
+                            
+                            <figure class="sort">
                                 <h4>Soin d'Urgence</h4>
 
                                 <em>3 <span title="Point d'Action">PA*</span> / <span title="lancé sur soi même">Self*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 2</em>
 
                                 <p>Le gardien absorbe l’énergie magique naturellement présente dans l’air pour la mélanger à son aura. Il récupère <strong><a href="index.html#jet">1D4</a> PV</strong></p>
-                            </div>
+                            </figure>
                         </div>
                     </div>
 
                     <div id="a2f" class="switch">
                         <h3>Feu</h3>
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="terre">
                                     <h4>Bouclier de la Terre</h4>
 
@@ -142,9 +146,9 @@
                                         <li>Contre <strong><a href="index.html#jet">1D4</a>+(X-1) PV</strong> le gardien peut appliquer son bouclier à une cible, <strong>X</strong> étant la distance en <strong>m</strong> entre lui et la cible</li>
                                     </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">   
+                            <figure class="sort">   
                                 <div class="terre">
                                     <h4>Rage Salvatrice</h4>
 
@@ -157,33 +161,37 @@
                                         <li><strong>+1 <span title="Dommages">DMG*</span></strong> infligés pour chaque attaque ennemie ou auto-infligée reçue <strong>/ 2 Tr</strong></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </figure>
                         </div>
                     </div>
 
                     <div id="a2e" class="switch">
-                        <h3>Eau</h3>
-                        <div class="sort">
-                            <div class="eau">
-                                <h4>Immobilisation</h4>
+                    <h3>Eau</h3>
+                       
+                        <div class="liste">
+                            <figure class="sort eau">
+                            <h4>Immobilisation</h4>
 
-                                <em>3 <span title="Point d'Action">PA*</span>/ <span title="Portée en mètres">Po*</span> 4 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 2</em>
+                                    <em>3 <span title="Point d'Action">PA*</span>/ <span title="Portée en mètres">Po*</span> 4 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 2</em>
 
-                                <p>Le gardien absorbe rapidement l’énergie de feu contenue dans la terre d’une zone. Des cristaux de glace émergent du sol et emprisonnent les pieds de la cible. Le gardien reçoit un marqueur inflammable sur son aura qui se dissipe après 1Tr</p>
+                                    <p>Le gardien absorbe rapidement l’énergie de feu contenue dans la terre d’une zone. Des cristaux de glace émergent du sol et emprisonnent les pieds de la cible. Le gardien reçoit un marqueur inflammable sur son aura qui se dissipe après 1Tr</p>
 
-                                <ul>
-                                    <li><span title="Points de Mouvements">PM*</span> cible = <strong>0 /2tr</strong></li>
-                                    <li>Tant qu’il a sur lui un marqueur inflammable le gardien reçoit +COIN <span title="Dommages">DMG*</span> aux sorts de feu</li>
-                                </ul>
-                            </div>
+                                    <ul>
+                                        <li><span title="Points de Mouvements">PM*</span> cible = <strong>0 /2tr</strong></li>
+                                        <li>Tant qu’il a sur lui un marqueur inflammable le gardien reçoit +COIN <span title="Dommages">DMG*</span> aux sorts de feu</li>
+                                    </ul>
+                            </figure>
                         </div>
+                        
+
                     </div>
 
                     <div id="a2t" class="switch">
-                        <h3>Terre</h3>
-                        <div class="sort">
-                            <div class="feu">
-                                <h4>Charge Explosive</h4>
+                    <h3>Terre</h3>
+                        
+                        <div class="liste">
+                            <figure class="sort feu">
+                            <h4>Charge Explosive</h4>
 
                                 <em>6 <span title="Point d'Action">PA*</span> / <span title="lancé sur soi même">Self*</span> </em>
 
@@ -194,16 +202,16 @@
                                     <li><strong><span title="Dommages">DMG*</span> AoE+3 <a href="index.html#jet">1D10</a> ; <a href="index.html#jet">2D6</a> ; <a href="index.html#jet">1D6</a>+2</strong></li>
                                     <li>La charge explosive peut traverser les zones maudites sans qu’elles affectent le gardien</li>
                                 </ul>
-                            </div>
+                            </figure>
                         </div>
                     </div>
                 </div>
                 
                 <div class="ongside">
-                    <p onclick="a2n();" class="neutre"></p>
-                    <p onclick="a2t();" class="terre"></p>
-                    <p onclick="a2e();" class="eau" ></p>
-                    <p onclick="a2f();" class="feu" ></p>
+                    <p onclick="a2n();" class="neutre button"></p><br>
+                    <p onclick="a2t();" class="terre button"></p><br>
+                    <p onclick="a2e();" class="eau button" ></p><br>
+                    <p onclick="a2f();" class="feu button" ></p><br>
                 </div>
 
             </article>
@@ -213,13 +221,13 @@
             <article id="b" class="switch">
             
                 <div class="ongtop">
-                    <p onclick="b();" class="neutre">Presentation</p>
-                    <p onclick="b2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="b();" class="button">Présentation</p>
+                    <p onclick="b2();" class="button">Liste des Sorts</p>
                 </div>
                 
                 <div class="descri">
 
-                <h2>Zélote</h2>
+                    <h2>Zélote</h2>
 
                     <p>Opposé direct du gardien, le zélote applique l’énergie de son aura à celle naturellement présente dans l’air qui l’entoure pour la sur-activer afin de déchainer une puissance dévastatrice.<br>Très puissang grace à ses dégats magique à courte et semi courte distance et sa mobilité, il reste cependant faible physiquement et ne peut pas résister à des assauts trop violents.</p>
 
@@ -227,30 +235,37 @@
 
                         <img src="img/Modificateur%20zelote.png">
 
-                    <article class="liste">
-                       <div class="sort">
-                            <h3>Réactions</h3>
+                    <article>
 
-                                <h4>Esquive</h4>
-
+                        <div class="liste">
+                        
+                        <h3>Réactions</h3>
+                          
+                           <figure class="sort">
+                               
+                            <h4>Esquive</h4>
+                               
                                 <p>Quand le zélote est attaqué, il peut tenter d’éviter <a href="index.html#jet">1D6</a> <span title="Dommages">DMG*</span> reçus par s’il réussit un jet d’AGI. Il ne peut pas réagir aux attaques dans son dos. Il peut utiliser l’esquive plusieurs fois par tr, tant qu’il réalise une chaine ininterrompue d’esquives. Si la chaine est brisée il ne peut plus effectuer d’esquives pour ce tr. Après une esquive réussie, le personnage fait face à la source de l’attaque. Ne fonctionne pas sur les AoE ou les attaques ayant une zone d’effet en ligne ou en cône, sauf si le zélote est sur une case adjacente au lanceur.</p>
-                        </div>
-
-                        <div class="sort">   
-                            <h3>Passifs de Classe</h3>
+                            </figure>
+                            
+                        <h3>Passifs de Classe</h3>
+                        
+                        <figure class="sort">   
 
                                 <h4>Maitre d'arme</h4>
 
                                 <p>Le cout en PA à l’usage des armes est réduit de 1 pour le zélote. </p>
+                        </figure>
+
                         </div>
 
                     </article>
                 </div>
                 
                 <div class="ongside">
-                    <p onclick="b2t();" class="terre"></p>
-                    <p onclick="b2e();" class="eau" ></p>
-                    <p onclick="b2f();" class="feu" ></p>
+                    <p onclick="b2t();" class="terre button"></p><br>
+                    <p onclick="b2e();" class="eau button"></p><br>
+                    <p onclick="b2f();" class="feu button"></p><br>
                 </div>
 
             </article>
@@ -258,8 +273,8 @@
             <article id="b2" class="switch">
                
                 <div class="ongtop">
-                    <p onclick="b();" class="neutre">Presentation</p>
-                    <p onclick="b2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="b();" class="button">Présentation</p>
+                    <p onclick="b2();" class="button">Liste des Sorts</p>
                 </div>
 
                 <div class="descri">
@@ -270,7 +285,7 @@
                         <div id="b2f" class="switch">
                         <h3>Feu</h3>
                         <div class="liste">
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="feu">
                                         <h4>Trait de feu</h4>
 
@@ -282,8 +297,8 @@
                                                 <li><a href="index.html#jet">1D4</a> <span title="Dommages">DMG*</span></li>
                                             </ul>
                                     </div>
-                                </div>
-                                <div class="sort">
+                            </figure>
+                                <figure class="sort">
                                     <div class="feu">
                                         <h4>Vague de feu</h4>
 
@@ -295,14 +310,14 @@
                                                 <li><a href="index.html#jet">1D6</a> <span title="Dommages">DMG*</span></li>
                                             </ul>
                                     </div>
-                                </div>
+                            </figure>
                             </div>
                         </div>
                         
                         <div id="b2t" class="switch">
                         <h3>Terre</h3>
                         <div class="liste">
-                               <div class="sort">
+                               <figure class="sort">
                                     <div class="terre">
                                         <h4>Projectioon</h4>
 
@@ -315,9 +330,9 @@
                                                 <li><a href="index.html#jet">2D4</a> <span title="Dommages">DMG*</span> cible à la collision</li>
                                             </ul>
                                     </div>
-                               </div>
+                            </figure>
 
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="terre">
                                          <h4>Poing de Gaïa</h4>
 
@@ -330,14 +345,14 @@
                                                 <li><strong><a href="index.html#jet">1D4</a></strong> Auto-infligés</li>
                                             </ul>
                                     </div>
-                                </div>
+                            </figure>
                             </div>
                         </div>
                         
                         <div id="b2e" class="switch">
                         <h3>Eau</h3>
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Trait de Glace</h4>
 
@@ -349,9 +364,9 @@
                                             <li><strong><a href="index.html#jet">1D4</a> <span title="Dommages">DMG*</span></strong></li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Iceberg</h4>
 
@@ -365,7 +380,7 @@
                                             <li><strong>-2 <span title="Points de Mouvements">PM*</span> / Tr</strong></li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
                     </div>
                         </div>
                         
@@ -373,9 +388,9 @@
                 </div>
                 
                 <div class="ongside">
-                    <p onclick="b2t();" class="terre"></p>
-                    <p onclick="b2e();" class="eau" ></p>
-                    <p onclick="b2f();" class="feu" ></p>
+                    <p onclick="b2t();" class="terre button"></p><br>
+                    <p onclick="b2e();" class="eau button"></p><br>
+                    <p onclick="b2f();" class="feu button"></p><br>
                 </div>
                 
             </article>
@@ -384,8 +399,8 @@
         <section>
             <article id="c" class="switch">
                 <div class="ongtop">
-                    <p onclick="c();" class="neutre">Presentation</p>
-                    <p onclick="c2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="c();" class="button">Présentation</p>
+                    <p onclick="c2();" class="button">Liste des Sorts</p>
                 </div>
                              
                 <div class="descri">
@@ -414,20 +429,24 @@
                     <img src="img/Modificateur%20Invocateur.png">
 
                     <h3>Réactions</h3>
+                    
+                    <div class="liste">
+                        <figure class="sort">
+                            <h4>Rappel</h4>
 
-                    <div class="sort">
-                        <h4>Rappel</h4>
-
-                        <p>L’invocateur peut désinvoquer son familier contre  <strong>X-Y PV, X</strong> étant le nombre de <strong>PV</strong> restant au familier et <strong>Y</strong> le nombre de <strong>PA</strong> restant à l’invocateur. Si le nombre de point d’action de l’invocateur est supérieur au nombre de points de vie du familier il récupère <strong>X PV</strong></p>
+                            <p>L’invocateur peut désinvoquer son familier contre  <strong>X-Y PV, X</strong> étant le nombre de <strong>PV</strong> restant au familier et <strong>Y</strong> le nombre de <strong>PA</strong> restant à l’invocateur. Si le nombre de point d’action de l’invocateur est supérieur au nombre de points de vie du familier il récupère <strong>X PV</strong></p>
+                        </figure>
                     </div>
+
+                        
 
                 </div>
 
                 <div class="ongside">
-                    <p onclick="c2n();" class="neutre"></p>
-                    <p onclick="c2t();" class="terre"></p>
-                    <p onclick="c2e();" class="eau" ></p>
-                    <p onclick="c2f();" class="feu" ></p>
+                    <p onclick="c2n();" class="neutre button"></p><br>
+                    <p onclick="c2t();" class="terre button"></p><br>
+                    <p onclick="c2e();" class="eau button"></p><br>
+                    <p onclick="c2f();" class="feu button"></p><br>
                 </div>
 
             </article>
@@ -435,8 +454,8 @@
             <article id="c2" class="switch">
               
                 <div class="ongtop">
-                    <p onclick="c();" class="neutre">Presentation</p>
-                    <p onclick="c2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="c();" class="button">Présentation</p>
+                    <p onclick="c2();" class="button">Liste des Sorts</p>
                 </div>
                
                 <div class="descri">
@@ -446,7 +465,7 @@
                     <div id="c2n" class="switch">
                         <h3>Neutre</h3>
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <h4>Invocation</h4>
 
                                     <em>4 <span title="Point d'Action">PA*</span> + COIN PV / <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 5</em>
@@ -460,25 +479,27 @@
                                         <li>Le familier possède 10 PV + le modificateur ESP de son invocateur</li>
                                         <li>Le familier possède autant de PA max et de <span title="Points de Mouvements">PM*</span> max qu’en possède son invocateur au moment de sa création</li>
                                     </ul>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <h4>Hate</h4>
                                     <em>3 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 4 sans ligne de vue</em>
 
                                     <p>La cible gagne 2 <span title="Point d'Action">PM*</span> max / 2Tr</p>
-                            </div>
+                            </figure>
 
-                            <h4>Hyperactivité</h4>
+                            <figure class="sort">
+                                <h4>Hyperactivité</h4>
 
-                            <em>3 PA / Po 4 sans ligne de vue</em>
+                                <em>3 PA / Po 4 sans ligne de vue</em>
 
-                            <p>La cible gagne 2 PA max / 2Tr</p>
+                                <p>La cible gagne 2 PA max / 2Tr</p>
 
-                            <ul>
-                                <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
+                                <ul>
+                                    <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
 
-                            </ul>
+                                </ul>
+                            </figure>
                         </div>
                     </div>
 
@@ -486,7 +507,7 @@
                         <h3>Sorts du familier d'élément Eau</h3>
 
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Mirage</h4>
 
@@ -499,9 +520,9 @@
                                             <li>L’illusion disparait si le familier meurt</li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Souffle Glacé</h4>
 
@@ -514,9 +535,9 @@
                                         <li>Le bord du plateau n’occasionne pas de dégâts</li>
                                     </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Mur de Glace</h4>
 
@@ -525,9 +546,9 @@
                                     <p>Crée un mur de glace de 3 m de long qui fond après  4 Tr</p>
                                     <ul><li>Le mur de glace fond s’il reçoit un total d’au moins 10 <span title="Dommages">DMG*</span> de feu</li></ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Lances de glace</h4>
 
@@ -539,14 +560,14 @@
                                             <li>-2 <span title="Points de Mouvements">PM*</span> / 3 Tr</li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
                         </div>
                     </div>
 
                     <div id="c2t" class="switch">                   
                     <h3>Sorts du familier de la Terre</h3>
                     <div class="liste">
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="terre">
                                         <h4>Constriction</h4>
 
@@ -556,9 +577,9 @@
 
                                             <ul><li><span title="Points de Mouvements">PM*</span> = 0 / 3 TR</li></ul>
                                     </div>
-                                </div>
+                        </figure>
 
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="terre">
                                             <h4>Souffle empoisonné</h4>
 
@@ -568,9 +589,9 @@
 
                                                 <ul><strong>COIN .<span title="Dommages">DMG*</span>/Tr/ 5 Tr</strong></ul>  
                                     </div>
-                                </div>
+                        </figure>
 
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="terre">
                                         <h4>Bénédiction</h4>
 
@@ -578,9 +599,9 @@
 
                                             <p>Le familier transfert 5 PV a une cible</p>
                                     </div>
-                                </div>
+                        </figure>
 
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="terre">
                                         <h4>Sommeil forcé</h4>
 
@@ -588,14 +609,14 @@
 
                                             <p>Le familier souffle un gaz soporifique qui incapacite toute cible à portée jusqu’à ce qu’elle réussisse <a href="index.html#jet">1D20</a> ESP avec un modificateur - 2</p>
                                     </div>
-                                </div>
+                        </figure>
                     </div>
                     </div>
                      
                     <div id="c2f" class="switch">  
                     <h3>Sort du familier des flammes</h3>
                     <div class="liste">
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="feu">
                                         <h4>Trace</h4>
 
@@ -605,17 +626,17 @@
 
                                             <ul><li>Coin <span title="Dommages">DMG*</span> sur zone / 2 Tr</li></ul>
                                     </div>
-                                </div>
+                        </figure>
 
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="feu">
                                         <h4>Kamikaze</h4>
 
                                             <p>Le familier s’autodétruit et inflige son total de PV restant /2 en <span title="Dommages">DMG*</span> sur une AoE +1</p>
                                     </div>
-                                </div>
+                        </figure>
 
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="feu">
                                         <h4>Boutefeu</h4>
 
@@ -625,9 +646,9 @@
 
                                             <ul><li>COIN <span title="Dommages">DMG*</span></li></ul>
                                     </div>
-                                </div>
+                        </figure>
 
-                                <div class="sort">
+                                <figure class="sort">
                                     <div class="feu">
                                         <h4>Souffle incandescent</h4>
 
@@ -637,17 +658,17 @@
 
                                         <ul><li><strong><span title="Dommages">DMG*</span> <a href="index.html#jet">1D6</a> ; <a href="index.html#jet">1D6</a>-1 ; <a href="index.html#jet">1D6</a>-2 </strong></li></ul>
                                     </div>
-                                </div>
+                        </figure>
                     </div>
                      </div>
                      
                 </div>
                 
                 <div class="ongside">
-                    <p onclick="c2n();" class="neutre"></p>
-                    <p onclick="c2t();" class="terre"></p>
-                    <p onclick="c2e();" class="eau" ></p>
-                    <p onclick="c2f();" class="feu" ></p>
+                    <p onclick="c2n();" class="neutre button"></p><br>
+                    <p onclick="c2t();" class="terre button"></p><br>
+                    <p onclick="c2e();" class="eau button"></p><br>
+                    <p onclick="c2f();" class="feu button"></p><br>
                 </div>
                                 
             </article>
@@ -657,8 +678,8 @@
             <article id="d" class="switch">
                
                 <div class="ongtop">
-                    <p onclick="d();" class="neutre">Presentation</p>
-                    <p onclick="d2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="d();" class="button">Présentation</p>
+                    <p onclick="d2();" class="button">Liste des Sorts</p>
                 </div>
                               
                 <div class="descri">                                    
@@ -673,13 +694,13 @@
 
                     <h3>Réactions</h3>
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <h4>Bouclier de l'esprit</h4>
 
                                 <p>La maitrise des flux magique du Pacificateur ne se limite pas à la magie de l’environnement. Chaque fois qu’il est la cible directe d’une attaque occasionnant des <strong><span title="Dommages">DMG*</span></strong> magiques, le Pacificateur peut faire un jet d’<strong>ESP</strong> pour tenter d’en annuler les <strong><a href="index.html#jet">1D4</a> <span title="Dommages">DMG*</span></strong>. En cas de réussite critique, il annule tous les dommages de l’attaque. Ne fonctionne pas pour les dommages venant dans le dos. Il peut utiliser son boulier de l’esprit plusieurs fois par Tr, tant qu’il réalise une chaine ininterrompue de boulier. Si la chaine est brisée il ne peut plus effectuer boulier pour ce Tr. Après une boulier réussie, le personnage fait face à la source de l’attaque.</p>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <h4>Tacle</h4>
 
                                     <p>Si un personnage se trouvant sur une case adjacente au lanceur essaie de se déplacer, le lanceur peut tenter de l’en empêcher.</p>
@@ -689,14 +710,14 @@
                                         <li>La cible fait un jet d’<strong>AGI</strong></li>
                                         <li>Si le lanceur a le plus grand score la cible ne peut plus se déplacer pour ce tr.</li>
                                     </ul>
-                            </div>
+                            </figure>
                         </div>
                 </div>
 
                  <div class="ongside">
-                    <p onclick="d2t();" class="terre"></p>
-                    <p onclick="d2e();" class="eau" ></p>
-                    <p onclick="d2f();" class="feu" ></p>
+                    <p onclick="d2t();" class="terre button"></p><br>
+                    <p onclick="d2e();" class="eau button"></p><br>
+                    <p onclick="d2f();" class="feu button"></p><br>
                 </div>
                 
             </article>
@@ -704,8 +725,8 @@
             <article id="d2" class="switch">
                
                 <div class="ongtop">
-                    <p onclick="d();" class="neutre">Presentation</p>
-                    <p onclick="d2();" class="neutre">Liste des Sorts</p>
+                    <p onclick="d();" class="button">Présentation</p>
+                    <p onclick="d2();" class="button">Liste des Sorts</p>
                 </div>
                                
                 <div class="descri" >
@@ -715,7 +736,7 @@
                     <div id="d2t" class="switch">
                     <h3>Terre</h3>
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="terre">
                                     <h4>Intimidation</h4>
 
@@ -728,9 +749,9 @@
                                             <li>Cible <strong>+1 <span title="Points de Mouvements">PM*</span>/2Tr</strong></li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="terre">
                                     <h4>Silence</h4>
 
@@ -740,9 +761,9 @@
 
                                         <ul><li>Tant que la cible a un marqueur de silence sur elle, elle ne peut plus utiliser la magie. Il perd aussi tout buff, débuff, ou marqueur qu’il possède.</li></ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                <h3>Terre / Eau</h3>
                                 <div class="mixte">
 
@@ -768,7 +789,7 @@
 
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
                         </div>
                     </div>
 
@@ -776,7 +797,7 @@
                     <h3>Eau</h3>
                         <div class="liste">
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Marche forcée</h4>
 
@@ -801,9 +822,9 @@
                                             <li>Il n’est pas possible d’éjecter un personnage du plateau, heurter le bord du plateau n’occasionne pas de dégâts</li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="eau">
                                     <h4>Prison aqueuse</h4>
 
@@ -826,9 +847,9 @@
                                             <li>Un joueur ne peut conjurer qu'une Bulle à la fois</li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                <h3>Terre / Eau</h3>
                                 <div class="mixte">
 
@@ -853,9 +874,9 @@
 
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                     <h3>Eau / Feu</h3>
                                 <div class="mixfe">
                                     <h4>Ecran</h4>
@@ -874,14 +895,14 @@
                                             <li>Une Prison aqueuse éclate au contact de la brume</li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
                         </div>
                     </div>
 
                     <div id="d2f" class="switch">
                     <h3>Feu</h3>
                         <div class="liste">
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="feu">
                                     <h4>Invisibilité</h4>
 
@@ -898,9 +919,9 @@
                                                 <li>Attaquer au corps à corps annule l’invisibilité</li>
                                             </ul>
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                                 <div class="feu">
                                     <h4>Mur de feu</h4>
 
@@ -913,8 +934,8 @@
                                             <li>Le mur de flamme se dissipe s’il reçoit un total d’au moins <strong>10 <span title="Dommages">DMG*</span></strong> d’eau</li>
                                         </ul>
                                 </div>
-                            </div>
-                            <div class="sort">
+                            </figure>
+                            <figure class="sort">
                                 <div class="feu">
                                     <h4>Boule de feu</h4>
 
@@ -927,9 +948,9 @@
                                             <li><strong>-2 PV. sur zone/ Tr</strong></li>
                                         </ul> 
                                 </div>
-                            </div>
+                            </figure>
 
-                            <div class="sort">
+                            <figure class="sort">
                     <h3>Eau / Feu</h3>
                                 <div class="mixfe">
                                     <h4>Ecran</h4>
@@ -948,16 +969,16 @@
                                             <li>Une Prison aqueuse éclate au contact de la brume</li>
                                         </ul>
                                 </div>
-                            </div>
+                            </figure>
                     </div>
                     </div>
                               
                 </div>
 
                 <div class="ongside">
-                    <p onclick="d2t();" class="terre"></p>
-                    <p onclick="d2e();" class="eau" ></p>
-                    <p onclick="d2f();" class="feu" ></p>
+                    <p onclick="d2t();" class="terre button"></p><br>
+                    <p onclick="d2e();" class="eau button"></p><br>
+                    <p onclick="d2f();" class="feu button"></p><br>
                 </div>
                 
             </article>
