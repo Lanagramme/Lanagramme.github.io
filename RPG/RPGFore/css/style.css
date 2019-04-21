@@ -70,7 +70,9 @@
 	border-top-right-radius: 0px;
 	margin-bottom: 5px;}
 
-ul {margin-top:0px;}
+ul {
+    margin-top:0px;
+    padding-left: 25px;}
 
 li {
 	margin-top: 0px; 
@@ -263,7 +265,6 @@ background-color: #abc8f7;}
 
 .skil{display: none;}
 
-ul{padding-left: 25px;}
 
 #a{display: none;}
 
