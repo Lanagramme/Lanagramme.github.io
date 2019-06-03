@@ -161,6 +161,7 @@ function z (pos){
 }
 
 function h(rrr){
+    let pos = -1;
     for (let i = 0; i <= gri.length - 1; i++) {
         if (gri[i].classList.contains("active")) {
             pos = i;
@@ -168,12 +169,14 @@ function h(rrr){
         }
     }
     console.log(pos);
-    switch (rrr){
-        case 1:
-        a(pos);
-        break;
-        case 2:
-        b(pos);
-        break;
+    if (pos != -1) {
+        switch (rrr){
+            case 1:
+            a(pos);
+            break;
+            case 2:
+            b(pos);
+            break;
+        }
     }
 }
