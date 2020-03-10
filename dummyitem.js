@@ -1,11 +1,12 @@
 let a = {
 	id1 : {
-		titre: "Compte rendu de la reunion du 19.02",
+		title: "Compte rendu de la reunion du 19.02",
 		date: "19 Fevrier 2020",
 		author: "ecovillage",
 		tag: ["none"],
 		extract: "Pour cette première réunion nous avons établi des réunions régulières afin de garder un rythme d'avancée régulier sur le projet.",
-		content: `
+        content: 
+            `
                 <h3>Thèmes principaux autour desquels axer nos les recherches.</h3>
                 <ul>
                     <li>Architecture (baubiologie)</li>
@@ -69,7 +70,7 @@ let a = {
 		`,
 	},
 	id2 : {
-		titre: "Compte rendu de la reunion du 20.02",
+		title: "Compte rendu de la reunion du 20.02",
 		date: "20 Fevrier 2020",
 		author: "ecovillage",
 		tag: ["none"],
@@ -100,7 +101,7 @@ let a = {
 		`
 	},
 	id3 : {
-		titre: "0",
+		title: "0",
 		date: "0",
 		author: "0",
 		tag: "0",
