@@ -129,11 +129,82 @@ let a = {
 		`
 	},
 	id3 : {
+		title: "Compte rendu de la reunion du 21.02",
+		date: "21 Fevrier, 2020",
+		author: "Ecovillage",
+		tags: "",
+		extract: "",
+		content: `<h3>Cahier de route du projet</h3>
+
+        <p>Que pouvons nous faire durant les deux années à venir pour faire avancer le projet ?</p>
+
+        <h4>Cultiver le jardin</h4>
+
+        <p>Réunir les plantes que nous allons cultiver dans l'écovillage et s'essayer à la permaculture sur une plus petite échelle.</p>
+
+        <h4>Se former</h4>
+
+        <div class="row" style="margin-left: 25px;">
+            <p style="margin-left: -25px;">Pour gérer l'écovillage nous aurons besoin de connaissance dans les dommaines suivant :</p>
+            <ul class="col-6">
+                <li>Agriculture</li>
+                <li>Menuiserie</li>
+                <li>Cuisine</li>
+                <li>Maçonnerie</li>
+                <li>Plomberie</li>
+            </ul>
+            <ul class="col-6">
+                <li>Architecture</li>
+                <li>Comptabilité / Gestion de projet</li>
+                <li>Electronique / Ingenurie</li>
+                <li>Psuchologie / Gestion de ressources humaines</li>
+                <li>Psychologie</li>
+            </ul>
+        </div>
+
+        <h4>Preparer le dossier du projet</h4>
+
+        <ul>
+            <li>Faire des recherches sur la façon de rédiger un dossier de projet de cette envergure</li>
+            <li>Préparer notre présentation</li>
+            <li>Rencontrer les proféssionnels necessaires à la validation de notre projet</li>
+        </ul>
+
+        <h4>Budjeter</h4>
+
+        <p></p>
+
+        <ul>
+            <li>Projet Bokito Days. <a href="">Fiche à créer</a></li>
+            <li>Formation restauration (300€).</li>
+        </ul>
+
+        <h4>Créer l'association du vilage</h4>
+
+        <h4>Permis de conduire</h4>
+
+        <h3>Autres idées</h3>
+        <ul>
+            <li>Mise au point du design des toitures végtétales. <a href="Architecture">Voir la page.</a></li>
+        </ul>
+
+        <h3>Conclusion</h3>
+`
+	},
+	id4 : {
 		title: "0",
 		date: "0",
 		author: "0",
 		tags: "0",
 		extract: "0",
 		content: "0"
-	}
+	},
+	id5 : {
+		title: "0",
+		date: "0",
+		author: "0",
+		tags: "0",
+		extract: "0",
+		content: "0"
+	},
 }
