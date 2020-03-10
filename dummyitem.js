@@ -2,10 +2,10 @@ let a = {
 	id1 : {
 		titre: "Compte rendu de la reunion du 19.02",
 		date: "19 Fevrier 2020",
-		auteur: "ecovillage",
+		author: "ecovillage",
 		tag: ["none"],
-		resume: "Pour cette première réunion nous avons établi des réunions régulières afin de garder un rythme d'avancée régulier sur le projet.",
-		contenu: `
+		extract: "Pour cette première réunion nous avons établi des réunions régulières afin de garder un rythme d'avancée régulier sur le projet.",
+		content: `
                 <h3>Thèmes principaux autour desquels axer nos les recherches.</h3>
                 <ul>
                     <li>Architecture (baubiologie)</li>
@@ -71,10 +71,10 @@ let a = {
 	id2 : {
 		titre: "Compte rendu de la reunion du 20.02",
 		date: "20 Fevrier 2020",
-		auteur: "ecovillage",
+		author: "ecovillage",
 		tag: ["none"],
-		resume: "Lors de cette réunion nous avons discuté de plusieurs alternatives architecturales pour les habitations du village. Au vues de la nature de notre projet et de no possibilitées financières nous avons convenus qu'il nous fallait sortir des sentiers battus. Nous nous sommes donc tourné vers les methodes alternatives de construction autour de la planète pour de l'inspiration, et principalement dans les pays ou l'argent est un problème. \n Le mot clé de notre phylosophie étant 'penser de façon non conventionnelle'",
-		contenu: `<h3>Design explorés</h3>
+		extract: "Lors de cette réunion nous avons discuté de plusieurs alternatives architecturales pour les habitations du village. Au vues de la nature de notre projet et de no possibilitées financières nous avons convenus qu'il nous fallait sortir des sentiers battus. Nous nous sommes donc tourné vers les methodes alternatives de construction autour de la planète pour de l'inspiration, et principalement dans les pays ou l'argent est un problème. \n Le mot clé de notre phylosophie étant 'penser de façon non conventionnelle'",
+		content: `<h3>Design explorés</h3>
 
                 <ul>
                     <li>Maisons en dôme. <i>Article à créer</i></li>
@@ -102,9 +102,9 @@ let a = {
 	id3 : {
 		titre: "0",
 		date: "0",
-		auteur: "0",
+		author: "0",
 		tag: "0",
-		resume: "0",
-		contenu: "0"
+		extract: "0",
+		content: "0"
 	}
 }
