@@ -39,7 +39,7 @@ const Launch = function() {
 
 async function Reload(){
     //recuperer le tableau des articles sur le serveur par une promesse
-    //exploiter les données sur la page: Reload().then( (data) => {a=data ; callback} )
+    //exploiter les données sur la page: Reload().then((data) => {a=data ; callback})
     const result = await $.ajax({
         url: "http://mondesperdus.com/Eden/readeden",
         type: "GET"
