@@ -29,7 +29,7 @@
         </nav>
     </div>
         <section>
-            <h1>Compte rendu des réunions</h1>
+            <h1 id="pageTitle">Compte rendu des réunions</h1>
             <hr>
             <article id="content">
 
@@ -44,15 +44,7 @@
         <script src="js/scripts.js"></script>
         <script>
             //récupère la liste des articles sur le serveur et affiche le titre de ceux qui on le tag "Reunion" (ne pas oublier la majuscule)...
-            //...dans la balise "content"
-            go = () => {
-                $.ajax({
-                url: "http://mondesperdus.com/Eden/readeden",
-                success: function(result){ a = JSON.parse(result); console.log(a); Reu() } });
-            }
-
-            //go()
-            
+            Reload().then( (data) => {a=data ; Find("tags", "Reunion") })
         </script>
 </body>
 </html>
