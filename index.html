@@ -2,344 +2,111 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script defer type="text/javascript" src="Ecovillage/js/jquery-3.4.1.js"></script>
-        <script defer type="text/javascript" src="Ecovillage/js/index.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="Ecovillage/blog.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Projet - Ecovillage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Felicy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <style>
+            /* Formulaire centré */
+            .form-signin{
+                width: 100%; max-width: 372px;
+                padding: 15px; margin: auto;
+            }
+            /* Contenu de page centré, ajouter la classe text-center */
+            body.centré{
+                height: 100vh;
+                display: grid; place-items: center;
+            }
+
+            .bandeau{ display: grid; grid-template-columns: 1fr auto; }
+            #login>form{ padding: 0; }
+            .all{ display: none; }
+            #splashscreen{
+                position: fixed;
+                top: 0; bottom: 0;
+                left: 0; right: 0;
+                display: grid;
+                place-items: center;
+                background: white;
+            }
+        </style>
 </head>
-<body>
-    <main class="container">
-    <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-3 text-center"></div>
-            <div class="col-6 text-center"><a class="blog-header-logo text-dark" href="#">Eco Village et autres écologeries</a></div>
-            <div class="col-3 text-center"></div>
-        </div>
-    </header>
-    <div class="nav-scroller py-1 mb-2">
-        <nav class="nav d-flex justify-content-between">
-            <a href="Ecovillage/FAQ.html" class="p-2 text-muted">F.A.Q.</a>
-            <a href="#" class="p-2 text-muted">Agriculture</a>
-            <a href="Ecovillage/Construire.html" class="p-2 text-muted">Architecture</a>
-            <a href="#" class="p-2 text-muted">Hotellerie</a>   
-            <a href="#" class="p-2 text-muted">Ingénierie</a>
-            <a href="#" class="p-2 text-muted">Finances</a>
-            <a href="Ecovillage/Reunions.html" class="p-2 text-muted">Reunion</a>
-        </nav>
-    </div>
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-        <div class="col-md6 px-0">
-            <h1 class="display-4 font-italic">F.A.Q</h1>
-            <p class="lead my-3">Ici sont compilées toutes les questions et problématiques que nous avons rencontrées ainsi que les propositions que nous leur avons trouvées.</p>
-            <p class="lead mb-0"><a class="text-white font-weight-bold" href="Ecovillage/FAQ.html">Continuer la lecture...</a></p>
-        </div>
-    </div>
-    <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary">Reunion</strong>
-              <h3 class="mb-0">Compte rendu de...</h3>
-              <div class="mb-1 text-muted">20 Fev</div>
-              <p class="card-text mb-auto">Compte rendu de la réunion tenue le 20 Fevrier. Themes abordés :</p>
-              <a href="#" class="stretched-link">Continuer la lecture</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-success">Architecture</strong>
-              <h3 class="mb-0">Comment construire...</h3>
-              <div class="mb-1 text-muted">19 Fev</div>
-              <p class="mb-auto">La baubiologie étant notre guide, comment adapter ses methodes à notre projet et notre region ?</p>
-              <a href="Ecovillage/Construire.html" class="stretched-link">Continuer la lecture</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section>
-        <h2>Dépenses</h2>
-        <hr>
-        <br>
-        <h3>Outillage</h3>
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Article</th>
-              <th scope="col">Mr Bricolage</th>
-              <th scope="col">General Bricolage</th>
-              <th scope="col">Weldom</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">règle</th>
-              <td>3,50 / 50cm</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">équerre</th>
-              <td>2,50€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">jeu de mèches</th>
-              <td>0</td>
-              <td>0</td>
-              <td>17,90€ / petite tailles</td>
-            </tr>
-            <tr>
-              <th scope="row">fraise</th>
-              <td>5,50€</td>
-              <td>0</td>
-              <td>6,50€ = petit ; 4,89€ = moyen ; 8,90€ = 3 tailles</td>
-            </tr>
-            <tr>
-              <th scope="row">vis</th>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">colle à bois</th>
-              <td>13,50€ /650g</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">lasure</th>
-              <td>0</td>
-              <td>12,90€ /0,75L</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">pinceau </th>
-              <td>3,95€ / 3</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">chevilles en bois</th>
-              <td>7,50€</td>
-              <td>0</td>
-              <td>4,50</td>
-            </tr>
-            <tr>
-              <th scope="row">disques papier de verre</th>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">scie sauteuse</th>
-              <td>58,90€</td>
-              <td>19,95€</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">scie à main</th>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">pince universelle</th>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Mètre mesureur</th>
-              <td>3,50€€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Serre joint</th>
-              <td>23,90€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-          </tbody>
-        </table>
-        <hr>
-        <br>
-        <h3>Plantes en pot</h3>
-        <table class="table">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">Article</th>
-              <th scope="col">Mr Bricolage</th>
-              <th scope="col">General Bricolage</th>
-              <th scope="col">Weldom</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Piment andillais</th>
-              <td>2,75€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Piment Végétarien</th>
-              <td>2,5€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Thym</th>
-              <td>4,45€</td>
-              <td>0</td>
-              <td>3,80€</td>
-            </tr>
-            <tr>
-              <th scope="row">tomate </th>
-              <td>4,80€ / 20 pieds</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">0</th>
-              <td>4,80€ / 20 pieds</td>
-              <td>0</td>
-              <td>3,30€</td>
-            </tr>
-              <th scope="row">Herbe à albumine</th>
-              <td>3,90€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Fraisier</th>
-              <td>2,5€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Citronier</th>
-              <td>22€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-              <th scope="row">Oranger</th>
-              <td>22€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Romarin</th>
-              <td>7€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Basilic</th>
-              <td>8,50€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Sauge</th>
-              <td>8,50€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Tomate Cerise</th>
-              <td>2,58€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Menthe Chocolat</th>
-              <td>2,58€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Basilic citron vert ???</th>
-              <td>2,58€</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Menthe ricqles</th>
-              <td>2,58€</td>
-              <td>0</td>
-              <td>3,90€</td>
-            </tr>
-            <tr>
-              <th scope="row">Concombre</th>
-              <td>0</td>
-              <td>0</td>
-              <td>1,50€</td>
-            </tr>
-            <tr>
-              <th scope="row">Melon</th>
-              <td>0</td>
-              <td>0</td>
-              <td>1,50€</td>
-            </tr>
-          </tbody>
-        </table>
-        <br>
-        <hr>
-        <br>
-        <br>
-      </section>
-      <!-- <section>
-          <h2>FAQ</h2>
-          <hr>
-          <article>
-              <h3>Comment construire une maison ecologique ? <a href="Construire.html">>></a></h3>
-              
-              <ul>
-                  <li>Materiaux</li>
-                  <li>Techniques de construction</li>
-                  <li>Installation électrique</li>
-                  <li>Acces à l'eau potable</li>
-              </ul>
+<body class="centré text-center" >
 
-              <h3>De quoi à t'on besoin dans une maison ?</h3>
-              <ul>
-                  <li>Dormir</li>
-                  <li>Manger</li>
-                  <li>Laver</li>
-                  <li>Cuisiner</li>
-                  <li>Stocker</li>
-              </ul>
-              
-              <h3>Evacuation / traitement des eaux usées ?</h3>
-              <ul>
-                  <li>-</li>
-                  <li>-</li>
-              </ul>
-              <hr>
-              
-              <h3>- ?</h3>
-              <ul>
-                  <li>-</li>
-                  <li>-</li>
-              </ul>
-              <hr>
-          </article>
-      </section> -->
-    </main>
+    <!-- Splash Screen -->
+    <div class="all container" id="splashscreen" onclick="page('login')">
+        <h1 class="mb-4">Felicy</h1>
+        <p class="fixed-bottom small text-secondary">Une application du groupe <br>Pounoumem</p>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Page de connection -->
+        <form method="POST" action="" class="all form-signin" id="login">
+            <h1 class="h3 mb-5 font-weight-normal" >CONNEXION</h1>
+            <input type="email" class="form-control p-4 mb-4" placeholder="Adresse e-mail" required>
+            <input type="password" class="form-control p-4 mb-5" placeholder="Mot de passe" required>
+            <!-- <button class="btn btn-primary btn-block mb-2" type="submit">SE CONNECTER</button> -->
+            <a href="./Accueil.html" class="btn btn-primary btn-block mb-2" type="submit">SE CONNECTER</a>
+            <p class="small text-secondary" onclick="page('oubli')">J'ai oublié mon mot de passe</p>
+
+            <div class="bandeau fixed-bottom bg-dark text-white ">
+                <p class="p-3 text-left"><strong>Pas encore abonné ?</strong> <br>Démarrez l'expérience Felicy dès maintenant.</p>
+                <div class="d-flex align-items-center">
+                    <a href="./abonnement.html" class="btn btn-primary m-3">S'ABONNER <br>(sans angagement)</a>
+                </div>
+            </div>
+        </form>
+
+    <!-- Mot de passe oublié -->
+    <form method="POST" class="all form-signin" id="oubli">
+        <h1 class="h3 mb-4 font-weight-normal">MOT DE PASSE OUBLIÉ ?</h1>
+        <p class="mb-5">Nous allons vous aider à générer un nouveau mot de passe. Entrez l'adresse email que vous utilisez habituellement puis validez.</p>
+        <input type="email" class="form-control p-4 mb-5" placeholder="Votre adresse e-mail" required>
+        <button class="btn btn-primary btn-block mb-2" onclick="page('valid')">VALIDER</button>
+        <p class="small text-secondary" onclick="page('login')">Annuler</p>
+
+    </form>
+
+    <!-- Validation envoi de lien de récuperation -->
+    <form action="" class="all form-signin" id="valid" >
+        <h1 class="h3 mb-4 font-weight-normal" >CONSULTEZ VOS MAILS</h1>
+        <p class="mb-4">Pour vérifier votre identité, nous vous avons envoyé un mail pour que vous puissiez générer un nouveau mot de passe rapidement et simplement.</p>
+        <p class="mb-5">Une fois votre nouveau mot de passe généré, revenez sur l'application pour vous connecter</p>
+        <div class="btn pb-3 pt-3 btn-primary btn-block" onclick="page('login')">REVENIR À L'ÉCRAN DE CONNECTION</div>
+    </form>
+
+    <script src="./jquery-3.4.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+          var nua = navigator.userAgent
+          var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
+          if (isAndroid) {
+            $('select.form-control').removeClass('form-control').css('width', '100%')
+          }
+        })
+
+        function page(b){
+            console.log(b)
+            $('.all').hide()
+            $('#'+b).show()
+        }
+
+        const a = window.location.search
+        const Param = new URLSearchParams(a)
+        let data = Param.get('page')
+        if (data != undefined) {
+            page(data) 
+        }
+        else {
+            page('splashscreen')
+            $("#splashscreen").delay( 500 ).fadeOut( "400" );    
+            $("#login").delay( 500 ).fadeIn( 400 );   
+        }
+
+
+
+        </script>
 </body>
 </html>

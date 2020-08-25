@@ -1,0 +1,66 @@
+<head>
+  <style>
+    .btn {   
+    padding: 8px;
+    background-color: #33b5e5;
+    box-shadow: 1px 2px 1px 1px #745fb51f; 
+    border-radius: 2px;
+        margin: 8px 20px ;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        width: 100%;
+        color: black;
+    }
+    nav {
+          width: 25%;
+      }
+    ul>a.btn {
+        padding: 8px;
+        background-color: #fff; 
+        box-shadow: 1px 2px 1px 1px #745fb51f; 
+        border-radius: 2px;
+        margin: 8px 20px ;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        width: 186px;
+        color: black;
+
+    }
+    .case {
+        padding: 0px;
+        overflow: hidden;
+        transition: max-height 0.7s;
+        max-height: 0;
+      }
+    .case>ul {
+          margin: 0;
+          
+      }
+    .item:target .case{
+        max-height: 10em;
+        }
+  </style>
+</head>
+<nav>
+  <div id="case1"  class="item">
+    <a href="#case1" class="btn">Classe</a>
+    <div class="case">
+      <ul>
+        <a class="btn" href="RPG/RPGFore/1010.html">Livre des Classes</a>
+      </ul>
+    </div>
+  </div>
+  <div class="item" id="case2">
+    <a href="#case2" class="btn">Personnages</a>
+    <div class="case">
+      <ul>
+        <a class="btn" href="RPG/RPGFore/FichesDePerso/FicheNeithania.html">Neithania</a>
+        <a class="btn" href="RPG/RPGFore/FichesDePerso/FicheNirvelly.html">Nirvelly</a>
+        <a class="btn" href="RPG/RPGFore/FichesDePerso/FicheLeFaucheur.html">Lefaucheur</a>
+        <a class="btn" href="RPG/RPGFore/FichesDePerso/FicheTheBoss.html">Theboss</a>
+      </ul>
+    </div>
+  </div>
+</nav>

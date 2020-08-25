@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td{width: 400px; }
+        td, th {border: 1px solid grey; padding: 5px;}
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 200);
+        }
+    </style>
+</head>
+<body>
+<!--- Lame légendaire -->
+    <table> 
+        <tr>
+            <th>Jugement céleste</th>
+            <th>Epée du juge</th>
+            <th>Lame spirituelle</th>
+            <th>Estoc fantome</th>
+        </tr>
+        <tr> 
+            <td>Jugement céleste</td>
+            <td>Epée du juge</td>
+            <td>Lame spirituelle</td>
+            <td>Estoc fantome</td>
+        </tr>
+        <tr>
+            <td>Une épée fantomatique titanesque tombe du ciel et s'enfonce profondément dans le sol</td>
+            <td>Le casteur réveille l'esprit combatif d'un héro du passé. Une épée fantomatique flotte autour de sa cible et attaque tous ceux qui s'en approchent à moins d'un mètre</td>
+            <td>Le casteur réveille le désir de vangeance d'un héro déchu. Une épée géante flotte au dessus de sa tête et attaque tout ceux qui tentent de l'attaquer au corps à corps avant qu'ils ne puissent porter leur coup.</td>
+            <td>Le caster invoque l'arme d'un héro légendaire qui se matérialise devant lui et attaque en un grand arc de 3m devant lui</td>
+        </tr>
+    </table>
+    <br>
+<!--- Invo feu -->
+    <table>
+        <tr>
+            <th>Invocation mineure (FEU)</th>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <th>Attaque basique</th>
+                        <th>Sens accru</th>
+                    </tr>
+                    <tr> 
+                        <td>2PA/ 1PM</td>
+                        <td>(passif)</td>
+                    </tr>
+                    <tr>
+                        <td>Le familier crache une petite boule de feu qui atteint sa cible jusqu'a 2m</td>
+                        <td>Toute attaque réussie occasionne au moins 2pv de dégats à la cible <br> Coups critique 3pv de dégats</td>
+                    </tr>
+                </table>
+            </td>
+        </tr> 
+        <tr><td>Le familier de feu possède 6PA/4PV/6PM</td></tr>
+    </table>
+    <br>
+<!--- Invo eau -->
+    <table>
+        <tr>
+            <th>Invocation mineure (EAU)</th>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <th>Souffle glacé</th>
+                        <th>Esprit du froid</th>
+                        <th>bulle d'eau</th>
+                    </tr>
+                    <tr> 
+                        <td>2PA</td>
+                        <td>(passif)</td>
+                        <td>(effet)</td>
+                    </tr>
+                    <tr>
+                        <td>Repousse l'ennemi de deux cases</td>
+                        <td>Les attaques du familier appliquent un marqueur de glace sur la cible<br>si l'ennemi possède 3 marqueur d'eau il est enfermé dans une bulle d'eau /2Tr</td>
+                        <td>(PA = 0, PM = 0, PV-2/tr)/2tr<br>Tous les marqueurs sont effacés</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr><td>Le familier d'eau possède 4PA/6PV/3PM</td></tr>
+    </table>
+    <br>
+<!--- Invo terre-->
+    <table>
+        <tr>
+            <th>Invocation mineure (TERRE)</th>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <th>Vol vie</th>
+                        <th>Provocation</th>
+                        <th>Retaliation</th>
+                    </tr>
+                    <tr>
+                        <td>(passif)</td>
+                        <td>4PA</td>
+                        <td>(réaction)</td>
+                    </tr>
+                    <tr>
+                        <td>Pour chaque attaque contrée le familier vole 2PV</td>
+                        <td>Toutes les cibles à moins de 4m concentrent toutes leurs attaques sur le familier</td>
+                        <td>Le familier à une chance de renvoyer 1D4 dégats contre n'importe quelle cible qui l'attaque contre 1D20 AGI</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td>Le familier de TERRE possède 4PA/6PV+COIN/4PM</td></tr>
+    </table>
+    <br>
+<!--- gardien -->
+    <table>
+        <caption></caption>
+        <tr>
+            <th>Arc spirituel</th>
+            <th>Poigne</th>
+            <th>Etreinte</th>
+            <th>Bouclier Spirituel</th>
+            <th>Force brute</th>
+        </tr>
+        <tr> 
+            <td>Arc spirituel</td>
+            <td>Poigne</td>
+            <td>Etreinte</td>
+            <td>Bouclier Spirituel</td>
+            <td>Force brute</td>
+        </tr>
+        <tr>
+            <td>Le caster invoque l'arme d'un héro légendaire et s'en sert pour projetter une épée fantomatique de grande taille.</td>
+            <td>Le caster invoque la main d'un esprit titanesque pour attrapper une cible en face de lui (ligne) et l'attirer</td>
+            <td>Des racines poussent du sol et ligottent les jambes de la cibe. Ne fonctionne pas en interrieur.</td>
+            <td>Le casteur invoque le désir de justice d'une héroine inconnue. Il est entouré d'une barrière d'aura qui repousse tous dommages pendant un tour PUIS disparait après avoir subit 10dmg.</td>
+            <td>Convertis tous les marqueurs élémentaires en aura <br>+1 dégat par attaque par marqueur converti jusqu'à la fin du tour prochain<br>Les marqueurs convertis sont détruits dans le processus</td>
+        </tr>
+    </table>
+    <br>
+<!-- pacificateur -->
+    <table>
+        <caption></caption>
+        <tr>
+            <th>Bruleur</th>
+            <th>Givre</th>
+            <th>Reflux</th>
+            <th>Stop</th>
+            <th>Ecran</th>
+            <th>Mur de feu</th>
+            <th>Soin</th>
+            <th>Vague de feu</th>
+            <th>Charge explosive</th>
+            <th>Poing de gaïa</th>
+        </tr>
+        <tr> 
+            <td>Bruleur</td>
+            <td>Givre</td>
+            <td>Reflux</td>
+            <td>Stop</td>
+            <td>ecran</td>
+            <td>mur de feu</td>
+            <td>soin</td>
+            <td>Vague de feu</td>
+            <td>Charge explosive </td>
+            <td>Poing de gaïa  </td>
+        </tr>
+        <tr>
+            <td>La cible subit 1dmg par marqueur de feu posé sur elle.</td>
+            <td>La cible perd 1PM tous les 3 marqueurs d'eau posé sur elle</td>
+            <td>La cible est repoussé violement d'un nombre de cases égalle au nombre de marqueurs d'eau posé sur elle</td>
+            <td>La cible perd 1Pa tous les 3 marqueurs de terre posé sur elle</td>
+            <td>Le casteur invoque la volonté de fer d'un stratège légendaire, et renvoie toutes les attaques lancées sur la cible du sort</td>
+            <td>mur de feu</td>
+            <td>Le casteur en appelle à la bénédiction d'un héro mort pour protéger les faibles et rend 1D6 PV à sa sible, s'il a subit des dégats ce tour ci et que sa sible est un autre joueur, celui-ci recoit un bonus de PV équivalent à la moitié du nombre de PV perdu par le lanceur ce tours ci aroudi au supérieur.</td>
+            <td>vague de feu</td>
+            <td>La rage d'un héros tombé au combat emplit le casteur qui gagne ne ressent plus la douleur ce tour ci. Tous les dommages qu'il subit ce tour ne lui seront appliqués qu'au début de son prochain tour. S'il parvient à tuer un ennemi il ne subit aucun dommage et sa rage est prolongée pour un tour.</td>
+            <td>poing </td>
+        </tr>
+    </table>
+</body>
+</html>

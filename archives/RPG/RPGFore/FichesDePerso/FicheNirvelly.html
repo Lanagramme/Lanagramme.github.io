@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Oswald|Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script src="../JS/a.js"></script>
+	
+	<title>Fiches de personnages</title>
+</head>
+
+<body>
+    <header>
+        <h1>Fiches de personnages</h1>
+    </header>
+
+    <div id="nav" class="col-3">
+       <h3 class="grosButton" onclick="a('a', 'menu')">Classes</h3>
+       <div id="a" class="menu">
+            <a class="button" href="../1010.html">Livre des Classes</a>
+        </div>
+
+       <h3 class="grosButton" onclick="a('b', 'menu')">Personnages</h3>
+       <div id="b" class="menu">
+            <a class="button" href="FicheNeithania.html">Neithania</a>
+            <a class="button" href="FicheNirvelly.html">Nirvelly</a>
+            <a class="button" href="FicheLeFaucheur.html">Lefaucheur</a>
+            <a class="button" href="FicheTheBoss.html">Theboss</a>
+        </div>
+    </div>
+    
+    <div id="main" class="colf-7">
+        <div class="colf-6 block block-h1">
+            <h2>Nirvelly</h2>
+            <p style="float: left;"><strong>Classe</strong> : Invocateur</p>
+            <p style="float: right;"><strong>Element </strong>: Terre</p>
+        </div>
+
+        <div class="colf-4 block block-h1" style="clear: both;">
+            <p><strong>Modificateurs</strong></p>
+            <div class="boite">
+                <div style="width: 60px;"><p><strong>FOR</strong><br>3<br>-1</p></div>
+
+                <div style="width: 60px;"><p><strong>ESP</strong><br>2<br>-1</p></div>
+
+                <div style="width: 60px;"><p><strong>AGI</strong><br>5<br>+1</p></div>
+
+                <div style="width: 60px;"><p><strong>CHA</strong><br>1<br>+1</p></div>
+
+                <div style="width: 60px;"><p><strong>CHAR</strong><br>3<br>+1</p></div>
+            </div>
+        </div>
+
+        <div class="colf-2 block block-h1">
+           <p><strong>Stats</strong> </p>
+            <ul>
+                <li>PV : 11</li>
+                <li>PA : 6</li>
+                <li>PM : 3</li>
+            </ul>
+        </div>
+
+	    <div class="colf-6 block block-cf">
+            <p><strong>Equipement</strong></p>
+
+            <h3 class="element">Armes</h3>
+            
+            <div class="skillneutre" id="li">
+                <div onclick="c('li2', 'li', 'skillneutreopen', 'skillneutre')">
+                    <h4 style="margin: 0px;" >Lance <i>Inante</i></h4>
+                    <em>4 PA/CaC --- 6 PA/Po 2 Ligne</em>
+                </div>
+                
+                <div id="li2" class="skil" style="display: none;">
+                    <p>Si vous la lancez elle ne reviens pas. Alors pourquoi vous avez à ce point envie d'essayer ?</p>
+        
+                    <ul>
+                        <li>1D4 DMG</li>
+                        <li>1D4 DMG-1</li>
+                    </ul>
+                </div>
+            </div>            
+
+            <div class="skillneutre" id="grim">
+                <h4 style="margin: 0px;" onclick="c('grim2', 'grim', 'skillneutreopen', 'skillneutre')">Grimmoire de débutant</h4>
+
+
+                <p id="grim2" class="skil" style="display: none;">Un puissant artéfact magique qui permet à son porteur de lancer des sorts bien supérieur à ce dont il est réellement capable en se nourissant de son énergie vitale.<br><br><em>Il vous tuera en 24h.</em></p>
+            </div>		
+
+
+            <h3 class="element">Armure</h3>
+	    </div>
+
+        <div class="colf-6 block block-cf">
+            <p style="clear: both;"><strong>inventaire</strong></p>
+        </div>
+
+        <div class="colf-6 block block-cf">
+            <p><strong>SKIlS</strong></p>
+
+            <h3 class="element">Passifs</h3>
+
+                <div class="skillneutre" id="rpl">
+
+                    <h4 style="margin: 0px;" onclick="c('rpl2', 'rpl', 'skillneutreopen', 'skillneutre')">Rappel</h4>
+
+                    <p id="rpl2" class="skil" style="display: none;">L’invocateur peut désinvoquer son familier contre  <strong>X-Y PV, X</strong> étant le nombre de <strong>PV</strong> restant au familier et <strong>Y</strong> le nombre de <strong>PA</strong> restant à l’invocateur. Si le nombre de point d’action de l’invocateur est supérieur au nombre de points de vie du familier il récupère <strong>X PV</strong>.</p>
+
+                </div>
+
+            <h3 class="element">Neutres</h3>
+
+                <div class="skillneutre" id="invo">
+
+                    <div onclick="c('invo2', 'invo', 'skillneutreopen', 'skillneutre')">
+                        <h4 style="margin: 0px;" >Invocation</h4>
+
+                        <em>4 <span title="Point d'Action">PA*</span>+COIN PV/ <span title="Le sort n'atteint que les personnages se trouvant sur une case adjacente à celle du lanceur">CaC*</span> / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> 5</em>
+                    </div>
+                    <div id="invo2" class="skil" style="display: none;">
+                        <p>L’invocateur  sacrifie une part de son énergie vitale pour invoquer son familier</p>
+
+                        <ul>
+                            <li>Si l’invocateur a moins de 5 PV il ne sacrifie pas de PV pour l’invocation.</li>
+                            <li>Les marqueurs appliqués au familier se reportent aussi directement sur son invocateur et tous les familiers que celui-ci contrôle, mais se dissolvent à la mort du familier sur qui il a été posé.</li>
+                            <li>Dès qu’il dépense des PA le familier perd autant de PV.</li>
+                            <li>Le familier possède 10 PV + le modificateur ESP de son invocateur</li>
+                            <li>Le familier possède autant de PA max et de <span title="Points de Mouvements">PM*</span> max qu’en possède son invocateur au moment de sa création</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skillneutre" id="hype">
+
+                    <div onclick="c('hype2', 'hype', 'skillneutreopen', 'skillneutre')">
+                        <h4 style="margin: 0px;" >Hyperactivité</h4>
+
+                        <em>3 PA / Po 4 sans ligne de vue</em>
+                    </div>
+                    <div id="hype2" class="skil" style="display: none;">
+                        <p>La cible gagne 2 PA max / 2Tr</p>
+
+                        <ul>
+                            <li>Si la cible du sort est un familier, le fait de gagner des PA n’a pas d’impact sur ses PV</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                    <h3 class="element">Terre / EAU</h3>
+
+                <div class="skillterreeau" id="port">
+
+                    <div onclick="c('port2', 'port', 'skillterreeauopen', 'skillterreeau')">
+                        <h4 style="margin: 0px;" >Portail</h4>
+
+                        <em>4 <span title="Point d'Action">PA*</span> / <span title="Portée en mètres">Po*</span> 3 / <span title="Cooldown : Nombres de tours necessaires avant de reutiliser la compétance">Cd*</span> X <br>X étant le nombre de portail de l’équipe encore ouvert</em>
+                    </div>
+                    <div id="port2" class="skil" style="display: none;">
+                        <p>En mélangeant les énergies de feu ou de glace naturellement présentes dans l’air à son énergie personnelle de nature opposée, le pacificateur crée un portail à double entrés.</p>
+
+                        <ul>
+                            <li>Entrer dans un portail permet d’être téléporté à l’emplacement d’un autre portail posé par la même équipe</li>
+                            <li>Un portail disparait après avoir été traversé deux fois, il reste ouvert tant que la traversée est en cours</li>
+                            <li>Les sorts fonctionnant en ligne traversent les portails. Leur portée se réinitialise à la sortie du portail</li>
+                            <li>Les sorts fonctionnant en AOE Traversent les portails. La portée totale en sortie de portail est égale à la portée totale de l'AOE - la distance entre la source de l'AOE et le portail.</li>
+                            <li>Les sorts fonctionnant en Cône traversent les portails. La portée totale en sortie de portail est égale à la portée totale du Cône - la distance entre la source de l'AOE et le portail. La direction en sortie est la même que la direction en entrée, mais le lanceur peut la modifier pour 1 PM.</li>
+                            <li>Les familiers ne peuvent pas traverser les portails</li>
+                            <li>Un portail disparait en cas de contact avec un sort d’écran</li>
+                            <li>Il est possible de traverser un portail posé par un membre de l’équipe adverse</li>
+                            <li>Les sorts ne traversent pas les portails posés par un membre de l’équipe adverse mais diminue de 1 le nombre de traversées possible par celui-ci. Si le nombre tombe à 0 le portail disparait.</li>
+                            <li>Il est possible de créer un portail en appliquant une aura de terre sur une prison aqueuse. Le portail appartient à l’équipe de personnage appliquant l’aura. La prison est détruite à la création du portail</li>
+                            <li>Il est possible d’ouvrir un portail en appliquant une aura d’eau sur un bouclier de la terre. La personne sous le bouclier est téléportée au moment de l’ouverture du portail si un autre portail est sous le contrôle son équipe. Le bouclier se dissipe à la création du portail.</li>
+                            <li>Pas plus de trois portails ne peuvent être ouvert en même temps par une même équipe</li>
+                            <li>Il n’est pas possible de relier des portails ouvert par des membres d’équipes opposées</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="colf-6 block block-cf">
+            
+		    <p><strong>SKILLS DU FAMILIER DE NIRVELLY</strong></p>
+		    
+                <h3 class="element">Terre</h3>
+                
+                <div class="skillterre" id="stop">
+                    <div onclick="c('stop2', 'stop', 'skillterreopen', 'skillterre')">
+                        <h4 style="margin: 0px;" >Constriction</h4>
+
+                        <em>3 PV / <span title="Portée en mètres">Po*</span>3</em>
+                    </div>
+                    <div id="stop2" class="skil" style="display: none;">
+                        <p>Des racines sorte de terre et immobilisent la cible</p>
+                        <ul><li><span title="Points de Mouvements">PM*</span> = 0 / 3 TR</li></ul>
+                    </div>
+                </div>
+
+                <div class="skillterre" id="ben">
+                    <div onclick="c('ben2', 'ben', 'skillterreopen', 'skillterre')">
+                        <h4 style="margin: 0px;" >Bénédiction</h4>
+                        <em>5 PV / <span title="Portée en mètres">Po*</span> 2</em>
+                    </div>
+
+                    <div id="ben2" class="skil" style="display: none;">
+                        <p>Le familier transfert 5 PV a une cible</p>
+                    </div>
+                </div>
+
+                <div class="skillterre" id="dor">
+                    <div onclick="c('dor2', 'dor', 'skillterreopen', 'skillterre')">
+                        <h4 style="margin: 0px;" >Sommeil forcé</h4>
+                        <em>2 PV / Po2</em>
+                    </div>
+
+                    <div id="dor2" class="skil" style="display: none;">
+                        <p>Le familier souffle un gaz soporifique qui incapacite toute cible à portée jusqu’à ce qu’elle réussisse <a href="index.html#jet">1D20</a> ESP avec un modificateur - 2</p>
+                    </div>
+                </div>   
+        </div>
+	</div>
+</body>
+</html>

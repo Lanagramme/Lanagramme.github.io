@@ -1,0 +1,41 @@
+*{box-sizing: border-box}
+
+.album-mosaic {
+    width: 100%;
+    margin-top: 0.625rem;
+    margin-left: -0.3125rem;
+    margin-right: -0.3125rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.site-wrapper {
+    height: initial;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.album-mosaic-item {
+    position: relative;
+    display: block;
+    margin-left: 0.3125rem;
+    margin-right: 0.3125rem;
+    margin-bottom: 0.625rem;
+}
+
+.album-mosaic-image {
+    width: 100%;
+    height: initial;
+    vertical-align: top;
