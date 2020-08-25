@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Felicy</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
         body{
@@ -16,13 +16,13 @@
 </head>
 <body>
     <nav class="navbar navbar-light bg-light bandeau3">
-        <a href="./Accueil.html">
+        <a href="./compte.html" id="retour">
             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
                 <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
         </a>
-      <span class="navbar-brand mb-0 h1">COMMANDES</span>
+        <span class="navbar-brand mb-0 h1" style="margin: auto;">COMMANDES</span>
     </nav>
     <div class="bg-light">
         <div class="container p-0" style="height: 100%;margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr;">
@@ -34,7 +34,7 @@
     <div class="container text-center mt-4">
         <div id="cours" class="all">
             <p>Vous n'avez pas de commande en cours</p>
-            <a href="Accueil.html" style="width:max-content" class="btn btn-primary">ALLER À LA BOUTIQUE</a>
+            <a href="../Accueil.html" style="width:max-content" class="btn btn-primary">ALLER À LA BOUTIQUE</a>
         </div>
         <div id="deja" class="all">
             <a href="./detailCommande.html?page=commandes" class="block d-flex justify-content-between">
@@ -79,6 +79,14 @@
         function page(b){
             $('.all').hide()
             $('#'+b).show()
+        }
+
+        const a = window.location.search
+        const Param = new URLSearchParams(a)
+        let data = Param.get('page')
+        if (data != undefined) {
+            console.log()
+            $('#retour').attr('href', data + '.html')
         }
     </script>
 </body>
