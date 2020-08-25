@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Felicy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="CSS/styles.css">
         <style>
             /* Formulaire centré */
             .form-signin{
@@ -14,7 +14,6 @@
             }
             /* Contenu de page centré, ajouter la classe text-center */
             body.centré{
-                height: 100vh;
                 display: grid; place-items: center;
             }
 
@@ -31,30 +30,29 @@
             }
         </style>
 </head>
-<body class="centré text-center" >
+<body class="centered text-center" >
 
     <!-- Splash Screen -->
-    <div class="all container" id="splashscreen" onclick="page('login')">
+    <div class="all" id="splashscreen" onclick="page('login')">
         <h1 class="mb-4">Felicy</h1>
         <p class="fixed-bottom small text-secondary">Une application du groupe <br>Pounoumem</p>
     </div>
 
     <!-- Page de connection -->
-        <form method="POST" action="" class="all form-signin" id="login">
-            <h1 class="h3 mb-5 font-weight-normal" >CONNEXION</h1>
-            <input type="email" class="form-control p-4 mb-4" placeholder="Adresse e-mail" required>
-            <input type="password" class="form-control p-4 mb-5" placeholder="Mot de passe" required>
-            <!-- <button class="btn btn-primary btn-block mb-2" type="submit">SE CONNECTER</button> -->
-            <a href="./Accueil.html" class="btn btn-primary btn-block mb-2" type="submit">SE CONNECTER</a>
-            <p class="small text-secondary" onclick="page('oubli')">J'ai oublié mon mot de passe</p>
+    <form method="POST" action="" class="p-0 pl-3 pr-3 all form-signin m-0" id="login">
+        <h1 class="h3 mb-5 font-weight-normal" >CONNEXION</h1>
+        <input type="email" class="form-control p-4 mb-4" placeholder="Adresse e-mail" required>
+        <input type="password" class="form-control p-4 mb-5" placeholder="Mot de passe" required>
+        <a href="./Accueil.html" class="btn btn-primary btn-block mb-2" type="submit">SE CONNECTER</a>
+        <p class="small text-secondary" onclick="page('oubli')">J'ai oublié mon mot de passe</p>
 
-            <div class="bandeau fixed-bottom bg-dark text-white ">
-                <p class="p-3 text-left"><strong>Pas encore abonné ?</strong> <br>Démarrez l'expérience Felicy dès maintenant.</p>
-                <div class="d-flex align-items-center">
-                    <a href="./abonnement.html" class="btn btn-primary m-3">S'ABONNER <br>(sans angagement)</a>
-                </div>
+        <div class="bandeau fixed-bottom bg-dark text-white ">
+            <p class="p-3 m-0 text-left"><strong>Pas encore abonné ?</strong> <br>Démarrez l'expérience Felicy dès maintenant.</p>
+            <div class="d-flex align-items-center">
+                <a href="./abonnement.html" class="btn btn-primary m-3">S'ABONNER <br>(sans angagement)</a>
             </div>
-        </form>
+        </div>
+    </form>
 
     <!-- Mot de passe oublié -->
     <form method="POST" class="all form-signin" id="oubli">
@@ -75,7 +73,6 @@
     </form>
 
     <script src="./jquery-3.4.1.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script>
