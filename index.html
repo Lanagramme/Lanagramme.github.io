@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/styles.css">
         <style>
+            @media screen and (min-width: 200px) and (max-width: 640px) {
+                #bye {
+                    display:none;
+                }
+            }
             /* Formulaire centré */
             .form-signin{
                 width: 100%; max-width: 372px;
@@ -47,7 +52,9 @@
         <p class="small text-secondary" onclick="page('oubli')">J'ai oublié mon mot de passe</p>
 
         <div class="bandeau fixed-bottom bg-dark text-white ">
-            <p class="p-3 m-0 text-left"><strong>Pas encore abonné ?</strong> <br>Démarrez l'expérience Felicy dès maintenant.</p>
+            <div class="d-flex align-items-center">
+                <p class="p-3 m-0 text-left" ><strong id="bye">Pas encore abonné ? <br></strong> Démarrez l'expérience Felicy dès maintenant.</p>
+            </div>
             <div class="d-flex align-items-center">
                 <a href="./abonnement.html" class="btn btn-primary m-3">S'ABONNER <br>(sans angagement)</a>
             </div>
