@@ -7,7 +7,7 @@ class Pion {
 		this.pv_max = 10
 		this._pv = this.pv_max
 		this.pa_max = 6
-		this.pa = this.pa_max
+		this._pa = this.pa_max
 		this.pm_max = 3
 		this._pm = this.pm_max
 		this.skills = [ "fire_bolt", "heal" ]
@@ -15,6 +15,7 @@ class Pion {
 
 	get pv() {return this._pv}
 	get pm() {return this._pm}
+	get pa() {return this._pa}
 	get html() {return `<div class='pion animate__animated ${this.couleur}' id='${this.id}'></div>`}
 
 	set pv(x){
@@ -36,6 +37,11 @@ class Pion {
 		this._pm = x
 		$(`#pm-${this.id}`).html(this.pm)
 		$(`#pm`).html(this.pm)
+	}
+	set pa(x){
+		this._pa = x
+		$(`#pa-${this.id}`).html(this.pa)
+		$(`#pa`).html(this.pa)
 	}
 
 	uuidv4() {

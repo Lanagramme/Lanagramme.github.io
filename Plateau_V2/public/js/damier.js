@@ -131,7 +131,7 @@ class Damier {
 									</div>
 									<div class="rounded-circle border border-danger outer">
 										<div class="rounded-circle bg-danger">
-											<div id="pa" class="pion-pa white">${pion.pa}</div>
+											<div id="pa-${pion.id}" class="pion-pa white">${pion.pa}</div>
 											<div class="label">PA</div>
 										</div>
 									</div>

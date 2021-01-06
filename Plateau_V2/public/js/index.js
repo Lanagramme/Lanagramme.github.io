@@ -30,9 +30,8 @@ function begin_tour(){
 	let equipe_active = plateau.pions.filter( x => x.equipe == nom_equipe_active)
 	for (let pion of equipe_active){
 		pion.pm = pion.pm_max
+		pion.pa = pion.pa_max
 	}
-	$('#pa').html(0)
-	$('#pm').html(0) 
 
 	//changer le nom de l'équipe active
 	$('#tour').html(nom_equipe_active)
@@ -49,9 +48,6 @@ function end_tour(){
 	if (index == 1) index = 2
 	else index = 1
 	$('.case').removeClass('tour')
-	if ($('div[class^=lin]:not(.portrait)')) document.getElementById('portrait').classList.remove(document.getElementById('portrait').classList[document.getElementById('portrait').classList.length-1])
-	$('#pa').html(0)
-	$('#pm').html(0) 
 
 	plateau.clear_board_classes()
 	//verifier s'il y a un vaincquer 
