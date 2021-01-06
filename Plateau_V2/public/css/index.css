@@ -173,15 +173,15 @@ width: 100%
 }
 
 .team-name{
-height: 0px;
-width: 30px;
-transform: rotate(-90deg);
-transform-origin: left;
+    height: 0px;
+    width: 30px;
+    transform: rotate(-90deg);
+    transform-origin: left;
 }
 
 .info-pv{
     position: absolute;
-    right: 52px;
+    left: 104px;
     width: 100px;
     color: white;
 }
