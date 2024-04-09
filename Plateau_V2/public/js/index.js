@@ -1,6 +1,16 @@
 // ---------------- Variables ----------------
+// Index de l'équipe active
 var index = 1
 // ---------------- Fonctions ---------------- 
+
+/**
+ * Fonction lancée au démarrage d'une partie
+ * @function
+ * lance la création du plateau
+ * lance la création des éléments html
+ * ajout des eventsListeners de l'UI
+ * Lance le permier tour
+ **/
 function setup_game(){
 	plateau = new Damier()
 	if ($('#compte_ligne').val() + $('#compte_colone').val() < 6) {
@@ -15,8 +25,7 @@ function setup_game(){
 	})
 	$('.attack').click(()=>{
 		if(plateau.pion_actif != null)
-		if($('.active')) {plateau.draw_area('attack', plateau.sort_actif.aire) }
-		// if($('.active')) {plateau.draw_area('attack', 0, 'ligne')}
+      if($('.active')) {plateau.draw_area('attack', plateau.sort_actif.aire) }
 	})
 	$('.clearBoard').click(()=>{
 		plateau.clear_board_classes()
@@ -24,6 +33,14 @@ function setup_game(){
 
 	begin_tour()
 }
+
+/**
+ * Nouveau tour
+ * @function 
+ * definir l'équipe active
+ * changer le nom de l'équipe active
+ * mettre la classe tour à toutes les cases parent des pions de l'équipe
+ **/
 function begin_tour(){
 	//definir l'équipe active
 	let nom_equipe_active = plateau.equipes["equipe" + index].nom
@@ -44,6 +61,14 @@ function begin_tour(){
 	}
 	//Verfier apres chaque clic si le tour est fini
 }
+
+/**
+ * Fin du tour
+ * @function 
+ * Changer l'équipe active
+ * Nétoyer le plateau
+ * Lancer un nouveau tour
+ */
 function end_tour(){
 	if (index == 1) index = 2
 	else index = 1

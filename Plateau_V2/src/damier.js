@@ -3,7 +3,7 @@ var Sorts = require('./skill.js')
 
 var cl = console.log
 var names = ["Acid_Apple","Acid_Pain","Acid_Rain","Acid_Sky","Acid_Voice",
-"Bad_Apple","Bad_Book","Bad_Actor",
+"Bad_Apple","Bad_Actor",
 "Black_Book","Black_Pain",
 "Blue_Apple","Blue_Lullaby","Blue_Rain",
 "Breaking_Glass","Breaking_Ground","Breaking_Point",
@@ -36,22 +36,20 @@ export default class Damier {
 	}
 	
 	//------ informations du plateau ------
-	coordonnees_to_querySelector(coordonnees) { return `.x${coordonnees.x}.y${coordonnees.y}` }
+	coordonnees_to_querySelector({x,y}) { return `.x${x}.y${y}` }
 	coordonnees_from_classes(classes) { return { x: Number(classes[1].split('x')[1]) , y: Number(classes[2].split('y')[1]) } }
 	coordonnees_aleatoires() { return { x : RNG(this.colone_max-1) + 1, y : RNG(this.ligne_max-1) + 1 } }
-	_distance(depart, arrivee){
-		return Math.sqrt( Math.pow((arrivee.x - depart.x), 2) + Math.pow((arrivee.y - depart.y), 2))
-	}
+	_distance(depart, arrivee){ return Math.sqrt( Math.pow((arrivee.x - depart.x), 2) + Math.pow((arrivee.y - depart.y), 2)) }
 
 	//------ nouvelle partie ------
 	reset_damier(a,b){
 		$('#info').html("")
 		$('.panel .teams').html("")
-		this.ligne_max = a
+		this.ligne_max  = a
 		this.colone_max = b
 
 		let couleurs_equipes = this._pick_random_colors()
-		let noms_equipes = this._pick_random_names()
+		let noms_equipes     = this._pick_random_names()
 		this.equipes = {
 			equipe1 : new Equipe(noms_equipes[0], ('lin-' + couleurs_equipes[0])),
 			equipe2 : new Equipe(noms_equipes[1], ('lin-' + couleurs_equipes[1]))

@@ -20,6 +20,10 @@ var names = ["Acid_Apple","Acid_Pain","Acid_Rain","Acid_Sky","Acid_Voice",
 "Stolen_Book",
 "Void_Dream","Void_Sky","Void_Voice"]
 
+/**
+ * Représente la partie en cours
+ * @constuctor
+ */
 class Damier {
 	constructor(){
 		this.ligne_max = 0
@@ -32,18 +36,23 @@ class Damier {
 	}
 	
 	//------ informations du plateau ------
-	coordonnees_to_querySelector(coordonnees) { return `.x${coordonnees.x}.y${coordonnees.y}` }
+	coordonnees_to_querySelector({x, y}) { return `.x${x}.y${y}` }
 	coordonnees_from_classes(classes) { return { x: Number(classes[1].split('x')[1]) , y: Number(classes[2].split('y')[1]) } }
 	coordonnees_aleatoires() { return { x : RNG(this.colone_max-1) + 1, y : RNG(this.ligne_max-1) + 1 } }
-	_distance(depart, arrivee){
-		return Math.sqrt( Math.pow((arrivee.x - depart.x), 2) + Math.pow((arrivee.y - depart.y), 2))
-	}
+  // Retourne la distance entre deux points
+	_distance(depart, arrivee) { return Math.sqrt( Math.pow((arrivee.x - depart.x), 2) + Math.pow((arrivee.y - depart.y), 2)) }
 
 	//------ nouvelle partie ------
+  /**
+   * Initie une nouvelle partie
+   * @function 
+   * @param {number} a - nombre de lignes du plateau
+   * @param {number} b - nombre de colones du plateau
+   */
 	reset_damier(a,b){
 		$('#info').html("")
 		$('.panel .teams').html("")
-		this.ligne_max = a
+		this.ligne_max  = a
 		this.colone_max = b
 
 		let couleurs_equipes = this._pick_random_colors()
@@ -54,7 +63,6 @@ class Damier {
 		}
 	
 		this._create_teams(3)
-
 		this._dessin_damier()
 		this._spawn()
 		this._case_events()
